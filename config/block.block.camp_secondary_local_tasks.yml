@@ -1,0 +1,22 @@
+uuid: 14c233e2-1e42-4056-8ff8-603d666824fe
+langcode: en
+status: true
+dependencies:
+  theme:
+    - camp
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: camp_secondary_local_tasks
+theme: camp
+region: header
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

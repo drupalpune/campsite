@@ -1,0 +1,23 @@
+uuid: 348eff65-6c7f-4659-bffa-0252e8b26c5f
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - camp
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: camp_search_form_narrow
+theme: camp
+region: header
+weight: -3
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

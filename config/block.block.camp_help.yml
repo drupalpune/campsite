@@ -1,0 +1,22 @@
+uuid: d1d9976b-a2fe-4f13-b98e-3ccf5f42d02d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - camp
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: camp_help
+theme: camp
+region: header
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
