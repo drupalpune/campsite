@@ -1,0 +1,10 @@
+uuid: fa260220-ad2d-420a-8de9-c1f8fd5d996c
+langcode: en
+status: true
+dependencies: {  }
+id: simple_text
+label: 'Simple text'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
