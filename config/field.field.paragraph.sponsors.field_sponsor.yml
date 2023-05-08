@@ -1,19 +1,18 @@
-uuid: ce8f0013-244d-4f28-953c-3786bcea4baf
+uuid: 4197281e-e5eb-4a09-b600-7234b9966e5d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_paragraph
-    - node.type.landing_page
-    - paragraphs.paragraphs_type.simple_text
+    - field.storage.paragraph.field_sponsor
+    - paragraphs.paragraphs_type.sponsor
     - paragraphs.paragraphs_type.sponsors
   module:
     - entity_reference_revisions
-id: node.landing_page.field_paragraph
-field_name: field_paragraph
-entity_type: node
-bundle: landing_page
-label: Paragraph
+id: paragraph.sponsors.field_sponsor
+field_name: field_sponsor
+entity_type: paragraph
+bundle: sponsors
+label: Sponsor
 description: ''
 required: false
 translatable: false
@@ -23,17 +22,16 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      simple_text: simple_text
-      sponsors: sponsors
+      sponsor: sponsor
     negate: 0
     target_bundles_drag_drop:
       simple_text:
-        weight: 2
-        enabled: true
+        weight: 4
+        enabled: false
       sponsor:
         weight: 5
-        enabled: false
+        enabled: true
       sponsors:
         weight: 6
-        enabled: true
+        enabled: false
 field_type: entity_reference_revisions
