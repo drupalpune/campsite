@@ -1,0 +1,50 @@
+// Sponsors paragraph.
+.paragraph--type--sponsors {
+  .field--name-field-title {
+    .field__item {
+      text-align : center;
+      font-size  : 40px;
+      color      : rgb(3, 73, 130);
+      margin     : 50px 0;
+      font-weight: bold;
+    }
+  }
+
+  .field--name-field-sponsor {
+    .field__items {
+      display        : flex;
+      flex-wrap      : wrap;
+      gap            : 50px;
+      align-items    : center;
+      justify-content: center;
+    }
+  }
+}
+
+// Sponsor paragraph
+.paragraph--type--sponsor {
+  position : relative;
+  max-width: 200px;
+
+  .field--type-image {
+    margin: 0;
+  }
+
+  .field--name-field-link {
+    height: 0;
+  }
+
+  a {
+    font-size: 0;
+    display  : inline-block;
+
+    &::after {
+      content : '';
+      position: absolute;
+      left    : 0;
+      right   : 0;
+      top     : 0;
+      bottom  : 0;
+    }
+  }
+}
