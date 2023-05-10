@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_paragraph
     - node.type.landing_page
+    - paragraphs.paragraphs_type.hero_banner
     - paragraphs.paragraphs_type.simple_text
     - paragraphs.paragraphs_type.sponsors
   module:
@@ -24,9 +25,13 @@ settings:
   handler_settings:
     target_bundles:
       simple_text: simple_text
+      hero_banner: hero_banner
       sponsors: sponsors
     negate: 0
     target_bundles_drag_drop:
+      hero_banner:
+        weight: 5
+        enabled: true
       simple_text:
         weight: 2
         enabled: true
