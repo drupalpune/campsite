@@ -1,0 +1,50 @@
+uuid: 146dcc4d-4af1-4340-97a6-358e9b012bee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_with_pattern.field_after_pattern
+    - field.field.paragraph.image_with_pattern.field_before_pattern
+    - field.field.paragraph.image_with_pattern.field_intro_image
+    - paragraphs.paragraphs_type.image_with_pattern
+  module:
+    - image
+id: paragraph.image_with_pattern.default
+targetEntityType: paragraph
+bundle: image_with_pattern
+mode: default
+content:
+  field_after_pattern:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_before_pattern:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_intro_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

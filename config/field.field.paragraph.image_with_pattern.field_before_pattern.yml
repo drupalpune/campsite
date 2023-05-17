@@ -1,0 +1,38 @@
+uuid: 921fd2f3-cc1d-41c6-9b2e-7599a31f75e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_before_pattern
+    - paragraphs.paragraphs_type.image_with_pattern
+  module:
+    - image
+id: paragraph.image_with_pattern.field_before_pattern
+field_name: field_before_pattern
+entity_type: paragraph
+bundle: image_with_pattern
+label: 'Before Pattern'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

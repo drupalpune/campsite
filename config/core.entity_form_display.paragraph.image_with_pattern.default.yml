@@ -1,0 +1,44 @@
+uuid: d0a188a0-0733-433d-a0af-9555eab4ed4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_with_pattern.field_after_pattern
+    - field.field.paragraph.image_with_pattern.field_before_pattern
+    - field.field.paragraph.image_with_pattern.field_intro_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_with_pattern
+  module:
+    - image
+id: paragraph.image_with_pattern.default
+targetEntityType: paragraph
+bundle: image_with_pattern
+mode: default
+content:
+  field_after_pattern:
+    type: image_image
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_before_pattern:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_intro_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
