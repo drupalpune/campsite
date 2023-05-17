@@ -1,0 +1,33 @@
+.image-with-pattern {
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  height: 480px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.main-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.pattern-image-before ,
+.pattern-image-after {
+  position: absolute;
+  height: 620px;
+  top: -57px;
+}
+
+.pattern-image-after {
+  right: 0;
+}
+
+.pattern-image-before img,
+.pattern-image-after img {
+  height: 620px;
+  object-fit: cover;
+}
