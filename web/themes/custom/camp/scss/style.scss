@@ -1,3 +1,7 @@
+// Variables & mixins
+@import './Components/Global/variables';
+@import './Components/Global/layout';
+
 // Import components
 
 @import './Components/Hero/hero';
@@ -6,4 +10,4 @@
 @import './Components/About/about';
 @import './Components/PatternImage/patternimage';
 @import './Components/Video/video';
-
+@import './Components/Navigation/main-menu';

@@ -1,0 +1,36 @@
+.page-header {
+  display: flex;
+  height: 90px;
+  justify-content: space-between;
+  align-items: center;
+
+  .block-system-branding-block {
+    background: $white;
+    min-height: auto;
+
+    .site-branding__name {
+      display: none;
+    }
+
+    .site-branding__inner {
+      margin-top: 30px;
+    }
+  }
+  
+  .menu--main {
+    ul {
+      &.menu--level-1 {
+        gap: 32px;
+        list-style: none;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+
+        a {
+          color: $primary;
+          text-decoration: none;
+        }
+      }  
+    }
+  }
+}

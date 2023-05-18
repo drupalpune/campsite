@@ -1,6 +1,6 @@
 uuid: 414c5012-a8c0-4567-b38b-921eba2833b5
 langcode: en
-status: true
+status: false
 dependencies:
   theme:
     - camp
@@ -8,8 +8,8 @@ _core:
   default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
 id: camp_page_title
 theme: camp
-region: content_above
-weight: -6
+region: header
+weight: 1
 provider: null
 plugin: page_title_block
 settings:

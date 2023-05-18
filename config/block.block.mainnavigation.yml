@@ -1,6 +1,6 @@
-uuid: 4936ee7c-65bc-4f6d-87e8-078f2470cfc7
+uuid: 15a88c14-9f12-4919-bf72-0b08dcdd9a75
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.main
@@ -8,12 +8,10 @@ dependencies:
     - system
   theme:
     - camp
-_core:
-  default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
-id: camp_main_menu
+id: mainnavigation
 theme: camp
 region: header
-weight: -3
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,6 +20,6 @@ settings:
   label_display: '0'
   provider: system
   level: 1
-  depth: 2
-  expand_all_items: true
+  depth: 0
+  expand_all_items: false
 visibility: {  }
