@@ -2,7 +2,10 @@
 
   <img src="{{ file_url(paragraph.field_background_image.entity.uri.value) }}" alt="{{ paragraph.field_image.alt }}">
   <div class="text-fields-wrapper">
-    <div class="text-field">{{ paragraph.field_title.value }}</div>
-    <div class="text-field">{{ paragraph.field_sub_title.value }}</div>
+    <div class="text-field-title">{{ paragraph.field_title.value }}</div>
+    <div class="text-field-welcome">{{ paragraph.field_welcome_text.value }}</div>
+    <div class="text-field-date">{{ paragraph.field_date.value }}</div>
+    <div class="text-field-subtitle">{{ paragraph.field_sub_title.value }}</div>
+    <button class="action">{{ paragraph.field_call_for_action_.value }}</button>
   </div>
 </div>

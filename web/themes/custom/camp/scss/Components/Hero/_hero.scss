@@ -11,12 +11,57 @@
 
 .text-fields-wrapper {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 180px;
+  margin-left: 60px;
+  max-width: 659px;
+  .text-field-title{
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 68px;
+    letter-spacing: -1.3700000047683716px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 9px;
+  }
+  .text-field-welcome{
+    // font-family: Manrope;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.49583348631858826px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+  }
+  .text-field-date{
+    // font-family: Manrope;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.49583348631858826px;
+    text-align: left;
+    color: #FC8309;
+    margin-bottom: 24px;
+  }
+  .text-field-subtitle{
+    // font-family: Circular Air;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.44625020027160645px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 36px;
+
+  }
+  button.action{
+    height: 48px;
+    width: 186px;
+    left: 0px;
+    top: 0px;
+    border-radius: 55px;
+    padding: 12px 20px 12px 20px;
+    background: #FFFFFF;
+    border-color: transparent;
+  }
 }
 
-.text-field {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
