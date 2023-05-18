@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.hero_banner.field_background_image
+    - field.field.paragraph.hero_banner.field_call_for_action_
+    - field.field.paragraph.hero_banner.field_date
     - field.field.paragraph.hero_banner.field_sub_title
     - field.field.paragraph.hero_banner.field_title
+    - field.field.paragraph.hero_banner.field_welcome_text
     - image.style.thumbnail
     - paragraphs.paragraphs_type.hero_banner
   module:
@@ -23,6 +26,22 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_call_for_action_:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_date:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_sub_title:
     type: string_textfield
     weight: 1
@@ -34,6 +53,14 @@ content:
   field_title:
     type: string_textfield
     weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_welcome_text:
+    type: string_textfield
+    weight: 3
     region: content
     settings:
       size: 60

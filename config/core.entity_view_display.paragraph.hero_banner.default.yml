@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.hero_banner.field_background_image
+    - field.field.paragraph.hero_banner.field_call_for_action_
+    - field.field.paragraph.hero_banner.field_date
     - field.field.paragraph.hero_banner.field_sub_title
     - field.field.paragraph.hero_banner.field_title
+    - field.field.paragraph.hero_banner.field_welcome_text
     - paragraphs.paragraphs_type.hero_banner
   module:
     - image
@@ -25,6 +28,22 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
+  field_call_for_action_:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_date:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_sub_title:
     type: string
     label: hidden
@@ -40,5 +59,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_welcome_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden: {  }
