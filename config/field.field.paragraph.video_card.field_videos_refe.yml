@@ -1,0 +1,46 @@
+uuid: a9c43a9f-412a-4c84-81b0-c59d5992fa45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_videos_refe
+    - paragraphs.paragraphs_type.video
+    - paragraphs.paragraphs_type.video_card
+  module:
+    - entity_reference_revisions
+id: paragraph.video_card.field_videos_refe
+field_name: field_videos_refe
+entity_type: paragraph
+bundle: video_card
+label: 'videos refe'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      video: video
+    negate: 0
+    target_bundles_drag_drop:
+      hero_banner:
+        weight: 7
+        enabled: false
+      simple_text:
+        weight: 8
+        enabled: false
+      sponsor:
+        weight: 9
+        enabled: false
+      sponsors:
+        weight: 10
+        enabled: false
+      video:
+        weight: 11
+        enabled: true
+      video_card:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

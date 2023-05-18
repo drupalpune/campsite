@@ -1,0 +1,42 @@
+uuid: 9dbf3c29-ffb0-492c-9a6e-368b7fa919c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_card.field_heading
+    - field.field.paragraph.video_card.field_short_desc
+    - field.field.paragraph.video_card.field_videos_refe
+    - paragraphs.paragraphs_type.video_card
+  module:
+    - entity_reference_revisions
+id: paragraph.video_card.default
+targetEntityType: paragraph
+bundle: video_card
+mode: default
+content:
+  field_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_short_desc:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_videos_refe:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,20 @@
+.paragraph--type--video-card{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.field.field--name-field-videos-refe.field--type-entity-reference-revisions.field--label-hidden.field__items{
+    display: flex;
+  
+    .field__item{
+        width: 50%;
+        .field--name-field-video{
+            .field__item{
+                width: 100%;
+            }
+        }
+    }
+    .field__item:first-child{
+        margin-right: 40px;
+    }
+
+}
