@@ -1,0 +1,29 @@
+uuid: 6f42a96a-be09-4d46-ae18-7907c34aa660
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_category_
+    - node.type.session
+    - taxonomy.vocabulary.session_category
+id: node.session.field_session_category_
+field_name: field_session_category_
+entity_type: node
+bundle: session
+label: 'Session Category'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      session_category: session_category
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

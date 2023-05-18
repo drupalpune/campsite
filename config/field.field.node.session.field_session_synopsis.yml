@@ -1,0 +1,23 @@
+uuid: 039ae4f0-5a6b-426e-8cb7-74727a3bf5a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_synopsis
+    - node.type.session
+  module:
+    - text
+id: node.session.field_session_synopsis
+field_name: field_session_synopsis
+entity_type: node
+bundle: session
+label: 'Session Synopsis'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
