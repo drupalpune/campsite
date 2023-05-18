@@ -1,0 +1,19 @@
+uuid: 81a829ce-f01d-4696-9e30-76f9a1c85221
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.hero_banner
+id: paragraph.hero_banner.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: hero_banner
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
