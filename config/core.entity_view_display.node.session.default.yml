@@ -1,0 +1,78 @@
+uuid: f7affb1a-b95e-4c4f-a80d-55050109cb83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.session.field_attachment
+    - field.field.node.session.field_co_presenter
+    - field.field.node.session.field_experience_level
+    - field.field.node.session.field_selected
+    - field.field.node.session.field_session_category_
+    - field.field.node.session.field_session_synopsis
+    - field.field.node.session.field_speaker_consent
+    - node.type.session
+  module:
+    - file
+    - options
+    - text
+    - user
+id: node.session.default
+targetEntityType: node
+bundle: session
+mode: default
+content:
+  field_attachment:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_co_presenter:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_experience_level:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_session_category_:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_session_synopsis:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_speaker_consent:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_selected: true
