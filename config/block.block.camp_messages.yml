@@ -1,6 +1,6 @@
 uuid: 70bfcd31-cab4-4d0a-b585-58b00a000c76
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
 id: camp_messages
 theme: camp
-region: content_above
-weight: -7
+region: header
+weight: -1
 provider: null
 plugin: system_messages_block
 settings:

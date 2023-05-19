@@ -1,6 +1,6 @@
 uuid: a1f403a8-15cd-44b6-bd0d-b8a2849a2c09
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,8 +10,8 @@ _core:
   default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
 id: camp_powered
 theme: camp
-region: footer_bottom
-weight: -7
+region: header
+weight: -2
 provider: null
 plugin: system_powered_by_block
 settings:

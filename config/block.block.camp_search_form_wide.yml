@@ -11,7 +11,7 @@ _core:
 id: camp_search_form_wide
 theme: camp
 region: header
-weight: -1
+weight: 4
 provider: null
 plugin: search_form_block
 settings:
