@@ -11,3 +11,7 @@
 @import './Components/PatternImage/patternimage';
 @import './Components/Video/video';
 @import './Components/Navigation/main-menu';
+
+.node__meta span {
+    display: none;
+}

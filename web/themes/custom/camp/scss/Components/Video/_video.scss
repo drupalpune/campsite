@@ -1,7 +1,8 @@
 .paragraph--type--video-card{
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
+
 .field.field--name-field-videos-refe.field--type-entity-reference-revisions.field--label-hidden.field__items{
     display: flex;
   
@@ -16,5 +17,47 @@
     .field__item:first-child{
         margin-right: 40px;
     }
+    .field--name-field-video{
+        margin-bottom: 28px !important;
+    }
 
+}
+.field--name-field-heading{
+font-size: 42px;
+font-weight: 700;
+line-height: 44px;
+letter-spacing: -0.02em;
+text-align: left;
+margin-bottom: 20px !important;
+}
+.field--name-field-short-desc{
+font-size: 20px;
+font-weight: 600;
+line-height: 32px;
+letter-spacing: 0em;
+text-align: left;
+color: #0750F8;
+margin-bottom: 32px !important;
+}
+.field--name-field-video-title{
+    margin-bottom: 6px !important;
+    .field__item{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: left;
+        width: 100% !important;
+    }
+}
+.field--name-field-video-description{
+    .field__item{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #68737D;
+        width: 100% !important;
+    }
 }
