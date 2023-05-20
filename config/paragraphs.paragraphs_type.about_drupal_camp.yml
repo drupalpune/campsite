@@ -1,0 +1,10 @@
+uuid: 22c7f71e-9661-4e23-9d10-dda6911c79e5
+langcode: en
+status: true
+dependencies: {  }
+id: about_drupal_camp
+label: 'About Drupal Camp'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

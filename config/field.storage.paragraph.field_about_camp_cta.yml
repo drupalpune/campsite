@@ -1,0 +1,19 @@
+uuid: 2c2b2cea-c895-4cb0-96b1-8facbda38dac
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_about_camp_cta
+field_name: field_about_camp_cta
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

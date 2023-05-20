@@ -1,0 +1,30 @@
+uuid: 6826e088-d887-46ff-b813-42a02e1ec5cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - paragraphs
+id: paragraph.field_before_pattern
+field_name: field_before_pattern
+entity_type: paragraph
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 8cba0841-064c-4f52-8868-9fe61f86b008
+    alt: 'before pattern'
+    title: ''
+    width: 260
+    height: 536
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
