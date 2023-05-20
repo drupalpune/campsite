@@ -1,0 +1,54 @@
+uuid: a2a9c5ce-5234-4479-a854-ceaff89e87f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.about_drupal_camp.field_about_camp_cta
+    - field.field.paragraph.about_drupal_camp.field_about_camp_description
+    - field.field.paragraph.about_drupal_camp.field_about_camp_subheading
+    - field.field.paragraph.about_drupal_camp.field_about_heading
+    - paragraphs.paragraphs_type.about_drupal_camp
+  module:
+    - link
+    - text
+id: paragraph.about_drupal_camp.default
+targetEntityType: paragraph
+bundle: about_drupal_camp
+mode: default
+content:
+  field_about_camp_cta:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_about_camp_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_about_camp_subheading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_about_heading:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,30 @@
+uuid: 061bae2c-41d8-4d0f-9637-4b949f9bbda3
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - paragraphs
+id: paragraph.field_intro_image
+field_name: field_intro_image
+entity_type: paragraph
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  default_image:
+    uuid: 133a5fc7-6baf-4b4c-b51f-401826a3257a
+    alt: 'intro image'
+    title: ''
+    width: 1024
+    height: 769
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
