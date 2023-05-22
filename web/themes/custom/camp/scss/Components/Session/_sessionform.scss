@@ -1,0 +1,61 @@
+.node-session-form,
+.node-session-edit-form,
+.node-workshop-form,
+.node-workshop-edit-form {
+  max-width: 72rem;
+  margin: 5.25rem auto;
+  padding: 1.25rem 2.5rem;
+
+  .js-form-type-vertical-tabs {
+    display: none;
+  }
+
+  /* Consent field */
+  .form-item-field-speaker-consent-value {
+    display: block;
+
+    .description {
+      position: static;
+      overflow: unset;
+      display: inline-block;
+      margin-left: 0;
+      width: auto;
+
+      :after {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 0.3em;
+        content: "";
+        vertical-align: super;
+        background-image: url('../../Icons/required.svg');
+        background-repeat: no-repeat;
+        background-size: 6px 6px;
+      }
+    }
+
+    label {
+      display: none;
+    }
+  }
+
+  .field--type-text-with-summary {
+    .filter-wrapper {
+      display: none;
+    }
+
+    .js-form-item {
+      &.form-item {
+        &.js-form-type-vertical-tabs {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .field--type-text-long {
+    .filter-wrapper {
+      display: none;
+    }
+  }
+}

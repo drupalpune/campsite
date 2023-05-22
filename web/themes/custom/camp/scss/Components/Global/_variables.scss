@@ -1,4 +1,77 @@
 
 $primary: #2F3941;
 $white: #FFFFFF;
+$primaryFont: 'sans-serif';  //Archivo
+$secondaryFont: 'sans-serif'; //Monorope
+$tertioryFont: 'sans-serif'; //circular-air
+$label: #2d2d2d;
 
+
+
+// old
+
+/*------------------------------------*\
+    * @file
+    * Variables.
+\*------------------------------------*/
+
+// Fonts
+$standard-font: sans-serif;
+$body-font: "Ubuntu", sans-serif;
+$title-font: "Roboto", sans-serif;
+$font--gerogia: 'georgia', sans-serif;
+$font--circular-bold: 'circular-air-bold', sans-serif;
+$font--circular-book: 'circular-air-book', sans-serif;
+$font-eloquent: 'eloquent-regular', sans-serif;
+
+// Font Weights
+$light: 400;
+$normal: 500;
+$bold: 700;
+
+// Font Colors
+$grey: #92969e;
+$blue: #1975d2;
+$black: #131313;
+$light-grey: #d8d8d8;
+$dark-grey: #0f374a;
+$form-select: #9fa0ae;
+$white: #fff;
+$border: #cecece;
+$label: #2d2d2d;
+$form-text: #5e6675;
+$session-title: #313131;
+$speaker: #316cf4;
+$text-color: #717580;
+$schedule-btn-text: #333;
+
+// Background Colors
+$medblue: #f7f9fb;
+$lightblue: #f5f9fe;
+$highlighted: #F1F2F8;
+
+// Button Colors
+$medred: #fd1f58;
+$btn-color: #ff0074;
+$link-red: #ff2370;
+
+// Layouts width
+$container-width: 1440px;
+
+// Border colors
+$color--border: #dadbec;
+
+// Transition time.
+$transition-time: 0.25s;
+
+// Category colors.
+$color--cat-backend: #96cdff;
+$color--cat-frontend: #82ecac;
+$color--cat-qa: #fabd85;
+$color--cat-business: #f7a2b6;
+$color--cat-community: #b79efd;
+$color--cat-beyond: #316cf4;
+
+// Form colors.
+$color--form-bg: #f7f7fb;
+$color--form-border: #e3e3e7;

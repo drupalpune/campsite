@@ -1,0 +1,30 @@
+uuid: 0eea64fe-302d-4200-928e-55c6b024a831
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_banner:8df3915a-11e8-4d9e-a496-a770fecddc41'
+  module:
+    - block_content
+    - system
+  theme:
+    - camp
+id: propose_session_hero
+theme: camp
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:8df3915a-11e8-4d9e-a496-a770fecddc41'
+settings:
+  id: 'block_content:8df3915a-11e8-4d9e-a496-a770fecddc41'
+  label: 'Propose Session Hero'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/add/session

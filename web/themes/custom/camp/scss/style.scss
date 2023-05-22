@@ -5,12 +5,15 @@
 // Import components
 
 @import './Components/Hero/hero';
+@import './Components/Hero/heroblock';
 @import './Components/Sponsors/sponsor';
 @import './Components/Global/global';
+@import './Components/Global/form';
 @import './Components/About/about';
 @import './Components/PatternImage/patternimage';
 @import './Components/Video/video';
 @import './Components/Navigation/main-menu';
+@import './Components/Session/sessionform';
 
 .node__meta span {
     display: none;
