@@ -8,5 +8,6 @@ regions:
   hero: 'Hero (full width)'
   content: Content
   footer: 'Footer'
+  footer2: 'Footer 2'
 libraries:
   - camp/global-styling

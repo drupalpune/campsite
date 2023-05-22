@@ -1,0 +1,25 @@
+uuid: 7dbfb400-e9c2-496c-a379-a81bfabbfdfe
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.help-desk
+  module:
+    - system
+  theme:
+    - camp
+id: helpdesk
+theme: camp
+region: footer2
+weight: 0
+provider: null
+plugin: 'system_menu_block:help-desk'
+settings:
+  id: 'system_menu_block:help-desk'
+  label: 'Help Desk'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

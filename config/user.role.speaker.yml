@@ -1,0 +1,14 @@
+uuid: e5039df4-8e3a-499e-aeac-045aba5fe00a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.session
+  module:
+    - node
+id: speaker
+label: Speaker
+weight: 4
+is_admin: null
+permissions:
+  - 'create session content'

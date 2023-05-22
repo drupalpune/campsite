@@ -1,0 +1,8 @@
+uuid: 6049e8ed-241b-4f95-9e1b-202914310219
+langcode: en
+status: true
+dependencies: {  }
+id: community
+label: Community
+description: ''
+locked: false
