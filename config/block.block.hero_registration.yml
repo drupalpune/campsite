@@ -1,0 +1,30 @@
+uuid: 7a0fccd7-a018-423c-a675-acbe3ff928fc
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:hero_banner:0d5b43b7-3e7e-475b-90e3-1931446345aa'
+  module:
+    - block_content
+    - system
+  theme:
+    - camp
+id: hero_registration
+theme: camp
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:0d5b43b7-3e7e-475b-90e3-1931446345aa'
+settings:
+  id: 'block_content:0d5b43b7-3e7e-475b-90e3-1931446345aa'
+  label: hero-registration
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /registration
