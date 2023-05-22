@@ -1,0 +1,25 @@
+uuid: ec0d6295-94b3-4bc5-9710-fa9d2207f524
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.community
+  module:
+    - system
+  theme:
+    - camp
+id: community
+theme: camp
+region: footer2
+weight: 0
+provider: null
+plugin: 'system_menu_block:community'
+settings:
+  id: 'system_menu_block:community'
+  label: Community
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
