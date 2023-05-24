@@ -1,0 +1,73 @@
+uuid: a191f384-6c74-4526-af75-66b94f179d04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.speaker.field_drupal_speaking_experience
+    - field.field.profile.speaker.field_experience_detail
+    - field.field.profile.speaker.field_first_name
+    - field.field.profile.speaker.field_gender_pronouns
+    - field.field.profile.speaker.field_inclusivity
+    - field.field.profile.speaker.field_last_name
+    - field.field.profile.speaker.field_primary_email
+    - profile.type.speaker
+  module:
+    - options
+id: profile.speaker.default
+targetEntityType: profile
+bundle: speaker
+mode: default
+content:
+  field_drupal_speaking_experience:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_experience_detail:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_first_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_gender_pronouns:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_inclusivity:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_last_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_primary_email:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden: {  }

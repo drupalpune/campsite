@@ -1,0 +1,13 @@
+uuid: 93115384-0ab3-40e0-8671-4c7ef52c7e93
+langcode: en
+status: true
+dependencies: {  }
+id: speaker
+label: Speaker
+display_label: Speaker
+multiple: true
+registration: false
+roles:
+  speaker: speaker
+allow_revisions: false
+new_revision: false

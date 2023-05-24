@@ -1,0 +1,19 @@
+uuid: cfc805da-de59-4fae-8e30-b2f369aa8351
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_primary_email
+    - profile.type.speaker
+id: profile.speaker.field_primary_email
+field_name: field_primary_email
+entity_type: profile
+bundle: speaker
+label: 'Primary Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

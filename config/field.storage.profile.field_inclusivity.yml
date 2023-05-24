@@ -1,0 +1,60 @@
+uuid: f3619c70-68d7-48cc-8d32-969a06a015ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_inclusivity
+field_name: field_inclusivity
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ability
+      label: Ability
+    -
+      value: age
+      label: Age
+    -
+      value: ethnicity
+      label: Ethnicity
+    -
+      value: gender
+      label: Gender
+    -
+      value: gender_identity
+      label: 'Gender identity'
+    -
+      value: race
+      label: Race
+    -
+      value: religion
+      label: Religion
+    -
+      value: sexual_orientation
+      label: 'Sexual orientation'
+    -
+      value: socio_economic_status
+      label: 'Socio-economic status/class'
+    -
+      value: learning_differences
+      label: 'Learning differences'
+    -
+      value: family_composition
+      label: 'Family composition'
+    -
+      value: none
+      label: None
+    -
+      value: prefer_not_to_answer
+      label: 'Prefer not to answer'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

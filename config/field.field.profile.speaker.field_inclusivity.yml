@@ -1,0 +1,23 @@
+uuid: 5a924d23-ad18-4b20-a96a-1de8a8de48c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_inclusivity
+    - profile.type.speaker
+  module:
+    - options
+id: profile.speaker.field_inclusivity
+field_name: field_inclusivity
+entity_type: profile
+bundle: speaker
+label: Inclusivity
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: gender_identity
+default_value_callback: ''
+settings: {  }
+field_type: list_string

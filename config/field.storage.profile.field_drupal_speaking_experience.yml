@@ -1,0 +1,36 @@
+uuid: 4d511d68-51b9-46a5-bdd3-86e09600a381
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - profile
+id: profile.field_drupal_speaking_experience
+field_name: field_drupal_speaking_experience
+entity_type: profile
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: first_time_drupal
+      label: 'This will be my first time speaking at a Drupal event.'
+    -
+      value: experienced
+      label: 'I have spoken earlier at a Drupal event.'
+    -
+      value: 'experienced_non_drupalI have spoken earlier at a non-Drupal event.'
+      label: 'experienced_non_drupalI have spoken earlier at a non-Drupal event.'
+    -
+      value: first_time
+      label: 'This will be my first time speaking at a event.'
+    -
+      value: attending
+      label: "I'm just attending."
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
