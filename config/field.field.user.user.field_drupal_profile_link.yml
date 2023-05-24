@@ -12,7 +12,7 @@ field_name: field_drupal_profile_link
 entity_type: user
 bundle: user
 label: 'Drupal.org Profile'
-description: ''
+description: "Example: http://www.drupal.org/u/dries <br>\r\n"
 required: false
 translatable: false
 default_value: {  }
