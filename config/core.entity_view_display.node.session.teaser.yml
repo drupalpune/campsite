@@ -13,22 +13,47 @@ dependencies:
     - field.field.node.session.field_speaker_consent
     - node.type.session
   module:
+    - options
+    - text
     - user
 id: node.session.teaser
 targetEntityType: node
 bundle: session
 mode: teaser
 content:
-  links:
+  field_co_presenter:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_experience_level:
+    type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 2
+    region: content
+  field_session_category_:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_session_synopsis:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
+  content_moderation_control: true
   field_attachment: true
-  field_co_presenter: true
-  field_experience_level: true
   field_selected: true
-  field_session_category_: true
-  field_session_synopsis: true
   field_speaker_consent: true
+  links: true
