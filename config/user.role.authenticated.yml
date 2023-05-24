@@ -4,10 +4,14 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - node.type.session
+    - workflows.workflow.editorial
   module:
     - comment
     - contact
+    - content_moderation
     - filter
+    - node
     - search
     - shortcut
     - system
@@ -22,7 +26,9 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'create session content'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
+  - 'use editorial transition create_new_draft'
   - 'use text format basic_html'
