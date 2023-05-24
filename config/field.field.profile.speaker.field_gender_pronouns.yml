@@ -1,0 +1,19 @@
+uuid: d03f119d-db95-4123-813c-6a1e60934b84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_gender_pronouns
+    - profile.type.speaker
+id: profile.speaker.field_gender_pronouns
+field_name: field_gender_pronouns
+entity_type: profile
+bundle: speaker
+label: 'Gender Pronouns'
+description: '(They/Them - Ze/Hir - He/Him -She/Her)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

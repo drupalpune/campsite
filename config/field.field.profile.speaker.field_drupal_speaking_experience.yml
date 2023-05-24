@@ -1,0 +1,21 @@
+uuid: a858998a-d541-4713-bafb-7ce3ccf67b04
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_drupal_speaking_experience
+    - profile.type.speaker
+  module:
+    - options
+id: profile.speaker.field_drupal_speaking_experience
+field_name: field_drupal_speaking_experience
+entity_type: profile
+bundle: speaker
+label: 'Drupal Speaking Experience'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

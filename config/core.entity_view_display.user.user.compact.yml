@@ -4,6 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_designation
+    - field.field.user.user.field_drupal_profile_link
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_type_of_business
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -28,4 +33,12 @@ content:
     weight: 0
     region: content
 hidden:
+  field_designation: true
+  field_drupal_profile_link: true
+  field_full_name: true
+  field_organization: true
+  field_type_of_business: true
   member_for: true
+  speaker_biography_profiles: true
+  speaker_experience_profiles: true
+  speaker_profiles: true

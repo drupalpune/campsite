@@ -1,0 +1,19 @@
+uuid: e6660f9b-c47a-4623-9c6d-a14d4c7eac6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_experience_detail
+    - profile.type.speaker
+id: profile.speaker.field_experience_detail
+field_name: field_experience_detail
+entity_type: profile
+bundle: speaker
+label: 'Tell us about your experience as a speaker'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
