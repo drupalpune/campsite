@@ -9,7 +9,7 @@ dependencies:
     - field.field.user.user.field_organization
     - field.field.user.user.field_type_of_business
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.medium
   module:
     - image
     - link
@@ -65,6 +65,8 @@ content:
     weight: 8
     region: content
   member_for:
+    settings: {  }
+    third_party_settings: {  }
     weight: 5
     region: content
   user_picture:
@@ -72,7 +74,7 @@ content:
     label: hidden
     settings:
       image_link: content
-      image_style: thumbnail
+      image_style: medium
       image_loading:
         attribute: lazy
     third_party_settings: {  }
