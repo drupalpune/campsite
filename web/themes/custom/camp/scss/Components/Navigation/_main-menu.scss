@@ -1,9 +1,10 @@
 .page-header {
-  display: flex;
-  height: 90px;
-  justify-content: space-between;
-  align-items: center;
-
+  .menu-wrapper {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+  }
   .block-system-branding-block {
     background: transparent;
     min-height: auto;
@@ -31,6 +32,28 @@
           text-decoration: none;
         }
       }  
+    }
+  }
+  &.navbar-fixed {
+    background-color: rgb(12,18,82);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background 0.4s, all 0.3s linear;
+    .site-branding__logo {
+      width: 100px;
+      img {
+        object-fit: contain;
+        width: inherit;
+      }
+    }
+    .menu--main {
+      li {
+        a {
+          color: white;
+        }
+      }
     }
   }
 }
