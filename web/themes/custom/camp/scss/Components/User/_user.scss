@@ -1,0 +1,138 @@
+.user_profile {
+  &__header {
+    
+    .field--name-user-picture { 
+      position: relative;
+      height: 175px;
+
+      &::before {
+          content: '';
+          height: 262px;
+          width: 100%;
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+          background-image: linear-gradient(to right, $color--banner--purple, $color--banner--orange);
+        }
+
+        img {
+          position: absolute;
+          height: 175px;
+          width: 175px;
+          border-radius: 100%;
+          margin: auto;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          top: 150%;
+          border: 5px solid $white;
+          overflow: hidden;
+        }
+    }
+
+    .field--name-field{
+      &-full-name {
+        margin-bottom: 0;
+        padding-top: 1px;
+  
+        .field__label,
+        .field__item {
+          font-family: $body-font;
+          width: fit-content;
+          margin: auto;
+          line-height: 40px;
+          margin-top: 60px;
+          font-size: 24px;
+          font-weight: $bold;
+        }
+      }
+
+      &-designation {
+        .field__label {
+          display: none;
+        }
+        .field__item {
+          font-family: $body-font;
+          width: fit-content;
+          margin: auto;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 44px;
+    max-width: 400px;
+
+    a {
+      width: 170px;
+      border-radius: 50%;
+      border: 1px solid $btn-gray;
+      color: $btn-text-grey;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 16px;
+    }
+
+    .active {
+      background-color: $color--form-bg;
+      color: $purple;
+      border: none;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      margin: 60px 0;
+    }
+
+    @media (max-width: 768px) {
+      margin-inline: 30px;
+    }
+  }
+
+  &__wrapper {
+    max-width: 800px;
+    margin: 45px auto 100px auto;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-left: 30px;
+    }
+
+    .field {
+      flex-basis: 50%;
+    
+      &__label {
+        font-size: 20px;
+        color: $label-text;
+        font-weight: unset;
+      }
+  
+      &__item {
+        font-family: $body-font;
+        font-weight: bold;
+        font-size: 24px;
+      }
+    }
+  }
+}
