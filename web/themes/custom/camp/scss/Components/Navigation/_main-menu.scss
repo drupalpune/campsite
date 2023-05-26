@@ -41,6 +41,7 @@
     left: 0;
     width: 100%;
     transition: background 0.4s, all 0.3s linear;
+    z-index: 9;
     .site-branding__logo {
       width: 100px;
       img {
