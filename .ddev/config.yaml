@@ -1,4 +1,4 @@
-name: drupal-camp-pune-2023
+name: dcp-2023
 type: drupal10
 docroot: web
 php_version: "8.1"

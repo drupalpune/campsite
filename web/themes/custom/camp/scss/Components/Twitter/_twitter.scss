@@ -1,0 +1,34 @@
+#block-twitterblock {
+    margin: 0px 30px; // Adjusted margin for mobile view
+    width: 90vw; // Adjusted width for mobile view
+    
+    @media screen and (min-width: 480px) {
+      margin: 0px 40px; // Adjusted margin for wider mobile devices
+    }
+  
+    @media screen and (min-width: 768px) {
+      margin: 0px 60px; // Original margin for tablet view
+      width: 90.5vw; // Original width for tablet view
+    }
+    
+    .block__title {
+      font-family: $primaryFont;
+      font-size: 28px; // Adjusted font-size for mobile view
+      font-weight: 700;
+      line-height: 30px; // Adjusted line-height for mobile view
+      letter-spacing: -0.02em;
+      text-align: left;
+      color: $black;
+      
+      @media screen and (min-width: 480px) {
+        font-size: 32px; // Adjusted font-size for wider mobile devices
+        line-height: 34px; // Adjusted line-height for wider mobile devices
+      }
+  
+      @media screen and (min-width: 768px) {
+        font-size: 42px; // Original font-size for tablet view
+        line-height: 44px; // Original line-height for tablet view
+      }
+    }
+  }
+  
