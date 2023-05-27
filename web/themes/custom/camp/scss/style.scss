@@ -1,7 +1,7 @@
 // Variables & mixins
 @import './Components/Global/variables';
 @import './Components/Global/layout';
-
+@import './Components/Global/mixins';
 // Import components
 
 @import './Components/Hero/hero';
@@ -23,3 +23,9 @@
 }
 @import './Components/PatternImage/patternimage';
 @import './Components/Footer/footer';
+
+nav#block-mainnavigation{
+    @include tablet{
+        display: none;
+    }
+}

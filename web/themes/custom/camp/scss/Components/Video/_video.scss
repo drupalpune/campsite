@@ -1,5 +1,8 @@
 .paragraph--type--video-card{
     margin: 60px;
+    @include mobile{
+        margin: 30px 16px;
+    }
 }
 
 .field.field--name-field-videos-refe.field--type-entity-reference-revisions.field--label-hidden.field__items{
