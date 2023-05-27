@@ -34,3 +34,39 @@ footer.page-footer-section{
   margin-top: -9px;
   padding: 96px 60px;
 }
+.fab{
+  color: #D8D8D8;
+}
+#block-registernow{
+  @include mobile{
+    display: none;
+  }
+ div.text-content p{
+  height: 48px;
+  font-size: 16px;
+  border-radius: 55px;
+  padding: 3px 20px;
+  background: #5225B5;
+  border: 1px solid #5225B5;
+
+a{
+  color: white;
+  text-decoration: none;
+  box-shadow: none;
+  text-transform: uppercase;
+}
+}
+}
+header.page-header {
+  z-index: 1;
+  width: 100vw;
+  background: white;
+  &.fixed{
+    position: fixed;
+  }
+}
+#block-socialmedialinks{
+@include mobile{
+  display: none;
+}
+}

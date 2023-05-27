@@ -4,9 +4,15 @@
   height: auto;
 }
 
-.full-width-banner img {
+.full-width-banner{
+  background-image: url('../scss/Images/group.png');
   width: 100%;
-  height: auto;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mobile{
+    height: 63vh;
+  }
 }
 
 .text-fields-wrapper {
@@ -14,6 +20,11 @@
   top: 180px;
   margin-left: 60px;
   max-width: 659px;
+  @include mobile{
+    top: 65px;
+    margin: 0px 16px;
+    text-align: center;
+  }
   .text-field-title{
     font-size: 72px;
     font-weight: 700;
@@ -22,6 +33,12 @@
     text-align: left;
     color: #FFFFFF;
     margin-bottom: 9px;
+   @include mobile{
+    font-size: 40px;
+    line-height: 68px;
+    letter-spacing: 0.3500001132488251px;
+    text-align: center;
+   }
   }
   .text-field-welcome{
     font-family: $secondaryFont;
@@ -32,6 +49,12 @@
     text-align: left;
     color: #FFFFFF;
     margin-bottom: 24px;
+    @include mobile{
+      font-size: 30px;
+      line-height: 40px;
+      letter-spacing: 0.35000020265579224px;
+      text-align: center;
+    }
   }
   .text-field-date{
     font-family: $secondaryFont;
@@ -42,16 +65,27 @@
     text-align: left;
     color: #FC8309;
     margin-bottom: 24px;
+    @include mobile{
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.49583348631858826px;
+    text-align: center;
+    }
   }
   .text-field-subtitle{
-    // font-family: Circular Air;
+    font-family:$tertioryFont;
     font-size: 18px;
     line-height: 25px;
     letter-spacing: 0.44625020027160645px;
     text-align: left;
     color: #FFFFFF;
     margin-bottom: 36px;
-
+    @include mobile{
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.44625020027160645px;
+    text-align: center;
+    }
   }
   button.action{
     height: 48px;
@@ -62,6 +96,7 @@
     padding: 12px 20px 12px 20px;
     background: #FFFFFF;
     border-color: transparent;
+
   }
 }
 
