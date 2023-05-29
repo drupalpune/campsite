@@ -29,7 +29,8 @@
         "drupal/captcha": "^1.9",
         "drupal/twitter_block": "^3.0",
         "drupal/stage_file_proxy": "^2.0",
-        "drupal/social_media_links": "^2.9"
+        "drupal/social_media_links": "^2.9",
+        "drupal/webform": "^6.2@beta"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
