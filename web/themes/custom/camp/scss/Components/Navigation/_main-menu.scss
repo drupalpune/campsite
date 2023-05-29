@@ -58,3 +58,13 @@
     }
   }
 }
+
+.block-cheeseburger-menu  {
+  margin-right: 30px;
+  .block-cheeseburgermenu__trigger-element {
+    background-color: $purple;
+    span {
+      background: $white;
+    }
+  }
+}

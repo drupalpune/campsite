@@ -1,0 +1,25 @@
+uuid: 7dea1da0-3d16-42b3-944b-b701857e37e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block.block.cheeseburgermenu
+  module:
+    - cheeseburger_menu
+  theme:
+    - camp
+id: cheeseburgermenutrigger
+theme: camp
+region: header
+weight: 2
+provider: null
+plugin: cheeseburger_menu_trigger
+settings:
+  id: cheeseburger_menu_trigger
+  label: 'Cheeseburger menu trigger'
+  label_display: '0'
+  provider: cheeseburger_menu
+  block_to_trigger: cheeseburgermenu
+  breakpoints: {  }
+  custom_media_query: 'only screen and (min-width: 1025px)'
+visibility: {  }

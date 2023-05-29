@@ -26,7 +26,7 @@
 @import './Components/Footer/footer';
 
 nav#block-mainnavigation{
-    @include tablet{
+    @include laptop {
         display: none;
     }
 }
