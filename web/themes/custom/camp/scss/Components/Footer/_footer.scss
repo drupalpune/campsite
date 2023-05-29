@@ -9,6 +9,9 @@
     li{
         list-style: none;
     }
+    @include mobile{
+        width: 100%;
+    }
 }
 footer.page-footer-section{
     padding: 64px 60px 48px 60px;
@@ -23,6 +26,9 @@ footer.page-footer-section{
         color: white;
         margin-top: unset;
         margin-bottom: 16px;
+        @include mobile{
+            font-size: 30px;
+        }
     }
     h2.block__title{
         color: #C2C8CC;
