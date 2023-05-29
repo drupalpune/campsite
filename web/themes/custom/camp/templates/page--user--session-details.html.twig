@@ -1,0 +1,25 @@
+<div id="page-wrapper" class="page-wrapper page-user-session-wrapper">
+  <div class="dcp-page-wrapper">
+    <header class="page-header">
+      <div class="menu-wrapper">
+        {{ page.header }}
+      </div>
+    </header>
+    <section class="page-hero-section">
+      {{ page.hero }}
+    </section>
+    <section class="page-hero-section">
+      <div class="user_profile__links">
+        <a href="/user/{{user.id}}">My Profile</a>
+        <a href="/user/session-details/{{ user.id }}"  class="active">Sessions Details</a>
+      </div>
+      <h2 class="session-text">{{ 'Sessions' | t }}</h2>
+      {{ page.content }}
+    </section>
+    <footer class="page-footer-section">
+    <h2 class="foot1-head">Learn, connect, and Grow</h2>
+    <div class="footer-links">#Drupal2023 #Bettertogether #techvibe #Collaborate</div>
+      {{ page.footer2 }}
+    </footer>
+  </div>
+</div>

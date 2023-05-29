@@ -1,0 +1,74 @@
+.page-user-session-wrapper {
+  background-color: $lightgrey;
+  .session-text {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 92px 0 42px;
+    @media (max-width: 768px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  .view-sessions-details {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    @media (max-width: 768px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .view-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 40px;
+      .views-row  {
+        min-width: 356px;
+        padding: 30px;
+        text-align: left;
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+        strong {
+          font-family: $body-font;
+        }
+        .node__title {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 30px;
+          letter-spacing: 0.315px;
+          color: $label;
+        }
+        background-color: $white;
+        border-left: 6px solid $color--lightViolet;
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        .field--name-field-session-category-,
+        .field--name-field-experience-level,
+        .field--name-field-speaker-consent {
+          display: none;
+        }
+        .field--name-field-session-synopsis {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 30px;
+          letter-spacing: 0.315px;
+          color: $label;
+          margin-bottom: 0;
+          p {
+            padding-bottom: 20px;
+          }
+          &::after {
+            content: '';
+            width: 100%;
+            border-bottom: 1px solid $color--border;
+          }
+        }
+      }
+    }
+  }
+}
