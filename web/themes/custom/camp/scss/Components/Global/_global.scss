@@ -63,6 +63,12 @@ header.page-header {
   background: white;
   &.fixed{
     position: fixed;
+    background: #5225B5;
+    .menu--main {
+     li a {
+        color: $white;
+      }
+    }
   }
 }
 #block-socialmedialinks{
