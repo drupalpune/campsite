@@ -18,8 +18,8 @@ settings:
       value: experienced
       label: 'I have spoken earlier at a Drupal event.'
     -
-      value: 'experienced_non_drupalI have spoken earlier at a non-Drupal event.'
-      label: 'experienced_non_drupalI have spoken earlier at a non-Drupal event.'
+      value: experienced_non_drupal
+      label: 'I have spoken earlier at a non-Drupal event.'
     -
       value: first_time
       label: 'This will be my first time speaking at a event.'
