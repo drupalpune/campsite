@@ -15,11 +15,11 @@
 @import './Components/Navigation/main-menu';
 @import './Components/Session/sessionform';
 @import './Components/User/user';
+@import './Components/User/session-user';
 @import './Components/Twitter/twitter';
 
-
 .node__meta span {
-    display: none;
+  display: none;
 }
 @import './Components/PatternImage/patternimage';
 @import './Components/Footer/footer';

@@ -20,7 +20,7 @@
 #}
 <article{{attributes}}>
 	{% if content %}
-		<div class="user_profile">
+        <div class="user_profile">
 			<div class="user_profile__header">
 				{{ content.user_picture }}
 				{{ content.field_full_name }}
@@ -29,7 +29,7 @@
 			<div class="user_profile__wrapper">
 				<div class="user_profile__links">
 					<a href="url" class="active">My Profile</a>
-					<a href="url">Sessions Details</a>
+					<a href="/user/session-details/{{ user.id }}">Sessions Details</a>
 				</div>
 				<div class="user_profile__title">
 					<h2>My Profile
