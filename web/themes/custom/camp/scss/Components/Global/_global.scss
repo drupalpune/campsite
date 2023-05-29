@@ -38,17 +38,17 @@ footer.page-footer-section{
   color: #D8D8D8;
 }
 
- .register-now{
+ .register-now {
   height: 48px;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
   border-radius: 55px;
   padding: 12px 20px;
-  background: #5225B5;
-  border: 1px solid #5225B5;
+  background: $purple;
+  border: 1px solid $purple;
 
-a{
+a {
   color: white;
   text-decoration: none;
   box-shadow: none;
@@ -59,13 +59,19 @@ header.page-header {
   z-index: 1;
   
   background: white;
-  &.fixed{
+  &.fixed {
     width: 100vw;
     position: fixed;
-    background: #5225B5;
+    background: $purple;
     .menu--main {
      li a {
         color: $white;
+      }
+    }
+    .register-now {
+      background: $white;
+      a {
+        color: $purple;
       }
     }
   }
