@@ -3,6 +3,21 @@
     <header class="page-header">
       <div class="menu-wrapper">
         {{ page.header }}
+        {% if user_profile_url is not null %}
+          <div class="profile-name">
+            HELLO {{ user_profile_name }}
+          </div>
+          <div class="profile-dropdown-menu">
+            <ul>
+              <li><a href="{{ user_profile_url }}">View Profile</a></li>
+              <li><a href="{{ path('user.logout') }}">Log Out</a></li>
+            </ul>
+          </div>
+        {% else %}
+          <div class="register-now">
+            <a href="{{ path('user.register') }}">Register Now</a>
+          </div>
+        {% endif %}
       </div>
     </header>
     <section class="page-hero-section">
@@ -12,8 +27,8 @@
       {{ page.content }}
     </section>
     <footer class="page-footer-section">
-    <h2 class="foot1-head">Learn, connect, and Grow</h2>
-    <div class="footer-links">#Drupal2023 #Bettertogether #techvibe #Collaborate</div>
+      <h2 class="foot1-head">Learn, connect, and Grow</h2>
+      <div class="footer-links">#Drupal2023 #Bettertogether #techvibe #Collaborate</div>
       {{ page.footer2 }}
     </footer>
   </div>
