@@ -1,7 +1,7 @@
 (function ($, Drupal) {
     Drupal.behaviors.headerScroll = {
       attach: function (context, settings) {
-        $(document).ready(function(e) {
+        $(document).ready(function() {
           $(context).find('.profile-name').on('click', function() {
             console.log('Clicked on .profile-name');
             $(this).toggleClass('open');
