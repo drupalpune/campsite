@@ -27,6 +27,8 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  google_api_client: 0
+  googlelogin: 0
   help: 0
   history: 0
   image: 0
@@ -44,6 +46,9 @@ module:
   shortcut: 0
   social_media_links: 0
   stage_file_proxy: 0
+  social_api: 0
+  social_auth: 0
+  social_auth_google: 0
   standard: 0
   system: 0
   taxonomy: 0
