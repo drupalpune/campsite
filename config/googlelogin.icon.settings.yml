@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: J9l9v5XR_U4Q_OYCk1JskOFEqJNDsJ4bAw1-ST02lhE
+type: standard
+theme: outline
+size: large
+text: signin_with
+shape: rectangular
+logo_alignment: left
+locale: Login
+show_on_login_form: true
+width: '200'

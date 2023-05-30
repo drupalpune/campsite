@@ -31,7 +31,12 @@
         "drupal/stage_file_proxy": "^2.0",
         "drupal/social_media_links": "^2.9",
         "drupal/cheeseburger_menu": "^5.0@RC",
-        "drupal/webform": "^6.2@beta"
+        "drupal/webform": "^6.2@beta",
+        "drupal/social_auth_google": "^4.0",
+        "drupal/social_auth": "^4.0",
+        "drupal/social_api": "^4.0",
+        "drupal/google_api_client": "^4.3",
+        "drupal/googlelogin-googlelogin": "^9.2"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
