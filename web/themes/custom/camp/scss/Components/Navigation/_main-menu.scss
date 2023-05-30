@@ -4,9 +4,15 @@
     height: 80px;
     justify-content: space-between;
     align-items: center;
-    .profile-name:not(.cheeseburger-menu__mainmenu .profile-name:last-child) {
+    .profile-name:not(.cheeseburger-menu__mainmenu .profile-name:last-child),
+    .register-now:not(.cheeseburger-menu__mainmenu .register-now) {
       @include laptop {
         display: none;
+      }
+    }
+    .cheeseburger-menu__mainmenu {
+      .profile-name:last-child {
+        margin: 10px 10px 0;
       }
     }
   }
@@ -65,7 +71,6 @@
 }
 
 .block-cheeseburger-menu  {
-  margin-right: 30px;
   .block-cheeseburgermenu__trigger-element {
     background-color: $purple;
     span {
