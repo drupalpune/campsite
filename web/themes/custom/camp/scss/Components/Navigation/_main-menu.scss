@@ -4,6 +4,11 @@
     height: 80px;
     justify-content: space-between;
     align-items: center;
+    .profile-name:not(.cheeseburger-menu__mainmenu .profile-name:last-child) {
+      @include laptop {
+        display: none;
+      }
+    }
   }
   .block-system-branding-block {
     background: transparent;
@@ -66,5 +71,11 @@
     span {
       background: $white;
     }
+  }
+}
+.cheeseburger-menu__mainmenu {
+  margin: 0 10px;
+  .register-now {
+    margin-top: 10px;
   }
 }
