@@ -18,11 +18,18 @@ footer.page-footer-section{
   img{
     position: relative;
     z-index: 1;
+    max-height: 100%;
   }
 }
 .field--name-field-paragraph{
   .full-width-banner{
-    margin-top: -45px;
+    margin-top: -35px;
+    @include mobile{
+    margin-top: -20px;
+    }
+    @include tablet{
+      margin-top: -43px;
+    }
   }
 }
 .region--hero{
@@ -57,31 +64,18 @@ a {
   text-transform: uppercase;
 }
 }
+
 header.page-header {
+
   z-index: 1;
   
   background: white;
   &.fixed {
     width: 100vw;
     position: fixed;
-    background: $purple;
-    .menu--main {
-     li a {
-        color: $white;
-      }
-    }
-    .register-now {
-      background: $white;
-      a {
-        color: $purple;
-      }
-    }
+    background-color: #ffffff; /* Set the background color of the header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a box shadow */
   }
-}
-#block-socialmedialinks{
-@include mobile{
-  display: none;
-}
 }
 .profile-name{
   font-family: $secondaryFont;
@@ -93,9 +87,11 @@ header.page-header {
   color: #FF2370;
   text-transform: uppercase;
   display: flex;
+  align-items: center;
+  margin-right: 20px;
   cursor: pointer;
   @include mobile{
-    display: none;
+    display: block !important;
   }
 
   &:after{
@@ -105,12 +101,14 @@ header.page-header {
     width: 0.5rem;
     border-color: #000;
     border: 1.67px solid #68737D;
-    margin-left: 13px;
+    margin-left: 10px;
     transform: rotate(45deg);
     border-top: none;
     border-left: none;
-    margin-top: 2px;
-
+    margin-top: -4px;
+    @include mobile{
+      content: none;
+    }
   }
 }
 
@@ -142,5 +140,57 @@ header.page-header {
 #block-camp-primary-local-tasks{
   .tabs{
     display: none;
+  }
+}
+.cheeseburger-menu__title{
+  display: none;
+}
+
+div#block-cheeseburgermenu{
+  width: 100%;
+  .cheeseburger-menu__main-navigation-area>div{
+    border-bottom: 0px;
+  }
+  .cheeseburger-menu__side-trigger{
+    margin-right: 14px;
+   svg{
+    fill: #000;
+    margin: 0 0 0 auto;
+  }
+}
+ul.cheeseburger-menu__mainmenu{
+  li.cheeseburger-menu__item{
+    margin-bottom: 44px;
+    a span{
+  font-family:$tertioryFont;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.31500008702278137px;
+  text-align: left;
+  color: #9FA0AE;
+    }
+    &.in-active-trail{
+      a {
+        text-decoration: none;
+        span{
+      font-family:$tertioryFont;
+      font-size: 36px;
+      line-height: 20px;
+      letter-spacing: 0.31500008702278137px;
+      text-align: left;
+      color: #316CF4;
+      }
+    }
+    }
+  }
+}
+}
+.buttoncta{
+  display: flex;
+  @include mobile{
+    display: none;
+  }
+  .register-now:first-child{
+    margin-right: 10px;
   }
 }

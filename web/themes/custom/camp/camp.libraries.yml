@@ -4,6 +4,6 @@ global-styling:
     theme:
       css/style.css: {}
   js:
-    js/script.js: {}
+    js/campscript.js: {}
   dependencies:
     - core/jquery
