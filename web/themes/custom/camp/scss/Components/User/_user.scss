@@ -14,7 +14,8 @@
           right: 0;
           bottom: 0;
           top: 0;
-          background-image: linear-gradient(to right, $color--banner--purple, $color--banner--orange);
+          background-image: url('../scss/Images/heroBanner.png');
+          background-size: cover;
         }
 
         img {
@@ -38,7 +39,7 @@
   
         .field__label,
         .field__item {
-          font-family: $body-font;
+          font-family: $primaryFont;
           width: fit-content;
           margin: auto;
           line-height: 40px;
@@ -53,7 +54,7 @@
           display: none;
         }
         .field__item {
-          font-family: $body-font;
+          font-family: $secondaryFont;
           width: fit-content;
           margin: auto;
           font-size: 16px;
@@ -98,6 +99,7 @@
 
     h2 {
       margin: 60px 0;
+      font-family: 'Circular Air';
     }
 
     @media (max-width: 768px) {
@@ -129,7 +131,7 @@
       }
   
       &__item {
-        font-family: $body-font;
+        font-family: $secondaryFont;
         font-weight: bold;
         font-size: 24px;
       }
