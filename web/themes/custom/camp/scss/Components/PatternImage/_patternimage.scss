@@ -20,6 +20,9 @@
   position: absolute;
   height: 620px;
   top: -57px;
+  @include mobile{
+    display: none;
+  }
 }
 
 .pattern-image-after {

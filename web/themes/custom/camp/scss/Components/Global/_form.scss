@@ -1,5 +1,8 @@
 form {
   margin: 0px 260px;
+  @include mobile{
+    margin: 0px 20px;
+  }
     .form-item {
       display: flex;
       flex-flow: column nowrap;
@@ -118,5 +121,9 @@ form {
   .form-actions {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
-  
+  div#google-signin-container {
+    display: flex;
+    justify-content: center;
+}

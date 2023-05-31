@@ -9,7 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.hero_banner
     - paragraphs.paragraphs_type.image_with_pattern
     - paragraphs.paragraphs_type.simple_text
-    - paragraphs.paragraphs_type.sponsors
+    - paragraphs.paragraphs_type.sponsor
     - paragraphs.paragraphs_type.video_card
   module:
     - entity_reference_revisions
@@ -29,10 +29,10 @@ settings:
     target_bundles:
       simple_text: simple_text
       hero_banner: hero_banner
+      sponsor: sponsor
       about_drupal_camp: about_drupal_camp
-      sponsors: sponsors
-      video_card: video_card
       image_with_pattern: image_with_pattern
+      video_card: video_card
     negate: 0
     target_bundles_drag_drop:
       about_drupal_camp:
@@ -49,9 +49,6 @@ settings:
         enabled: true
       sponsor:
         weight: 5
-        enabled: false
-      sponsors:
-        weight: 6
         enabled: true
       video:
         weight: 10
