@@ -3,7 +3,9 @@
     <header class="page-header">
       <div class="menu-wrapper">
         {{ page.header }}
+        <div class = "buttoncta">
         {% if user_profile_url is not null %}
+        
           <div class="profile-name">
             HELLO {{ user_profile_name }}
           </div>
@@ -13,11 +15,18 @@
               <li><a href="{{ path('user.logout') }}">Log Out</a></li>
             </ul>
           </div>
+            <div class="register-now">
+              <a href="/submit-session">Submit A Session</a>
+          </div>
         {% else %}
           <div class="register-now">
-            <a href="{{ path('user.register') }}">Register Now</a>
+            <a href="{{ path('user.login') }}">Login</a>
+          </div>
+          <div class="register-now">
+              <a href="{{ path('user.login') }}">Submit A Session</a>
           </div>
         {% endif %}
+        </div>
       </div>
     </header>
     <section class="page-hero-section">

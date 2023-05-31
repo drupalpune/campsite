@@ -1,5 +1,8 @@
 .page-header {
   .menu-wrapper {
+    @include mobile{
+      margin: 0 17px;
+      }
     display: flex;
     height: 80px;
     justify-content: space-between;
@@ -79,7 +82,7 @@
   }
 }
 .cheeseburger-menu__mainmenu {
-  margin: 0 10px;
+  margin: 0 80px;
   .register-now {
     margin-top: 10px;
   }

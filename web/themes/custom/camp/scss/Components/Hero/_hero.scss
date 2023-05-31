@@ -13,6 +13,9 @@
   @include mobile{
     height: 63vh;
   }
+  @include mobile_M{
+    height: 80vh;
+  }
 }
 
 .text-fields-wrapper {
