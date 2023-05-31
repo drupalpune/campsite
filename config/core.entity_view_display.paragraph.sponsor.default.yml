@@ -16,7 +16,7 @@ mode: default
 content:
   field_image:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
       image_style: ''
@@ -26,8 +26,8 @@ content:
     weight: 0
     region: content
   field_link:
-    type: link
-    label: above
+    type: link_separate
+    label: hidden
     settings:
       trim_length: 80
       url_only: false

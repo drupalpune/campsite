@@ -10,6 +10,9 @@
   
     .field__item{
         width: 50%;
+        @include mobile{
+            width: unset;
+        }
         .field--name-field-video{
             .field__item{
                 width: 100%;
@@ -18,7 +21,11 @@
     }
     .field__item:first-child{
         margin-right: 40px;
+        @include mobile{
+            display: none;
+        }
     }
+    
     .field--name-field-video{
         margin-bottom: 28px !important;
     }

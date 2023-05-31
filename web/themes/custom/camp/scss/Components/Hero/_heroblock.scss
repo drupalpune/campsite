@@ -7,6 +7,10 @@
         letter-spacing: -0.02em;
         text-align: center;
         color: $white;
+        @include mobile{
+            font-size: 25px;
+            margin-bottom: unset;
+        }
     }
     .field--name-body p{
         font-family: $secondaryFont;
