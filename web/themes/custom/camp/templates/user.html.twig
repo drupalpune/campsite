@@ -26,27 +26,5 @@
 				{{ content.field_full_name }}
 				{{ content.field_designation }}
 			</div>
-			<div class="user_profile__wrapper">
-				<div class="user_profile__links">
-					<a href="url" class="active">My Profile</a>
-					<a href="/user/session-details/{{ user.id }}">Sessions Details</a>
-				</div>
-				<div class="user_profile__title">
-					<h2>My Profile
-					</h2>
-					<a href="{{ url('<current>') }}/edit">edit</a>
-				</div>
-				<div class="user_profile__content">
-					{{ content.field_full_name }}
-					<div class="field field--name-email field--label-above">
-						<div class="field__label">{% trans %}Email{% endtrans %}</div>
-						<div class="field__item">{{ user.mail.value }}</a>
-					</div>
-				</div>
-				{{ content.field_organization }}
-				{{ content.field_designation }}
-				{{ content.field_drupal_profile_link }}
-			</div>
 		</div>
-	</div>
 {% endif %}</article>

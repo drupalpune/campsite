@@ -128,13 +128,50 @@
         font-size: 20px;
         color: $label-text;
         font-weight: unset;
+        @include mobile{
+          font-size: 17px;
+        }
       }
   
       &__item {
         font-family: $secondaryFont;
         font-weight: bold;
         font-size: 24px;
+        @include mobile{
+          font-size: 20px;
+        }
       }
+    }
+  }
+}
+
+//quicktabs implementation
+
+ul.quicktabs-tabs{
+  @include mobile{
+    margin: unset;
+  }
+  text-align: center;
+  li{
+    width: 170px;
+    border: 1px solid #e9ebed;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    a{
+      color: #68737d;
+      text-decoration: none;
+    }
+    &.active {
+      a{
+      color: $purple;
+      }
+      background-color: $color--form-bg;
+      border: none;
     }
   }
 }

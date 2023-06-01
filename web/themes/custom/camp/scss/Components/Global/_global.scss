@@ -210,3 +210,8 @@ ul.cheeseburger-menu__mainmenu{
 #block-camp-primary-local-tasks{
   display: none;
 }
+.node--type-landing-page{
+  .node__author-image{
+    display: none;
+  }
+}

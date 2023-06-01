@@ -1,0 +1,25 @@
+uuid: 50fa7827-c5c7-4835-bf41-73d9bf9490b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - quicktabs
+    - system
+  theme:
+    - camp
+id: quicktabsprofilepage
+theme: camp
+region: content
+weight: 0
+provider: null
+plugin: 'quicktabs_block:profile_page'
+settings:
+  id: 'quicktabs_block:profile_page'
+  label: 'QuickTabs - profile page'
+  label_display: '0'
+  provider: quicktabs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'

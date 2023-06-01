@@ -11,4 +11,5 @@ label: Speaker
 weight: 4
 is_admin: null
 permissions:
+  - 'access user profiles'
   - 'create session content'
