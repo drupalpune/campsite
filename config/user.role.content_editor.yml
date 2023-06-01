@@ -29,6 +29,7 @@ permissions:
   - 'access files overview'
   - 'access toolbar'
   - 'access tour'
+  - 'access user profiles'
   - 'administer url aliases'
   - 'create article content'
   - 'create page content'

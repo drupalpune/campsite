@@ -1,0 +1,61 @@
+uuid: b418abf0-8992-4f50-a548-8bfc0c75b431
+langcode: en
+status: true
+dependencies: {  }
+id: profile_page
+label: 'profile page'
+renderer: quick_tabs
+hide_empty_tabs: false
+default_tab: 0
+options:
+  quick_tabs:
+    ajax: false
+    class: ''
+    style: ''
+configuration_data:
+  -
+    title: 'My Profile'
+    weight: 0
+    type: view_content
+    content:
+      block_content:
+        options:
+          bid: google_oauth_login_block
+          block_title: ''
+          display_title: false
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: true
+      view_content:
+        options:
+          vid: my_profile
+          display: block_1
+          args: '%2'
+      qtabs_content:
+        options:
+          machine_name: ''
+  -
+    title: Session
+    weight: 0
+    type: view_content
+    content:
+      block_content:
+        options:
+          bid: google_oauth_login_block
+          block_title: ''
+          display_title: false
+      node_content:
+        options:
+          nid: ''
+          view_mode: full
+          hide_title: true
+      view_content:
+        options:
+          vid: session
+          display: block_1
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: ''

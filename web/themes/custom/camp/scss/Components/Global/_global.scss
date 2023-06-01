@@ -117,22 +117,34 @@ header.page-header {
   &.open{
     display: block;
   position: absolute;
-  right: 4%;
-  top: 60px;
+  left: -25%;
+  top: 45px;
   z-index: 1;
   background: white;
   width: 240px;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   ul{
+    margin: unset;
     li{
       list-style: none;
-      height: 40px;
       width: 240px;
       left: 0px;
       top: 0px;
       border-radius: 0px;
       padding: 10px 16px 10px 16px;
-
+      &:first-child{
+        border-bottom: 1px solid #E9EBED;
+      }
+      a{
+        font-family: Helvetica;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0em;
+        text-align: left;
+        color: black;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -187,10 +199,19 @@ ul.cheeseburger-menu__mainmenu{
 }
 .buttoncta{
   display: flex;
+  position: relative;
   @include mobile{
     display: none;
   }
   .register-now:first-child{
     margin-right: 10px;
+  }
+}
+#block-camp-primary-local-tasks{
+  display: none;
+}
+.node--type-landing-page{
+  .node__author-image{
+    display: none;
   }
 }
