@@ -44,6 +44,7 @@ module:
   path_alias: 0
   persistent_login: 0
   profile: 0
+  quicktabs: 0
   search: 0
   shortcut: 0
   smtp: 0
