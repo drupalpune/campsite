@@ -4,17 +4,17 @@
 
 # Pantheon commits a settings.php for environment-specific settings.
 # Place local settings in settings.local.php
-/web/sites/*/settings.local.php
-/web/sites/*/services*.yml
-!/web/sites/*/services.pantheon.*.yml
-!/web/sites/*/services.yml
+/docroot/sites/*/settings.local.php
+/docroot/sites/*/services*.yml
+!/docroot/sites/*/services.pantheon.*.yml
+!/docroot/sites/*/services.yml
 
 # Ignore paths that contain user-generated content.
-/web/sites/*/files
-/web/sites/*/private
+/docroot/sites/*/files
+/docroot/sites/*/private
 
 # Ignore SimpleTest multi-site environment.
-/web/sites/simpletest
+/docroot/sites/simpletest
 
 #Ignore node_modules
 node_modules
@@ -58,12 +58,12 @@ node_modules
 # file.
 # ------------------------------------------------------------------
 /drush/Commands/contrib/
-/web/core/
-/web/modules/contrib/
-/web/themes/contrib/
-/web/profiles/contrib/
-/web/libraries/
-/web/private/scripts/quicksilver
+/docroot/core/
+/docroot/modules/contrib/
+/docroot/themes/contrib/
+/docroot/profiles/contrib/
+/docroot/libraries/
+/docroot/private/scripts/quicksilver
 
 
 # Generally you should only ignore the root vendor directory. It's important
@@ -87,7 +87,7 @@ node_modules
 # The drupal/core-composer-scaffold component will write .gitignore
 # files to other locations where it scaffolds files that are not
 # already ignored. We must also ignore these generated files.
-/web/**/.gitignore
+/docroot/**/.gitignore
 
 
 # Other common rules
