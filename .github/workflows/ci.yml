@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - staging
+      - main
+
+jobs:
+  build_test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup PHP 8.1
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v2
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+    - name: Install dependencies
+      run: composer install
+
+    - name: Make PHPCS Aware of Drupal Coding standards
+      run: vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer/
+
+    - name: PHP Code standard checks
+      run: vendor/bin/robo phpcs
+
+    - name: Setup node.js for theme build checks
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16.14.0'
+        check-latest: true
+
+    - name: Setup Global Gulp for theme build checks
+      run: npm install -g gulp-cli
+
+    - name: Install theme packages
+      run: vendor/bin/robo theme:install
+
+    - name: Check for theme assets build
+      run: vendor/bin/robo theme:build
