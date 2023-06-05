@@ -1,0 +1,30 @@
+uuid: 6b99cfea-dfbd-4186-99ba-0f127bd6c405
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ebe0087b-e500-4ec2-b7ce-fd03f886fc90'
+  module:
+    - block_content
+    - system
+  theme:
+    - camp
+id: coming_soon
+theme: camp
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:ebe0087b-e500-4ec2-b7ce-fd03f886fc90'
+settings:
+  id: 'block_content:ebe0087b-e500-4ec2-b7ce-fd03f886fc90'
+  label: 'Coming Soon'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /venue
