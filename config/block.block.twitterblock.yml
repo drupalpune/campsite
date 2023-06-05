@@ -1,6 +1,6 @@
 uuid: 11dee51f-2b1c-4860-a57c-c87debce97f4
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -10,7 +10,7 @@ dependencies:
 id: twitterblock
 theme: camp
 region: content
-weight: 0
+weight: -7
 provider: null
 plugin: twitter_block
 settings:

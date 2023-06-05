@@ -2,10 +2,7 @@ uuid: b06d53c9-7c44-460e-9c91-9167a1b5e9bf
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:d6a158a0-70db-4d63-8fa4-25c8c01419ff'
   module:
-    - block_content
     - user
   theme:
     - camp

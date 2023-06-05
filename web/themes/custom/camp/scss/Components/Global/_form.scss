@@ -8,6 +8,24 @@ form {
       flex-flow: column nowrap;
       margin-top: 0;
       margin-bottom: 2rem;
+      &.form-item-persistent-login{
+        display: none;
+        
+      }
+      
+    }
+    .login-persistent-wrapper{
+      .form-item-persistent-login{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: unset;
+      }
+      .login-persistent-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
     label {
       color: $label;
@@ -127,4 +145,45 @@ form {
   div#google-signin-container {
     display: flex;
     justify-content: center;
+}
+input[type="checkbox"]{
+  height: 16px;
+  width: 16px;
+  left: 0px;
+  top: 2px;
+  border-radius: 4px;
+  border: 1px solid #C2C8CC;
+  background: linear-gradient(0deg, #C2C8CC, #C2C8CC),
+linear-gradient(0deg, #FFFFFF, #FFFFFF);
+&:focus{
+  border: unset;
+  outline: unset;
+}
+
+}
+#block-log-in-to-your-account{
+  .block__content{
+    margin-top: 100px;
+    text-align: center;
+    .field--name-field-title-heading{
+      font-family: $primaryFont;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 42px;
+      letter-spacing: 0px;
+      text-align: center;
+
+    }
+    .field--name-body{
+      p{
+        font-family: Helvetica;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: center;
+        color:#68737D;
+      }
+    }
+  }
 }
