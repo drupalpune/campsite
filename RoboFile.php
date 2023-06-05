@@ -62,4 +62,24 @@ class RoboFile extends Tasks {
     return NULL;
   }
 
+  /**
+   * Install npm packages in themes.
+   */
+  public function themeInstall() {
+    $this->say("\e[1;34m=========================\e[0m");
+    $this->say("\e[1;34mInstalling theme packages\e[0m");
+    $this->say("\e[1;34m=========================\e[0m");
+    $this->taskNpmInstall()->dir('web/themes/custom/camp')->run()->stopOnFail();
+  }
+
+  /**
+   * Build css assets in themes.
+   */
+  public function themeBuild() {
+    $this->say("\e[1;34m==================\e[0m");
+    $this->say("\e[1;34mBuilding theme\e[0m");
+    $this->say("\e[1;34m==================\e[0m");
+    $this->taskGulpRun('sass')->dir('web/themes/custom/camp')->run()->stopOnFail();
+  }
+
 }
