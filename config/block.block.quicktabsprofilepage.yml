@@ -5,12 +5,13 @@ dependencies:
   module:
     - quicktabs
     - system
+    - user
   theme:
     - camp
 id: quicktabsprofilepage
 theme: camp
 region: content
-weight: 0
+weight: -10
 provider: null
 plugin: 'quicktabs_block:profile_page'
 settings:
@@ -23,3 +24,13 @@ visibility:
     id: request_path
     negate: false
     pages: '/user/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      content_editor: content_editor
+      administrator: administrator
+      speaker: speaker

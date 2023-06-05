@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\Core\Url;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_preprocess_HOOK() for page templates.
@@ -21,5 +22,48 @@ function camp_preprocess_page(&$variables) {
   } else {
     // User is anonymous, set user_profile_url to null.
     $variables['user_profile_url'] = null;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function camp_form_alter(&$form,FormStateInterface $form_state, $form_id) {
+  // Check if the form ID is 'user_login_form'.
+  if ($form_id === 'user_login_form') {
+    // Add your custom field to the login form.
+   
+    $form['persistent_container'] = [
+      '#type' => 'container',
+      '#attributes' => ['class' => ['login-persistent-container']],
+    ];
+  
+    // Add "Remember me" checkbox.
+    $form['persistent_container']['persistent_login'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Remember my password'),
+      '#cache' => [
+        "tags" => [
+          0 => "config:persistent_login.settings",
+        ]
+      ],
+    ];
+  
+    // Add "Forgot password" link.
+    $form['persistent_container']['forgot_password'] = [
+      '#type' => 'container',
+      [
+      '#type' => 'link',
+      '#title' => t('Forgot password?'),
+      '#url' => Url::fromRoute('user.pass'),
+      '#weight' => 10,
+      ]
+    ];
+  
+    // Modify the prefix and suffix of the form element to wrap it in a div.
+    $form['persistent_container']['#prefix'] = '<div class="login-persistent-wrapper">';
+    $form['persistent_container']['#suffix'] = '</div>';
+    // dump($form);
+    // die();
   }
 }

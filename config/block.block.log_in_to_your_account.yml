@@ -1,0 +1,38 @@
+uuid: 2619e741-d160-420e-8c7e-faac47d78c7c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:afe99884-21c7-4aef-99d5-19b26586d38e'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - camp
+id: log_in_to_your_account
+theme: camp
+region: content
+weight: -13
+provider: null
+plugin: 'block_content:afe99884-21c7-4aef-99d5-19b26586d38e'
+settings:
+  id: 'block_content:afe99884-21c7-4aef-99d5-19b26586d38e'
+  label: 'log in to your account'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /user/login
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
