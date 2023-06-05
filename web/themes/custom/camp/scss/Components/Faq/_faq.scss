@@ -1,0 +1,60 @@
+.view-faq {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        padding: 0 30px;
+      }
+
+    .js-views-accordion-group-header {
+        display: none;
+    }
+    .ui-accordion-header {
+        background: none;
+        border: none;
+        border-top: 1px solid $color--border;
+        position: relative;
+        padding: 32px 0;
+    }
+    
+    .view-header {
+        font-size: 42px;
+        font-weight: 600;
+        margin: 0 0 60px 0;
+        padding-top: 100px;
+    }
+    
+    .ui-icon {
+        background-image: url("/themes/custom/camp/scss/Icons/baseIcons.png");
+        background-position: center;
+        position: absolute;
+        right: 10px;
+        top: 38px;
+    }
+    .field-content {
+        font-family: $primaryFont;
+        color: black;
+    }
+
+    .ui-accordion-content {
+        height: auto !important;
+        border: none;
+        padding: 0 50px 0 0;
+    }
+
+    .views-field-field-question[aria-expanded="true"] {
+        padding: 32px 0 0 0;
+
+        .ui-icon {
+            transform: rotate(180deg);
+        }
+      }
+
+      .views-field-field-session-synopsis {
+        .field-content {
+            color: $btn-text-grey;
+            line-height: 24px;
+        }
+      }
+}

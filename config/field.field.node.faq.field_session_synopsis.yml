@@ -1,0 +1,23 @@
+uuid: f378eb4c-1295-4dff-8145-c93638fa7353
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_synopsis
+    - node.type.faq
+  module:
+    - text
+id: node.faq.field_session_synopsis
+field_name: field_session_synopsis
+entity_type: node
+bundle: faq
+label: Answer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary
