@@ -1,0 +1,26 @@
+uuid: 37f6a262-db86-40bc-ac76-0edff6af3ad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.under_maintenance.field_error_image
+    - paragraphs.paragraphs_type.under_maintenance
+  module:
+    - image
+id: paragraph.under_maintenance.default
+targetEntityType: paragraph
+bundle: under_maintenance
+mode: default
+content:
+  field_error_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

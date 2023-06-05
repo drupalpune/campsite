@@ -10,6 +10,7 @@ dependencies:
     - paragraphs.paragraphs_type.image_with_pattern
     - paragraphs.paragraphs_type.simple_text
     - paragraphs.paragraphs_type.sponsor
+    - paragraphs.paragraphs_type.under_maintenance
     - paragraphs.paragraphs_type.video_card
   module:
     - entity_reference_revisions
@@ -33,6 +34,7 @@ settings:
       about_drupal_camp: about_drupal_camp
       image_with_pattern: image_with_pattern
       video_card: video_card
+      under_maintenance: under_maintenance
     negate: 0
     target_bundles_drag_drop:
       about_drupal_camp:
@@ -49,6 +51,9 @@ settings:
         enabled: true
       sponsor:
         weight: 5
+        enabled: true
+      under_maintenance:
+        weight: 14
         enabled: true
       video:
         weight: 10
