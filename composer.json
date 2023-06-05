@@ -40,7 +40,8 @@
         "drupal/quicktabs": "^3.0@alpha",
         "drupal/smtp": "^1.2",
         "drupal/persistent_login": "^2.0",
-        "drupal/forgot_password_block": "^2.1"
+        "drupal/forgot_password_block": "^2.1",
+        "acquia/blt": "^13.7"
     },
     "require-dev": {
         "drupal/core-dev": "^10"
@@ -98,7 +99,8 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "acquia/blt": true
         }
     }
 }

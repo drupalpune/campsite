@@ -1,0 +1,13 @@
+project:
+  machine_name: html
+git:
+  default_branch: develop
+  remotes:
+    cloud: 'drupalcamppune@svn-12800.prod.hosting.acquia.com:drupalcamppune.git'
+command-hooks:
+  frontend-reqs:
+    dir: ${docroot}/themes/custom/camp
+    command: 'npm install'
+  frontend-assets:
+    dir: ${docroot}/themes/custom/camp
+    command: 'gulp sass'
