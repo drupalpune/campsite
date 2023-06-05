@@ -8,11 +8,25 @@
 
 use Robo\ResultData;
 use Robo\Tasks;
+use Symfony\Component\Filesystem\Filesystem;
 
 /**
  * Robo commands.
  */
 class RoboFile extends Tasks {
+  /**
+   * The Symfony filesystem service.
+   *
+   * @var \Symfony\Component\Filesystem\Filesystem
+   */
+  protected $fs;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct() {
+    $this->fs = new Filesystem();
+  }
 
   /**
    * Perform a Code sniffer test, and fix when applicable.
@@ -80,6 +94,16 @@ class RoboFile extends Tasks {
     $this->say("\e[1;34mBuilding theme\e[0m");
     $this->say("\e[1;34m==================\e[0m");
     $this->taskGulpRun('sass')->dir('web/themes/custom/camp')->run()->stopOnFail();
+  }
+
+  /**
+   * Create local settings github actions.
+   */
+  public function actionsSetup() {
+    // Adding config to settings.php.
+    $this->say("\e[;32mAdding config to settings.php\e[0m");
+    $appendContent = file_get_contents('ci-scripts/settings-additions.txt');
+    $this->fs->appendToFile('web/sites/default/settings.php', $appendContent);
   }
 
 }

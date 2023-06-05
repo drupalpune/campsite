@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches: [ develop ]
 
 jobs:
   deploy:
@@ -26,29 +26,15 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: Setup Global Gulp
-      run: npm install -g gulp-cli
-
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v2
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
-
-    - name: Install ddev
-      run: ci-scripts/install_ddev.sh
+    - name: Host key verification
+      continue-on-error: true
+      run: ssh -o StrictHostKeyChecking=No drupalcamppune@svn-12800.prod.hosting.acquia.com
 
     - name: Install dependencies
-      run: ddev composer install
-
-    - name: Debug
-      run: ddev blt doctor --no-interaction
+      run: composer install
 
     - name: deploy
-      run: ddev blt artifact:deploy --no-interaction
+      run: vendor/bin/blt artifact:deploy -vvv --ignore-dirty --no-interaction --branch "develop"
 
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
