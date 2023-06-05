@@ -11,3 +11,5 @@ command-hooks:
   frontend-assets:
     dir: ${docroot}/themes/custom/camp
     command: 'gulp sass'
+deploy:
+  tag_source: TRUE
