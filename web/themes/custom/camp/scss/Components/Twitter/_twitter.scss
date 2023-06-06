@@ -21,12 +21,20 @@
   h2 {
     margin: 36px 60px;
     text-align: center;
+    font-family: $primaryFont;
+    @include mobile{
+      margin: 0px 17px;
+      text-align: left;
+    }
   }
   .twitter-block {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 0 60px;
+    @include mobile{
+      padding: 0px 17px;
+    }
     .twitter-tweet {
       display: none !important;
     }
