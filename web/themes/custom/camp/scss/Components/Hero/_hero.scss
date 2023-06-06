@@ -20,11 +20,11 @@
 
 .text-fields-wrapper {
   position: absolute;
-  top: 180px;
+  top: 50%;
+  transform: translateY(-50%);
   margin-left: 60px;
   max-width: 659px;
   @include mobile{
-    top: 65px;
     margin: 0px 16px;
     text-align: center;
   }
@@ -37,8 +37,8 @@
     color: #FFFFFF;
     margin-bottom: 9px;
    @include mobile{
-    font-size: 40px;
-    line-height: 68px;
+    font-size: 32px;
+    line-height: 46px;
     letter-spacing: 0.3500001132488251px;
     text-align: center;
    }
