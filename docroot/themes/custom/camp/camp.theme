@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @file
+ * Mostly preprocess functions for camp theme.
+ */
+
 use Drupal\Core\Url;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -19,9 +24,10 @@ function camp_preprocess_page(&$variables) {
 
     // Pass the user profile page URL to the twig template.
     $variables['user_profile_url'] = $user_profile_url;
-  } else {
+  }
+  else {
     // User is anonymous, set user_profile_url to null.
-    $variables['user_profile_url'] = null;
+    $variables['user_profile_url'] = NULL;
   }
 }
 

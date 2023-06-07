@@ -1,0 +1,41 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup PHP 8.1
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+
+    - name: Setup Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16.14.0'
+        check-latest: true
+
+    - uses: webfactory/ssh-agent@v0.7.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Host key verification
+      continue-on-error: true
+      run: ssh -o StrictHostKeyChecking=No drupalcamppune@svn-12800.prod.hosting.acquia.com
+
+    - name: Install dependencies
+      run: composer install
+
+    - name: deploy
+      run: vendor/bin/blt artifact:deploy -vvv --ignore-dirty --no-interaction --branch "develop"
+
+
+    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
+    # Docs: https://getcomposer.org/doc/articles/scripts.md
