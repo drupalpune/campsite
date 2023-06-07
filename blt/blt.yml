@@ -11,5 +11,8 @@ command-hooks:
   frontend-assets:
     dir: ${docroot}/themes/custom/camp
     command: 'gulp sass'
+  post-deploy:
+    dir: ${docroot}
+    command: 'drush updb -y && drush cr && drush cim -y && drush cim -y && drush cr'
 deploy:
   tag_source: TRUE
