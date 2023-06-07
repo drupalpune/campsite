@@ -38,6 +38,7 @@ $ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
 }
+
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 /**
  * IMPORTANT.

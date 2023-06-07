@@ -39,7 +39,7 @@
  * provide full paths in a dynamic manner.
  */
 $additionalSettingsFiles = [
-  // e.g,( DRUPAL_ROOT . "/sites/$site_dir/settings/foo.settings.php" )
+  DRUPAL_ROOT . "/sites/$site_dir/settings/blt-overrides.settings.php",
 ];
 
 foreach ($additionalSettingsFiles as $settingsFile) {
