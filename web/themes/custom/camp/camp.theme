@@ -24,6 +24,27 @@ function camp_preprocess_page(&$variables) {
     $variables['user_profile_url'] = null;
   }
 }
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function camp_preprocess_paragraph__hero_banner(&$variables) {
+  // Get the current user.
+  $current_user = \Drupal::currentUser();
+
+  // Pass the user profile name to the twig template.
+  $variables['user_profile_name'] = $current_user->isAuthenticated() ? $current_user->getDisplayName() : '';
+
+  if ($current_user->isAuthenticated()) {
+    // Get the user profile page URL.
+    $user_profile_url = Url::fromRoute('entity.user.canonical', ['user' => $current_user->id()])->toString();
+
+    // Pass the user profile page URL to the twig template.
+    $variables['user_profile_url'] = $user_profile_url;
+  } else {
+    // User is anonymous, set user_profile_url to null.
+    $variables['user_profile_url'] = null;
+  }
+}
 
 /**
  * Implements hook_form_alter().
