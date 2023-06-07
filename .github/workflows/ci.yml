@@ -35,7 +35,9 @@ jobs:
       run: vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer/
 
     - name: PHP Code standard checks
-      run: vendor/bin/robo phpcs
+      run: |
+        vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer/
+        vendor/bin/robo phpcs
 
     - name: Setup node.js for theme build checks
       uses: actions/setup-node@v3

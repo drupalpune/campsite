@@ -5,29 +5,17 @@
  * Contains dcp_user.module.
  */
 
-use Drupal\Core\Routing\RouteMatchInterface;
-
-use Drupal\views\Views;
-use Drupal\block\Entity\Block;
-use Drupal\Core\Session\AccountInterface;
-use Drupal\Core\Access\AccessResult;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\media\Entity\Media;
-use Drupal\file\Entity\File;
-
 /**
  * Using hook_form_alter.
  */
-function dcp_user_form_alter(&$form, &$form_state, $form_id)
-{
-    if($form_id == 'user_login_form') {
-        $text = "Don't have and account ? ";
-        $form['help'] = [
-            '#type' => 'markup',
-            '#wrapper_attributes' => ['style' => 'align-items: center'],
-            '#markup' => '<div class="help"><span>' . $text . '<a href="/user/register">Sign up</a></span></div>',
-            '#weight' => '100',
-        ];
-    }
+function dcp_user_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'user_login_form') {
+    $text = "Don't have and account ? ";
+    $form['help'] = [
+      '#type' => 'markup',
+      '#wrapper_attributes' => ['style' => 'align-items: center'],
+      '#markup' => '<div class="help"><span>' . $text . '<a href="/user/register">Sign up</a></span></div>',
+      '#weight' => '100',
+    ];
+  }
 }
-
