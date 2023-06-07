@@ -36,6 +36,12 @@ jobs:
     - name: deploy
       run: vendor/bin/blt artifact:deploy -vvv --ignore-dirty --no-interaction --branch "main"
 
+    - name: Post deploy
+      run: |
+        vendor/bin/drush @drupalcamppune.prod -- updb
+        vendor/bin/drush @drupalcamppune.prod -- cr
+        vendor/bin/drush @drupalcamppune.prod -- cim
+
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
