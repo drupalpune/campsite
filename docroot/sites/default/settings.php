@@ -39,7 +39,14 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
 }
 
-require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
+// Override default database with dcp23 database settings.
+if (file_exists('/var/www/site-php')) {
+  require '/var/www/site-php/drupalcamppune/dcp23-settings.inc';
+}
+
+// Override default config directory to be ../config.
+$blt_override_config_directories = FALSE;
+$settings['config_sync_directory'] = '../config';
 /**
  * IMPORTANT.
  *
