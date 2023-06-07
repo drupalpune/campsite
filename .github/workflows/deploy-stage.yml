@@ -26,9 +26,13 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: Host key verification
+    - name: Host key verification for BLT
       continue-on-error: true
       run: ssh -o StrictHostKeyChecking=No drupalcamppune@svn-12800.prod.hosting.acquia.com
+
+    - name: Host key verification for drush remote
+      continue-on-error: true
+      run: ssh -o StrictHostKeyChecking=No drupalcamppune.test@drupalcamppunetest.ssh.prod.acquia-sites.com
 
     - name: Install dependencies
       run: composer install
