@@ -1,23 +1,23 @@
-uuid: 40914af1-6eac-4e09-8fcf-8dc143e99d98
+uuid: b9474021-2b09-4bb8-9169-30714df4cedc
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:5a7b98d4-d243-4e55-9eac-dac8c271b7ed'
+    - 'block_content:basic:fa01f96e-3bcd-4fe6-af64-f885291779a6'
   module:
     - block_content
     - system
   theme:
     - camp
-id: tweet2
+id: coming_soon
 theme: camp
 region: content
-weight: -8
+weight: 0
 provider: null
-plugin: 'block_content:5a7b98d4-d243-4e55-9eac-dac8c271b7ed'
+plugin: 'block_content:fa01f96e-3bcd-4fe6-af64-f885291779a6'
 settings:
-  id: 'block_content:5a7b98d4-d243-4e55-9eac-dac8c271b7ed'
-  label: 'tweet 2'
+  id: 'block_content:fa01f96e-3bcd-4fe6-af64-f885291779a6'
+  label: 'Coming Soon'
   label_display: '0'
   provider: block_content
   status: true
@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '<front>'
+    pages: /venue

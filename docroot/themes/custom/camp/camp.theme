@@ -73,3 +73,6 @@ function camp_form_alter(&$form,FormStateInterface $form_state, $form_id) {
     // die();
   }
 }
+function camp_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  $suggestions[] = sprintf('views_view__%s', $variables['view']->id());
+}

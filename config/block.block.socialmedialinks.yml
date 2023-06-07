@@ -1,0 +1,165 @@
+uuid: 9fe32bd2-5c6e-4062-924d-ef79615cef02
+langcode: en
+status: true
+dependencies:
+  module:
+    - social_media_links
+  theme:
+    - camp
+id: socialmedialinks
+theme: camp
+region: footer2
+weight: 0
+provider: null
+plugin: social_media_links_block
+settings:
+  id: social_media_links_block
+  label: Social
+  label_display: visible
+  provider: social_media_links
+  platforms:
+    tiktok:
+      value: ''
+      description: ''
+      weight: '-10'
+    youtube_channel:
+      value: ''
+      description: ''
+      weight: '-9'
+    behance:
+      value: ''
+      description: ''
+      weight: '-8'
+    xing:
+      value: ''
+      description: ''
+      weight: '-7'
+    whatsapp:
+      value: ''
+      description: ''
+      weight: '-6'
+    github:
+      value: ''
+      description: ''
+      weight: '-5'
+    vimeo:
+      value: ''
+      description: ''
+      weight: '-4'
+    googleplay:
+      value: ''
+      description: ''
+      weight: '-3'
+    tumblr:
+      value: ''
+      description: ''
+      weight: '-2'
+    website:
+      value: ''
+      description: ''
+      weight: '-1'
+    drupal:
+      value: ''
+      description: ''
+      weight: '0'
+    vkontakte:
+      value: ''
+      description: ''
+      weight: '1'
+    meetup:
+      value: ''
+      description: ''
+      weight: '2'
+    instagram:
+      value: ''
+      description: ''
+      weight: '3'
+    bitbucket:
+      value: ''
+      description: ''
+      weight: '4'
+    amazon:
+      value: ''
+      description: ''
+      weight: '5'
+    contact:
+      value: ''
+      description: ''
+      weight: '6'
+    rss:
+      value: ''
+      description: ''
+      weight: '7'
+    email:
+      value: ''
+      description: ''
+      weight: '8'
+    telegram:
+      value: ''
+      description: ''
+      weight: '9'
+    patreon:
+      value: ''
+      description: ''
+      weight: '10'
+    twitter:
+      value: drupalcamppune
+      description: ''
+      weight: '11'
+    linkedin:
+      value: in/drupal-pune
+      description: ''
+      weight: '12'
+    pinterest:
+      value: ''
+      description: ''
+      weight: '13'
+    mastodon:
+      value: ''
+      description: ''
+      weight: '14'
+    flickr:
+      value: ''
+      description: ''
+      weight: '15'
+    youtube:
+      value: ''
+      description: ''
+      weight: '16'
+    glassdoor:
+      value: ''
+      description: ''
+      weight: '17'
+    slideshare:
+      value: ''
+      description: ''
+      weight: '18'
+    gitlab:
+      value: ''
+      description: ''
+      weight: '19'
+    googleplus:
+      value: ''
+      description: ''
+      weight: '20'
+    facebook:
+      value: ''
+      description: ''
+      weight: '21'
+    goodreads:
+      value: ''
+      description: ''
+      weight: '22'
+  appearance:
+    orientation: h
+    show_name: 0
+    suggestion: ''
+  link_attributes:
+    target: '<none>'
+    rel: '<none>'
+  iconset:
+    style: 'fontawesome:2x'
+    installed_iconsets:
+      fontawesome:
+        examples: ''
+visibility: {  }

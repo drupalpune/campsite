@@ -19,6 +19,7 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  dcp_user: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -28,9 +29,13 @@ module:
   file: 0
   filter: 0
   forgot_password_block: 0
+  google_api_client: 0
+  googlelogin: 0
   help: 0
   history: 0
   image: 0
+  jquery_ui: 0
+  jquery_ui_accordion: 0
   link: 0
   menu_link_content: 0
   menu_ui: 0
@@ -48,6 +53,7 @@ module:
   smtp: 0
   social_api: 0
   social_auth: 0
+  social_auth_google: 0
   social_media_links: 0
   stage_file_proxy: 0
   standard: 0
@@ -60,6 +66,7 @@ module:
   update: 0
   user: 0
   video_embed_field: 0
+  views_accordion: 0
   views_ui: 0
   webform: 0
   workflows: 0

@@ -41,6 +41,7 @@
         "drupal/smtp": "^1.2",
         "drupal/persistent_login": "^2.0",
         "drupal/forgot_password_block": "^2.1",
+        "drupal/views_accordion": "^2.0",
         "acquia/blt": "^13.7"
     },
     "require-dev": {

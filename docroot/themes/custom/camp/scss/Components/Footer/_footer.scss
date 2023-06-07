@@ -8,6 +8,11 @@
     }
     li{
         list-style: none;
+        a{
+            color: white;
+            text-decoration: none;
+            font-family: Helvetica;
+        }
     }
     @include mobile{
         width: 100%;
@@ -16,8 +21,7 @@
 footer.page-footer-section{
     padding: 64px 60px 48px 60px;
     h2.foot1-head{
-        //styleName: H4;
-        // font-family: Archivo;
+        font-family: $primaryFont;
         font-size: 42px;
         font-weight: 700;
         line-height: 28px;
@@ -34,8 +38,7 @@ footer.page-footer-section{
         color: #C2C8CC;
     }
     .footer-links{
-        //styleName: B2/medium;
-        // font-family: Manrope;
+        font-family: $secondaryFont;
         font-size: 20px;
         font-weight: 500;
         line-height: 25px;

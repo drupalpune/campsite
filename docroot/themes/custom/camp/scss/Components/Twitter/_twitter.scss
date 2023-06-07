@@ -1,26 +1,51 @@
 #block-twitterblock {
-    margin: 0px 60px; // Adjusted margin for mobile view
-    width: 90vw; // Adjusted width for mobile view
+  margin: 0px 60px; // Adjusted margin for mobile view
+  width: 90vw; // Adjusted width for mobile view
+  @include mobile {
+    margin: 0px 16px;
+    width: 92vw;
+  }
+
+  .block__title {
+    font-family: $primaryFont;
+    font-size: 28px; // Adjusted font-size for mobile view
+    font-weight: 700;
+    line-height: 30px; // Adjusted line-height for mobile view
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: $black;
+  }
+}
+
+#block-tweet1 {
+  h2 {
+    margin: 36px 60px;
+    text-align: center;
+    font-family: $primaryFont;
     @include mobile{
-        margin: 0px 16px;
-        width: 92vw;
-    }
-    
-    .block__title {
-      font-family: $primaryFont;
-      font-size: 28px; // Adjusted font-size for mobile view
-      font-weight: 700;
-      line-height: 30px; // Adjusted line-height for mobile view
-      letter-spacing: -0.02em;
+      margin: 0px 17px;
       text-align: left;
-      color: $black;
     }
   }
-  
-  #block-tweet1{
-    margin: 0px 60px;
-      .twitter-block{
-      display: flex;
-      justify-content: space-around;
-      }
+  .twitter-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 60px;
+    @include mobile{
+      padding: 0px 17px;
     }
+    .twitter-tweet {
+      display: none !important;
+    }
+    .twitter-tweet:nth-child(1) {
+      display: flex !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 1220px) {
+  #block-tweet1 .twitter-block .twitter-tweet {
+    display: flex !important;
+  }
+}

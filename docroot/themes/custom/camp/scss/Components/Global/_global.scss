@@ -44,7 +44,41 @@ footer.page-footer-section{
 .fab{
   color: #D8D8D8;
 }
-
+.button1{
+  height: 48px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  border-radius: 55px;
+  padding: 12px 20px;
+  background: $purple;
+  border: 1px solid $purple;
+  height: auto;
+  text-align: center;
+  a {
+    color: white;
+    text-decoration: none;
+    box-shadow: none;
+    text-transform: uppercase;
+  }
+}
+.button2{
+  height: 48px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  border-radius: 55px;
+  padding: 12px 20px;
+  border: 1px solid #D8DCDE;
+  height: auto;
+  text-align: center;
+  a {
+    color:#2F3941;
+    text-decoration: none;
+    box-shadow: none;
+    text-transform: uppercase;
+  }
+}
  .register-now {
   height: 48px;
   font-size: 16px;
@@ -214,4 +248,7 @@ ul.cheeseburger-menu__mainmenu{
   .node__author-image{
     display: none;
   }
+}
+.help{
+    text-align: center;
 }

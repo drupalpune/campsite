@@ -1,0 +1,61 @@
+.under-maintenance{
+    display: flex;
+    margin: 203px 112px;
+    @include mobile{
+        flex-direction: column-reverse;
+        margin: 100px 27px;
+    }
+    .text-area{
+        @include mobile{
+            margin-top: 10px;
+        }
+        .small-head{
+            font-family: Helvetica;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #5225B5;
+        }
+        h4{
+            margin-top: 12px;
+            margin-bottom: 24px;
+            font-family: $primaryFont;
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 28px;
+            letter-spacing: 0px;
+            text-align: left;
+            @include mobile{
+                font-size: 29px;
+            }
+        }
+        p{
+            margin-top: unset;
+            margin-bottom: 48px;
+            font-family: $secondaryFont;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 25px;
+            letter-spacing: 0px;
+            text-align: left;
+            width: 64.25%;
+            @include mobile{
+                width: 100%;
+            }
+        }
+        .CTA-box{
+            .go-back{
+                @include mobile{
+                font-size: 13px;
+                padding: 8px 14px;}
+            }
+            .homepage{
+                @include mobile{
+                font-size: 13px;
+                padding: 8px 14px;}
+            }
+        }
+    }
+}

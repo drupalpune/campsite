@@ -11,3 +11,4 @@ global-styling:
     js/campscript.js: {}
   dependencies:
     - core/jquery
+    - core/once
