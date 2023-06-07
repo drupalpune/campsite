@@ -2,17 +2,14 @@ uuid: d716c2ad-93f9-441b-8092-3efd664c6903
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:hero_banner:fa0d006d-604e-4bdf-8201-0b3e93813fa8'
   module:
-    - block_content
     - system
   theme:
     - camp
 id: contactus_hero
 theme: camp
 region: hero
-weight: 0
+weight: -16
 provider: null
 plugin: 'block_content:fa0d006d-604e-4bdf-8201-0b3e93813fa8'
 settings:

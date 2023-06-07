@@ -9,7 +9,7 @@ dependencies:
 id: propose_session_hero
 theme: camp
 region: hero
-weight: 0
+weight: -15
 provider: null
 plugin: 'block_content:8df3915a-11e8-4d9e-a496-a770fecddc41'
 settings:
