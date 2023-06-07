@@ -45,7 +45,7 @@
         "acquia/blt": "^13.7"
     },
     "require-dev": {
-        "drupal/core-dev": "^10"
+        "drupal/core-dev": "^10.0"
     },
     "conflict": {
         "drupal/drupal": "*"
