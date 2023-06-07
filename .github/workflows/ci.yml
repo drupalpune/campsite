@@ -28,11 +28,9 @@ jobs:
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
+
     - name: Install dependencies
       run: composer install
-
-    - name: Make PHPCS Aware of Drupal Coding standards
-      run: vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer/
 
     - name: PHP Code standard checks
       run: vendor/bin/robo phpcs

@@ -26,15 +26,25 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: Host key verification
+    - name: Host key verification for BLT
       continue-on-error: true
       run: ssh -o StrictHostKeyChecking=No drupalcamppune@svn-12800.prod.hosting.acquia.com
+
+    - name: Host key verification for drush remote
+      continue-on-error: true
+      run: ssh -o StrictHostKeyChecking=No drupalcamppune.test@drupalcamppunetest.ssh.prod.acquia-sites.com
 
     - name: Install dependencies
       run: composer install
 
     - name: deploy
       run: vendor/bin/blt artifact:deploy -vvv --ignore-dirty --no-interaction --branch "stage"
+
+    - name: Post deploy
+      run: |
+        vendor/bin/drush @drupalcamppune.stage -- updb
+        vendor/bin/drush @drupalcamppune.stage -- cr
+        vendor/bin/drush @drupalcamppune.stage -- cim
 
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
