@@ -33,8 +33,14 @@ jobs:
     - name: Install dependencies
       run: composer install
 
-    - name: deploy
+    - name: Deploy
       run: vendor/bin/blt artifact:deploy -vvv --ignore-dirty --no-interaction --branch "develop"
+
+    - name: Post deploy
+      run: |
+        vendor/bin/drush @drupalcamppune.dev -- updb
+        vendor/bin/drush @drupalcamppune.dev -- cr
+        vendor/bin/drush @drupalcamppune.dev -- cim
 
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
