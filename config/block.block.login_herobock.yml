@@ -12,7 +12,7 @@ dependencies:
 id: login_herobock
 theme: camp
 region: hero
-weight: 0
+weight: -14
 provider: null
 plugin: 'block_content:3dc521a2-c0c5-4296-a392-acfa521de230'
 settings:

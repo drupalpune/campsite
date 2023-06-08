@@ -2,10 +2,7 @@ uuid: 2619e741-d160-420e-8c7e-faac47d78c7c
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:afe99884-21c7-4aef-99d5-19b26586d38e'
   module:
-    - block_content
     - system
     - user
   theme:
@@ -13,7 +10,7 @@ dependencies:
 id: log_in_to_your_account
 theme: camp
 region: content
-weight: -13
+weight: -14
 provider: null
 plugin: 'block_content:afe99884-21c7-4aef-99d5-19b26586d38e'
 settings:

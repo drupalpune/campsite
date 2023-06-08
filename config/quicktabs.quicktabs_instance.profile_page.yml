@@ -55,7 +55,7 @@ configuration_data:
         options:
           vid: session
           display: block_1
-          args: ''
+          args: '%2'
       qtabs_content:
         options:
           machine_name: ''

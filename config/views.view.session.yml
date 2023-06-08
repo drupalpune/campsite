@@ -113,7 +113,18 @@ display:
       cache:
         type: tag
         options: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: "<div class=\"register-now submit-session\">\r\n<a href=\"/submit-session\">Submit a session</a>\r\n</div>"
+          tokenize: false
       sorts:
         created:
           id: created
@@ -310,7 +321,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -585,8 +596,9 @@ display:
             title: All
           title_enable: false
           title: ''
-          default_argument_type: current_user
-          default_argument_options: {  }
+          default_argument_type: user
+          default_argument_options:
+            user: false
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -597,10 +609,10 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
             type: none
-            fail: 'not found'
+            fail: ignore
           validate_options: {  }
           break_phrase: false
           not: false
@@ -637,6 +649,7 @@ display:
           plugin_id: standard
           required: true
       display_extenders: {  }
+      block_hide_empty: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -644,7 +657,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.roles
       tags:
