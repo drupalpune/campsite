@@ -1,0 +1,16 @@
+uuid: d3eea120-845d-469a-bf39-dd12c45229aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+id: session_reviewer
+label: 'Session Reviewer'
+weight: 5
+is_admin: null
+permissions:
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition publish'
