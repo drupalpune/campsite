@@ -44,6 +44,12 @@ if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/drupalcamppune/dcp23-settings.inc';
 }
 
+
+$secrets_file = $_ENV['HOME'] . '/secrets.settings.php';
+if (file_exists($secrets_file)) {
+   require $secrets_file;
+}
+
 // Override default config directory to be ../config.
 $blt_override_config_directories = FALSE;
 $settings['config_sync_directory'] = '../config';
