@@ -1,0 +1,24 @@
+uuid: 39e90e23-6c56-46d8-b33a-812ffa110388
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - camp
+id: pagetitle
+theme: camp
+region: hero
+weight: -12
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/user/*\r\n/contact\r\n/submit-session"

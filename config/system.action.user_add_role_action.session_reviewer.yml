@@ -1,0 +1,14 @@
+uuid: 1e3b16a6-0117-43c6-a66c-422ef29f4399
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.session_reviewer
+  module:
+    - user
+id: user_add_role_action.session_reviewer
+label: 'Add the Session Reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: session_reviewer

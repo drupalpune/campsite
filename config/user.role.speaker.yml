@@ -13,3 +13,6 @@ is_admin: null
 permissions:
   - 'access user profiles'
   - 'create session content'
+  - 'delete own session content'
+  - 'edit own session content'
+  - 'view own unpublished content'

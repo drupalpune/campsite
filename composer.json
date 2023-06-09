@@ -53,11 +53,18 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "extra": {
+        "patches": {
+            "drupal/quicktabs": {
+                "View's Empty Behavior not displayed anymore": "https://www.drupal.org/files/issues/2022-03-08/issues-3197108-fix-views-empty-behavior-not-displayed-error_0.patch"
+            }
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "./docroot"
             },
-            "allowed-packages": ["pantheon-systems/drupal-integrations"],
+            "allowed-packages": [
+                "pantheon-systems/drupal-integrations"
+            ],
             "file-mapping": {
                 "[project-root]/.editorconfig": false,
                 "[project-root]/pantheon.upstream.yml": false,
@@ -83,11 +90,17 @@
         "enable-patching": true
     },
     "autoload": {
-        "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]
+        "classmap": [
+            "upstream-configuration/scripts/ComposerScripts.php"
+        ]
     },
     "scripts": {
-        "pre-update-cmd": ["DrupalComposerManaged\\ComposerScripts::preUpdate"],
-        "post-update-cmd": ["DrupalComposerManaged\\ComposerScripts::postUpdate"]
+        "pre-update-cmd": [
+            "DrupalComposerManaged\\ComposerScripts::preUpdate"
+        ],
+        "post-update-cmd": [
+            "DrupalComposerManaged\\ComposerScripts::postUpdate"
+        ]
     },
     "config": {
         "preferred-install": "dist",
@@ -104,4 +117,6 @@
             "acquia/blt": true
         }
     }
+
 }
+

@@ -3,11 +3,11 @@ _core:
 langcode: en
 uuid: 2aac324d-cf77-4166-82cf-4261405ec120
 name: 'Drupal Camp Pune 2023'
-mail: abhisekmajumdar4@gmail.com
+mail: camp@drupalpune.in
 slogan: ''
 page:
   403: ''
-  404: /node/4
+  404: '/node/4'
   front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
