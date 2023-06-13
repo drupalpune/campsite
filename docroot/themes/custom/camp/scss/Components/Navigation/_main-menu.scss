@@ -114,3 +114,9 @@ div#block-cheeseburgermenu {
     justify-content: space-between;
   }
 }
+.logout{
+  display: none;
+  @include mobile{
+    display: block;
+  }
+}
