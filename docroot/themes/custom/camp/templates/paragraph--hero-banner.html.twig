@@ -5,6 +5,10 @@
     <div class="text-field-welcome">{{ paragraph.field_welcome_text.value }}</div>
     <div class="text-field-date">{{ paragraph.field_date.value }}</div>
     <div class="text-field-subtitle">{{ paragraph.field_sub_title.value }}</div>
+    {% if user_profile_url is not null %}
     <a href = "/submit-session"><button class="action">{{ paragraph.field_call_for_action_.value }}</button></a>
+      {% else %}
+     <a href = "{{ path('user.login') }}"><button class="action">{{ paragraph.field_call_for_action_.value }}</button></a>
+    {% endif %}
   </div>
 </div>
