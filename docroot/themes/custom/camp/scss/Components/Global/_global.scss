@@ -125,7 +125,7 @@ header.page-header {
   margin-right: 20px;
   cursor: pointer;
   @include mobile{
-    display: block !important;
+    display: none !important;
   }
 
   &:after{
