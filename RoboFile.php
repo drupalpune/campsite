@@ -97,6 +97,16 @@ class RoboFile extends Tasks {
   }
 
   /**
+   * Build css assets in themes.
+   */
+  public function themeWatch() {
+    $this->say("\e[1;34m==================\e[0m");
+    $this->say("\e[1;34mBuilding theme\e[0m");
+    $this->say("\e[1;34m==================\e[0m");
+    $this->taskGulpRun('watch')->dir('web/themes/custom/camp')->run()->stopOnFail();
+  }
+
+  /**
    * Create local settings github actions.
    */
   public function actionsSetup() {
