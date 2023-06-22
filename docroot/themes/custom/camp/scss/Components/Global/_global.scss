@@ -107,8 +107,9 @@ header.page-header {
   &.fixed {
     width: 100vw;
     position: fixed;
+    top: 0;
     background-color: #ffffff; /* Set the background color of the header */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a box shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a box shadow */
   }
 }
 .profile-name{
