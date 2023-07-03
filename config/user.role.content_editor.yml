@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - node.type.article
+    - node.type.faq
+    - node.type.landing_page
     - node.type.page
+    - node.type.session
     - taxonomy.vocabulary.tags
   module:
     - comment
@@ -39,9 +42,12 @@ permissions:
   - 'delete own article content'
   - 'delete own page content'
   - 'delete page revisions'
-  - 'edit own article content'
+  - 'edit any article content'
+  - 'edit any faq content'
+  - 'edit any landing_page content'
+  - 'edit any page content'
+  - 'edit any session content'
   - 'edit own comments'
-  - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'view all revisions'
