@@ -7,7 +7,7 @@ mail: camp@drupalpune.in
 slogan: ''
 page:
   403: ''
-  404: '/node/4'
+  404: /node/4
   front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
