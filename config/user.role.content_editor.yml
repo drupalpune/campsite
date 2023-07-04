@@ -9,6 +9,7 @@ dependencies:
   module:
     - comment
     - contextual
+    - dcp_user
     - file
     - node
     - path
@@ -27,6 +28,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access sponsor detail'
   - 'access toolbar'
   - 'access tour'
   - 'access user profiles'
