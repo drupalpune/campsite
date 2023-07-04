@@ -89,7 +89,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access sponsor detail'
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
