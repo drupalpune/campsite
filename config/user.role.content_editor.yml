@@ -5,10 +5,12 @@ dependencies:
   config:
     - node.type.article
     - node.type.page
+    - node.type.sponsor
     - taxonomy.vocabulary.tags
   module:
     - comment
     - contextual
+    - dcp_user
     - file
     - node
     - path
@@ -27,6 +29,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access sponsor detail'
   - 'access toolbar'
   - 'access tour'
   - 'access user profiles'
@@ -35,13 +38,17 @@ permissions:
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete any sponsor content'
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own page content'
+  - 'delete own sponsor content'
   - 'delete page revisions'
+  - 'edit any sponsor content'
   - 'edit own article content'
   - 'edit own comments'
   - 'edit own page content'
+  - 'edit own sponsor content'
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'view all revisions'
