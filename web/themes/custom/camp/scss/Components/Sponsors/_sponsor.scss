@@ -1,50 +1,55 @@
-// Sponsors paragraph.
-.paragraph--type--sponsors {
-  .field--name-field-title {
-    .field__item {
-      text-align : center;
-      font-size  : 40px;
-      color      : rgb(3, 73, 130);
-      margin     : 50px 0;
-      font-weight: bold;
-    }
-  }
+.paragraph--type--simple-text {
+    text-align: center;
+    margin: 100px 50px;
 
-  .field--name-field-sponsor {
-    .field__items {
-      display        : flex;
-      flex-wrap      : wrap;
-      gap            : 50px;
-      align-items    : center;
-      justify-content: center;
+    p {
+        font-size: 24px;
+        font-style: $primaryFont;
+        font-weight: $bold;
+        line-height: 55px;
     }
-  }
 }
+.paragraph--type--sponsors {
+    .field--name-field-sponsor {
+        display: flex;
+        max-width: 1200px;
+        margin: auto;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 40px;
 
-// Sponsor paragraph
-.paragraph--type--sponsor {
-  position : relative;
-  max-width: 200px;
-
-  .field--type-image {
-    margin: 0;
-  }
-
-  .field--name-field-link {
-    height: 0;
-  }
-
-  a {
-    font-size: 0;
-    display  : inline-block;
-
-    &::after {
-      content : '';
-      position: absolute;
-      left    : 0;
-      right   : 0;
-      top     : 0;
-      bottom  : 0;
+        @include mobile{ 
+            justify-content: center;
+        }
     }
-  }
+
+    .field--name-field-image {
+            border-bottom: 1px solid $color--border;
+        img {
+            padding-bottom: 10px;
+        }
+    }
+
+    .paragraph--type--sponsor {
+        max-width: 300px;
+        transition: 0.3s;
+        box-shadow: 1px 1px 10px 1px rgba(0,0,0,.2);
+        border-top: 8px solid $color--lightViolet;
+        padding: 20px;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+        }
+
+        .field--type-link {
+            text-align: center;
+            margin: 15px 0 0 0;
+
+            a {
+                color: $black;
+                text-decoration: none;
+            }
+        }
+    }
 }
