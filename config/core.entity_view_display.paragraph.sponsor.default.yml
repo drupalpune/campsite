@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.sponsor.field_image
     - field.field.paragraph.sponsor.field_link
+    - image.style.medium
     - paragraphs.paragraphs_type.sponsor
   module:
     - image
@@ -19,14 +20,14 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: medium
       image_loading:
         attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
   field_link:
-    type: link_separate
+    type: link
     label: hidden
     settings:
       trim_length: 80

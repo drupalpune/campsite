@@ -1,0 +1,55 @@
+uuid: d553cb0e-fa2a-4668-8670-1df554191180
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sponsor
+    - paragraphs.paragraphs_type.sponsor
+    - paragraphs.paragraphs_type.sponsors
+  module:
+    - entity_reference_revisions
+id: paragraph.sponsors.field_sponsor
+field_name: field_sponsor
+entity_type: paragraph
+bundle: sponsors
+label: Sponsor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      sponsor: sponsor
+    negate: 0
+    target_bundles_drag_drop:
+      about_drupal_camp:
+        weight: 10
+        enabled: false
+      hero_banner:
+        weight: 11
+        enabled: false
+      image_with_pattern:
+        weight: 12
+        enabled: false
+      simple_text:
+        weight: 13
+        enabled: false
+      sponsor:
+        weight: 14
+        enabled: true
+      sponsors:
+        weight: 15
+        enabled: false
+      under_maintenance:
+        weight: 16
+        enabled: false
+      video:
+        weight: 17
+        enabled: false
+      video_card:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions
