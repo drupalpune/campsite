@@ -14,3 +14,4 @@ permissions:
   - 'use editorial transition archived_draft'
   - 'use editorial transition archived_published'
   - 'use editorial transition publish'
+  - 'view any unpublished content'
