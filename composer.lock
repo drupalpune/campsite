@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4eae900ce128df66cd1643d647b4860",
+    "content-hash": "083b0405def015a5fd17ce49f4018207",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1648,57 +1648,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/cheeseburger_menu",
                 "issues": "https://www.drupal.org/project/issues/cheeseburger_menu"
-            }
-        },
-        {
-            "name": "drupal/content_access",
-            "version": "2.0.0-rc1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/content_access.git",
-                "reference": "2.0.0-rc1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/content_access-2.0.0-rc1.zip",
-                "reference": "2.0.0-rc1",
-                "shasum": "8bdd51e086a43f71be75cbe9b9670c002c650b64"
-            },
-            "require": {
-                "drupal/core": "^9.4 || ^10"
-            },
-            "require-dev": {
-                "drupal/acl": "~1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.0.0-rc1",
-                    "datestamp": "1683474263",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "fago",
-                    "homepage": "https://www.drupal.org/user/16747"
-                },
-                {
-                    "name": "gisle",
-                    "homepage": "https://www.drupal.org/user/409554"
-                }
-            ],
-            "description": "Provides flexible content access control.",
-            "homepage": "https://drupal.org/project/content_access",
-            "support": {
-                "source": "https://git.drupalcode.org/project/content_access"
             }
         },
         {
@@ -13470,8 +13419,7 @@
         "pantheon-upstreams/upstream-configuration": 20,
         "drupal/cheeseburger_menu": 5,
         "drupal/webform": 10,
-        "drupal/quicktabs": 15,
-        "drupal/content_access": 5
+        "drupal/quicktabs": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
