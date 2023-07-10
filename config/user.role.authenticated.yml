@@ -5,12 +5,14 @@ dependencies:
   config:
     - filter.format.basic_html
     - filter.format.webform_default
+    - node.type.session
     - workflows.workflow.editorial
   module:
     - comment
     - contact
     - content_moderation
     - filter
+    - node
     - search
     - shortcut
     - system

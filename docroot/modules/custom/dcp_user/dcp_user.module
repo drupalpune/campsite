@@ -5,6 +5,10 @@
  * Contains dcp_user.module.
  */
 
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+
 /**
  * Using hook_form_alter.
  */
@@ -18,4 +22,28 @@ function dcp_user_form_alter(&$form, &$form_state, $form_id) {
       '#weight' => '100',
     ];
   }
+}
+
+/**
+ * Implements hook_node_access().
+ */
+function dcp_user_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  switch ($node->bundle()) {
+    case 'sponsor':
+      $access = _dcp_user_sponsor_node_access($node, $op, $account);
+      break;
+  }
+
+  return $access;
+}
+
+/**
+ * Helper function to determine access on sponsor node.
+ */
+function _dcp_user_sponsor_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  if ($op === 'view' && !$account->hasPermission('access sponsor detail page')) {
+    return AccessResult::forbidden();
+  }
+
+  return AccessResult::neutral();
 }
