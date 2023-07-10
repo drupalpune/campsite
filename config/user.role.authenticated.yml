@@ -26,6 +26,12 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'access user profiles'
+<<<<<<< HEAD
+=======
+  - 'create session content'
+  - 'delete own session content'
+  - 'edit own session content'
+>>>>>>> main
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
