@@ -1,0 +1,18 @@
+uuid: 40598eff-08ca-4f39-bb9e-c1ae99d77066
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sponsor
+id: node.sponsor.title
+field_name: title
+entity_type: node
+bundle: sponsor
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

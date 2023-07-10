@@ -2,8 +2,6 @@ uuid: e5039df4-8e3a-499e-aeac-045aba5fe00a
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.session
   module:
     - node
 id: speaker
@@ -12,7 +10,4 @@ weight: 4
 is_admin: null
 permissions:
   - 'access user profiles'
-  - 'create session content'
-  - 'delete own session content'
-  - 'edit own session content'
   - 'view own unpublished content'

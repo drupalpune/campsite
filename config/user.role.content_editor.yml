@@ -4,11 +4,16 @@ status: true
 dependencies:
   config:
     - node.type.article
+    - node.type.faq
+    - node.type.landing_page
     - node.type.page
+    - node.type.session
+    - node.type.sponsor
     - taxonomy.vocabulary.tags
   module:
     - comment
     - contextual
+    - dcp_user
     - file
     - node
     - path
@@ -27,6 +32,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access sponsor detail page'
   - 'access toolbar'
   - 'access tour'
   - 'access user profiles'
@@ -35,13 +41,23 @@ permissions:
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete any sponsor content'
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own page content'
+  - 'delete own sponsor content'
   - 'delete page revisions'
+  - 'edit any article content'
+  - 'edit any faq content'
+  - 'edit any landing_page content'
+  - 'edit any page content'
+  - 'edit any session content'
+  - 'edit any sponsor content'
   - 'edit own article content'
   - 'edit own comments'
+  - 'edit own comments'
   - 'edit own page content'
+  - 'edit own sponsor content'
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'view all revisions'
