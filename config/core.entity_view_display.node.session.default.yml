@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.session.field_attachment
     - field.field.node.session.field_co_presenter
     - field.field.node.session.field_experience_level
+    - field.field.node.session.field_keynote_session
     - field.field.node.session.field_selected
     - field.field.node.session.field_session_category_
     - field.field.node.session.field_session_synopsis
@@ -21,6 +22,11 @@ targetEntityType: node
 bundle: session
 mode: default
 content:
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_attachment:
     type: file_default
     label: hidden
@@ -43,6 +49,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_keynote_session:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_session_category_:
     type: entity_reference_label

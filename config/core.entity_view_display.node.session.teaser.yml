@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.session.field_attachment
     - field.field.node.session.field_co_presenter
     - field.field.node.session.field_experience_level
+    - field.field.node.session.field_keynote_session
     - field.field.node.session.field_selected
     - field.field.node.session.field_session_category_
     - field.field.node.session.field_session_synopsis
@@ -54,6 +55,7 @@ content:
 hidden:
   content_moderation_control: true
   field_attachment: true
+  field_keynote_session: true
   field_selected: true
   field_speaker_consent: true
   links: true
