@@ -28,6 +28,7 @@ function dcp_user_form_alter(&$form, &$form_state, $form_id) {
  * Implements hook_node_access().
  */
 function dcp_user_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  $access = AccessResult::neutral();
   switch ($node->bundle()) {
     case 'sponsor':
       $access = _dcp_user_sponsor_node_access($node, $op, $account);

@@ -6,12 +6,15 @@ dependencies:
     - field.field.node.session.field_attachment
     - field.field.node.session.field_co_presenter
     - field.field.node.session.field_experience_level
+    - field.field.node.session.field_keynote_session
     - field.field.node.session.field_selected
     - field.field.node.session.field_session_category_
     - field.field.node.session.field_session_synopsis
     - field.field.node.session.field_speaker_consent
     - node.type.session
+    - workflows.workflow.editorial
   module:
+    - content_moderation
     - file
     - text
 id: node.session.default
@@ -48,6 +51,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_keynote_session:
+    type: boolean_checkbox
+    weight: 101
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_session_category_:
     type: options_select
     weight: 2
@@ -70,6 +80,12 @@ content:
     region: content
     settings:
       display_label: false
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
