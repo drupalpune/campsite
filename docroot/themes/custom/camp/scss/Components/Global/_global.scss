@@ -33,13 +33,25 @@ footer.page-footer-section{
   }
 }
 .region--hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url('../scss/Images/heroBanner.png');
-  height: 326px;
+  min-height: 326px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   margin-top: -9px;
   padding: 96px 60px;
+
+  @include mobile{
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  .page-title {
+    color: #fff;
+  }
 }
 .fab{
   color: #D8D8D8;

@@ -2,7 +2,6 @@
   Drupal.behaviors.headerScroll = {
     attach: function (context, settings) {
       // Appending the Register now Button and Profile name ot Hamburger menu.
-      console.log($(context).find('.cheeseburger-menu__mainmenu .profile-name'));
       $(context).find('.cheeseburger-menu__mainmenu .profile-name').length == 0 ? $(context).find('.profile-name').clone().appendTo($(context).find('.cheeseburger-menu__mainmenu')) : '';
       $(context).find('.cheeseburger-menu__mainmenu .register-now').length == 0 ? $(context).find('.register-now').clone().appendTo($(context).find('.cheeseburger-menu__mainmenu')) : '';
 
