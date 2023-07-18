@@ -1,0 +1,23 @@
+uuid: b3bbbb59-77fd-4876-a003-cc2dedbb5a2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_featured_item
+    - paragraphs.paragraphs_type.schedule_item
+id: paragraph.schedule_item.field_featured_item
+field_name: field_featured_item
+entity_type: paragraph
+bundle: schedule_item
+label: 'Featured item'
+description: "Use this to 'feature' this schedule item.\r\nEg. check this for non-session items to theme them differently in a schedule."
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,108 @@
+uuid: 66a54201-917c-4ae7-9a80-549b382ad4ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.schedule_item.field_featured_item
+    - field.field.paragraph.schedule_item.field_is_session
+    - field.field.paragraph.schedule_item.field_schedule_item_location
+    - field.field.paragraph.schedule_item.field_schedule_item_time_date
+    - field.field.paragraph.schedule_item.field_session
+    - field.field.paragraph.schedule_item.field_title
+    - paragraphs.paragraphs_type.schedule_item
+  module:
+    - conditional_fields
+id: paragraph.schedule_item.default
+targetEntityType: paragraph
+bundle: schedule_item
+mode: default
+content:
+  field_featured_item:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_is_session:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_schedule_item_location:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_schedule_item_time_date:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_session:
+    type: entity_reference_autocomplete
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        4d9d56d2-e7f9-47c6-b082-5152e6ec985a:
+          entity_type: paragraph
+          bundle: schedule_item
+          dependee: field_is_session
+          settings:
+            state: '!visible'
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: true
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      conditional_fields:
+        378b79bd-6256-441b-a490-8558c8068c50:
+          entity_type: paragraph
+          bundle: schedule_item
+          dependee: field_is_session
+          settings:
+            state: 'visible'
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+hidden:
+  created: true
+  status: true

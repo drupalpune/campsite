@@ -1,0 +1,8 @@
+uuid: 230dcea5-2aa1-4c9d-b9af-b823e944f6f9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Session location (Room)'
+vid: session_location
+description: ''
+weight: 0

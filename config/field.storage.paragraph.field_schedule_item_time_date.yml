@@ -1,0 +1,21 @@
+uuid: c3ad1a6f-f997-4865-82de-9b9643e45541
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_schedule_item_time_date
+field_name: field_schedule_item_time_date
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

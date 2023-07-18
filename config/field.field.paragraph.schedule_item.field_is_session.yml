@@ -1,0 +1,23 @@
+uuid: 437b2d35-5c02-4253-8f6f-778c0cc98c41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_is_session
+    - paragraphs.paragraphs_type.schedule_item
+id: paragraph.schedule_item.field_is_session
+field_name: field_is_session
+entity_type: paragraph
+bundle: schedule_item
+label: 'Is this a session?'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

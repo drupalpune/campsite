@@ -1,0 +1,55 @@
+uuid: fce22cb8-d865-4fd4-b296-5912cc65470d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph
+    - node.type.schedule
+    - paragraphs.paragraphs_type.schedule_item
+  module:
+    - entity_reference_revisions
+id: node.schedule.field_paragraph
+field_name: field_paragraph
+entity_type: node
+bundle: schedule
+label: 'Schedule items'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      schedule_item: schedule_item
+    negate: 0
+    target_bundles_drag_drop:
+      about_drupal_camp:
+        weight: 10
+        enabled: false
+      hero_banner:
+        weight: 11
+        enabled: false
+      image_with_pattern:
+        weight: 12
+        enabled: false
+      schedule_item:
+        weight: 13
+        enabled: true
+      simple_text:
+        weight: 14
+        enabled: false
+      sponsor:
+        weight: 15
+        enabled: false
+      under_maintenance:
+        weight: 16
+        enabled: false
+      video:
+        weight: 17
+        enabled: false
+      video_card:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

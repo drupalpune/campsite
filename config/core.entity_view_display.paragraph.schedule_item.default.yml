@@ -1,0 +1,70 @@
+uuid: 2ded7771-de93-45ec-80a9-77d7da6137be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.schedule_item.field_featured_item
+    - field.field.paragraph.schedule_item.field_is_session
+    - field.field.paragraph.schedule_item.field_schedule_item_location
+    - field.field.paragraph.schedule_item.field_schedule_item_time_date
+    - field.field.paragraph.schedule_item.field_session
+    - field.field.paragraph.schedule_item.field_title
+    - paragraphs.paragraphs_type.schedule_item
+id: paragraph.schedule_item.default
+targetEntityType: paragraph
+bundle: schedule_item
+mode: default
+content:
+  field_featured_item:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_is_session:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_schedule_item_location:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_schedule_item_time_date:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_session:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

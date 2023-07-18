@@ -1,0 +1,20 @@
+uuid: 8dadca08-348b-48cf-a7a2-c2f7d2bb5d69
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - taxonomy
+id: paragraph.field_schedule_item_location
+field_name: field_schedule_item_location
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

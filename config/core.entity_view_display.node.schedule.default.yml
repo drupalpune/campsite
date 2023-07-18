@@ -1,0 +1,39 @@
+uuid: eb674b9a-33bf-49c5-a251-b465a2c3dd73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.schedule.body
+    - field.field.node.schedule.field_paragraph
+    - node.type.schedule
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.schedule.default
+targetEntityType: node
+bundle: schedule
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_paragraph:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

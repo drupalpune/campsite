@@ -1,0 +1,10 @@
+uuid: 5ac42864-f6c2-4aa8-9476-8dc1bc5bc2b6
+langcode: en
+status: true
+dependencies: {  }
+id: schedule_item
+label: 'Schedule Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
