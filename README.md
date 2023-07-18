@@ -12,3 +12,24 @@
 3. To watch theme run `ddev theme:watch`
 ### Code quality
 1. Run `ddev phpcs` to check and fix code standard errors in your code.
+
+
+## Content architecture
+### Sessions:
+- Content type: Session.
+- Session page: @todo: Add a page view of sessions at '/sessions'
+### Sponsors:
+- Content type: Sponsor.
+- Sponsors page: A page view of sponsors at '/sponsors'
+### Speakers:
+- Entity type: User.
+- Referenced from Speaker CT via author (uid).
+- Speakers page:
+  - A page view of users with relationship added to Speaker content and condition: Speaker moderation state: Published.
+  - A block of single content is added to top of this page as Keynote Speaker. Condition: Field 'Keynote session': TRUE.
+### Schedules:
+- Content type: Schedule.
+- Fields: 'Schedule item' with reference to paragraph type 'Schedule' item.
+- **Schedule item:**
+  - Paragraph with a field reference to a session/Or a text field for schedule items like 'Lunch', 'Break' etc.
+  - Other fields with details like Time, Location etc.
