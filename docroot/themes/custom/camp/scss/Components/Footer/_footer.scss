@@ -2,7 +2,15 @@
     display: flex;
     color: white;
     justify-content: space-between;
-    width: 50%;
+    width: 100%;
+    #block-in-collaboration-with-siu{
+        width: 15%;
+        text-align: center;
+        @include mobile{
+            width: 100%;
+        }
+
+    }
     ul{
         margin: unset;
     }
