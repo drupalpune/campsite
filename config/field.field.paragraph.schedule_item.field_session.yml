@@ -1,0 +1,29 @@
+uuid: f873d3c6-bf28-4bd3-a8ba-30aa9810196f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_session
+    - node.type.session
+    - paragraphs.paragraphs_type.schedule_item
+id: paragraph.schedule_item.field_session
+field_name: field_session
+entity_type: paragraph
+bundle: schedule_item
+label: Session
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      session: session
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

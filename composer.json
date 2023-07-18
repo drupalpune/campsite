@@ -9,6 +9,10 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
             "type": "path",
             "url": "upstream-configuration"
         }
@@ -42,7 +46,11 @@
         "drupal/persistent_login": "^2.0",
         "drupal/forgot_password_block": "^2.1",
         "drupal/views_accordion": "^2.0",
-        "acquia/blt": "^13.7"
+        "acquia/blt": "^13.7",
+        "drupal/conditional_fields": "^4.0",
+        "drupal/select2": "^1.15",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "npm-asset/select2": "^4.0"
     },
     "require-dev": {
         "drupal/core-dev": "^10.0"
@@ -50,12 +58,15 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
         "patches": {
             "drupal/quicktabs": {
                 "View's Empty Behavior not displayed anymore": "https://www.drupal.org/files/issues/2022-03-08/issues-3197108-fix-views-empty-behavior-not-displayed-error_0.patch"
+            },
+            "drupal/conditional_fields": {
+                "something": "https://www.drupal.org/files/issues/2023-06-15/conditional-fields-controlled-fields-inside-paragraphs-2902164-134.patch"
             }
         },
         "drupal-scaffold": {
@@ -73,7 +84,11 @@
         },
         "installer-paths": {
             "docroot/core": ["type:drupal-core"],
-            "docroot/libraries/{$name}": ["type:drupal-library"],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
             "docroot/modules/contrib/{$name}": ["type:drupal-module"],
             "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
             "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
@@ -83,6 +98,7 @@
             "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "docroot/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
         },
+        "installer-types": ["bower-asset", "npm-asset"],
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
@@ -114,7 +130,8 @@
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
-            "acquia/blt": true
+            "acquia/blt": true,
+            "oomphinc/composer-installers-extender": true
         }
     }
 

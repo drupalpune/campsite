@@ -1,0 +1,61 @@
+uuid: fe5f9d4d-bc66-4a9c-ae20-5125848581c6
+langcode: en
+status: true
+dependencies: {  }
+id: schedule
+label: Schedule
+renderer: quick_tabs
+hide_empty_tabs: false
+default_tab: 9999
+options:
+  quick_tabs:
+    ajax: false
+    class: ''
+    style: ''
+configuration_data:
+  -
+    title: 'Day 1'
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '20'
+          view_mode: full
+          hide_title: false
+      qtabs_content:
+        options:
+          machine_name: profile_page
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      block_content:
+        options:
+          bid: google_oauth_login_block
+          block_title: ''
+          display_title: false
+  -
+    title: 'Day 2'
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '22'
+          view_mode: full
+          hide_title: false
+      qtabs_content:
+        options:
+          machine_name: profile_page
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      block_content:
+        options:
+          bid: google_oauth_login_block
+          block_title: ''
+          display_title: false
