@@ -73,9 +73,13 @@ content:
             value: ''
             values: {  }
             value_form:
-              value: true
-            effect: show
-            effect_options: {  }
+              value: 1
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '200'
             selector: ''
   field_title:
     type: string_textfield
@@ -91,7 +95,7 @@ content:
           bundle: schedule_item
           dependee: field_is_session
           settings:
-            state: 'visible'
+            state: visible
             reset: false
             condition: value
             grouping: AND
@@ -100,8 +104,12 @@ content:
             values: {  }
             value_form:
               value: false
-            effect: show
-            effect_options: {  }
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '200'
             selector: ''
 hidden:
   created: true
