@@ -1,0 +1,25 @@
+uuid: 8010937b-e4b9-4012-9f96-b58e0ae00b0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - quicktabs
+    - system
+  theme:
+    - camp
+id: quicktabsschedule
+theme: camp
+region: content
+weight: 0
+provider: null
+plugin: 'quicktabs_block:schedule'
+settings:
+  id: 'quicktabs_block:schedule'
+  label: 'QuickTabs - Schedule'
+  label_display: '0'
+  provider: quicktabs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /schedule

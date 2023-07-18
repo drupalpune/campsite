@@ -1,0 +1,10 @@
+uuid: 76ac2705-bf56-40c8-b140-9314ff12fdb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.schedule
+label: Schedule
+targetEntityType: node
+cache: true
