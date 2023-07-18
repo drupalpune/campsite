@@ -50,6 +50,7 @@ module:
   profile: 0
   quicktabs: 0
   search: 0
+  select2: 0
   shortcut: 0
   smtp: 0
   social_api: 0

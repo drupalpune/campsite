@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.schedule_item
   module:
     - conditional_fields
+    - select2
 id: paragraph.schedule_item.default
 targetEntityType: paragraph
 bundle: schedule_item
@@ -32,14 +33,14 @@ content:
       display_label: true
     third_party_settings: {  }
   field_schedule_item_location:
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     weight: 3
     region: content
     settings:
+      width: 100%
+      autocomplete: false
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_schedule_item_time_date:
     type: string_textfield
@@ -50,14 +51,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_session:
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     weight: 1
     region: content
     settings:
+      width: 100%
+      autocomplete: false
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings:
       conditional_fields:
         4d9d56d2-e7f9-47c6-b082-5152e6ec985a:
