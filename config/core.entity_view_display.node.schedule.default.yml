@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.schedule.body
     - field.field.node.schedule.field_paragraph
+    - field.field.node.schedule.field_subtitle
     - node.type.schedule
   module:
     - entity_reference_revisions
@@ -30,6 +31,14 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     settings: {  }
