@@ -1,0 +1,102 @@
+.node--type-schedule {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.schedule {
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--title {
+      background: $white url("../scss/Images/schedule-header-keyart.svg") no-repeat 100% center;
+      background-size: contain;
+      width: 316px;
+      height: 149px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1E2429;
+      margin: 60px 0;
+      text-transform: capitalize;
+    }
+
+    &--subtitle {
+      color: #2F3941;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: nowrap;
+    gap: 10px;
+    padding: 24px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $session-title;
+    border: 1px solid $color--form-border;
+
+    &--featured {
+      background-color: $color--form-bg;
+    }
+
+    &--time {
+      flex-basis: 15%;
+    }
+
+    &--session {
+      flex-basis: 63%;
+    }
+
+    &--location {
+      flex-basis: 22%;
+      text-align: right;
+      color: $purple;
+    }
+  }
+
+  &__session {
+    &--title {
+      a {
+        color: $session-title;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &--author-detail {
+      margin-top: 20px;
+      text-transform: capitalize;
+    }
+
+    &--category {
+      margin-top: 28px;
+      background: #835BDB;
+      width: auto;
+      display: inline-block;
+      color: $white;
+      border-radius: 45px;
+      padding: 10px 16px;
+      font-size: 16px;
+    }
+  }
+}
+
+ul.quicktabs-tabs {
+  li {
+    padding: 0;
+    border-radius: 30px;
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    padding: 9px 10px;
+  }
+}

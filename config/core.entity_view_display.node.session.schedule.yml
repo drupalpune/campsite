@@ -27,13 +27,20 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_session_category_:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   content_moderation_control: true
   field_attachment: true
   field_experience_level: true
   field_keynote_session: true
   field_selected: true
-  field_session_category_: true
   field_session_synopsis: true
   field_speaker_consent: true
   links: true
