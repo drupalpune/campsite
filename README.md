@@ -14,7 +14,7 @@
 1. Run `ddev phpcs` to check and fix code standard errors in your code.
 
 
-## Content architecture
+## Content Architecture
 ### Sessions:
 - Content type: Session.
 - Session page: @todo: Add a page view of sessions at '/sessions'
@@ -33,3 +33,9 @@
 - **Schedule item:**
   - Paragraph with a field reference to a session/Or a text field for schedule items like 'Lunch', 'Break' etc.
   - Other fields with details like Time, Location etc.
+- Schedule page:
+  - Create 1 schedule node for each day of the schedule.
+  - Create a Landing page with Url alias `/schedule`.
+  - The quicktabs block for schedule items will automatically get placed on this page.
+    - Edit the 'Schedule' quicktab to configure which schedule nodes should appear on the schedule page.
+    - @todo: Add 'Schedule' quicktab node config to config ignore,
