@@ -1,0 +1,19 @@
+uuid: e2111792-71a1-4bec-b823-181fb70e86c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.schedule
+id: node.schedule.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: schedule
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
