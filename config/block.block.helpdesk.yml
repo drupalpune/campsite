@@ -11,7 +11,7 @@ dependencies:
 id: helpdesk
 theme: camp
 region: footer2
-weight: 0
+weight: -14
 provider: null
 plugin: 'system_menu_block:help-desk'
 settings:
