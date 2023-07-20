@@ -1,0 +1,29 @@
+uuid: c169d07f-efef-4b9b-83bb-5eb049bc5f3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sponsors
+  module:
+    - system
+    - views
+  theme:
+    - camp
+id: views_block__sponsors_sponsors_homepage
+theme: camp
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:sponsors-sponsors_homepage'
+settings:
+  id: 'views_block:sponsors-sponsors_homepage'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
