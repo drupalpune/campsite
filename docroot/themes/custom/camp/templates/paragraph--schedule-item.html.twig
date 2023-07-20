@@ -1,0 +1,15 @@
+<div class="schedule__content {{ paragraph.field_featured_item.value == '1' ? 'schedule__content--featured' : '' }}">
+  <div class="schedule__content--time">
+    {{ content.field_schedule_item_time_date }}
+  </div>
+  <div class="schedule__content--session">
+    {% if paragraph.field_is_session.value == '1' %}
+      {{ content.field_session }}
+    {% else %}
+      {{ content.field_title }}
+    {% endif %}
+  </div>
+  <div class="schedule__content--location">
+    {{ content.field_schedule_item_location }}
+  </div>
+</div>
