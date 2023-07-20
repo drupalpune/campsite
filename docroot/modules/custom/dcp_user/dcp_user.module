@@ -33,6 +33,7 @@ function dcp_user_node_access(NodeInterface $node, $op, AccountInterface $accoun
     case 'sponsor':
       $access = _dcp_user_node_access($node, $op, $account, 'access sponsor detail page');
       break;
+
     case 'schedule':
       $access = _dcp_user_node_access($node, $op, $account, 'access schedule detail page');
       break;
