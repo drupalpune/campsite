@@ -15,9 +15,9 @@
     <a href={{ url }}>{{ label }}</a>
   </div>
   <div class="schedule__session--author-detail">
-    {{ 'By '|t }}{{ node.Owner.name.value }} 
+    {{ 'By '|t }}{{ node.Owner.field_full_name.value }}
     {% if content.field_co_presenter.0 is not empty %}
-      {{ ', ' ~ content.field_co_presenter.0["#account"].name.value }}
+      {{ ', ' ~ content.field_co_presenter.0["#account"].field_full_name.value }}
     {% endif %}
   </div>
   <div class="schedule__session--category">
