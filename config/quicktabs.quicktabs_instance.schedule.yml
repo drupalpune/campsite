@@ -20,7 +20,7 @@ configuration_data:
     content:
       node_content:
         options:
-          nid: '20'
+          nid: '301'
           view_mode: full
           hide_title: false
       qtabs_content:
@@ -43,7 +43,7 @@ configuration_data:
     content:
       node_content:
         options:
-          nid: '22'
+          nid: '306'
           view_mode: full
           hide_title: false
       qtabs_content:
