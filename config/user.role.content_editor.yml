@@ -32,6 +32,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access schedule detail page'
   - 'access sponsor detail page'
   - 'access toolbar'
   - 'access tour'

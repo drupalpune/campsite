@@ -31,7 +31,10 @@ function dcp_user_node_access(NodeInterface $node, $op, AccountInterface $accoun
   $access = AccessResult::neutral();
   switch ($node->bundle()) {
     case 'sponsor':
-      $access = _dcp_user_sponsor_node_access($node, $op, $account);
+      $access = _dcp_user_node_access($node, $op, $account, 'access sponsor detail page');
+      break;
+    case 'schedule':
+      $access = _dcp_user_node_access($node, $op, $account, 'access schedule detail page');
       break;
   }
 
@@ -41,10 +44,16 @@ function dcp_user_node_access(NodeInterface $node, $op, AccountInterface $accoun
 /**
  * Helper function to determine access on sponsor node.
  */
-function _dcp_user_sponsor_node_access(NodeInterface $node, $op, AccountInterface $account) {
-  if ($op === 'view' && !$account->hasPermission('access sponsor detail page')) {
-    return AccessResult::forbidden();
+function _dcp_user_node_access(NodeInterface $node, string $op, AccountInterface $account, string $permission) {
+  $current_route_node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($current_route_node->id() !== $node->id()) {
+    return AccessResult::neutral();
   }
 
-  return AccessResult::neutral();
+  if ($op !== 'view' || $account->hasPermission($permission)) {
+    return AccessResult::neutral();
+  }
+
+  return AccessResult::forbidden();
 }
