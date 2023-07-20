@@ -50,7 +50,8 @@
         "drupal/conditional_fields": "^4.0",
         "drupal/select2": "^1.15",
         "oomphinc/composer-installers-extender": "^2.0",
-        "npm-asset/select2": "^4.0"
+        "npm-asset/select2": "^4.0",
+        "drupal/pathauto": "^1.11"
     },
     "require-dev": {
         "drupal/core-dev": "^10.0"

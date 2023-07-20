@@ -1,0 +1,10 @@
+uuid: c6e75954-3b8c-4d35-9405-39201c2ff776
+langcode: en
+status: true
+dependencies:
+  module:
+    - google_api_client
+id: google_api_client.token
+label: Token
+targetEntityType: google_api_client
+cache: true
