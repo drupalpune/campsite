@@ -9,6 +9,9 @@
         @include mobile{
             width: 100%;
         }
+        .field--name-field-title-heading {
+            margin: 0;
+        }
 
     }
     ul{
@@ -24,10 +27,18 @@
     }
     @include mobile{
         width: 100%;
+        > div, nav {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 }
 footer.page-footer-section{
     padding: 64px 60px 48px 60px;
+    @include mobile{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     h2.foot1-head{
         font-family: $primaryFont;
         font-size: 42px;
