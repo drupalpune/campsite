@@ -1,0 +1,10 @@
+uuid: 51b5118b-438e-447b-84f9-a86411ed8cd2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sponsor_homepage
+label: sponsor-homepage
+targetEntityType: node
+cache: true
