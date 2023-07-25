@@ -59,3 +59,31 @@
     }
   }
 }
+
+.node--type-session {
+  &.node--view-mode-full {
+    max-width: 1100px;
+    padding: 90px 20px;
+    margin: 0 auto;
+
+    .field--name-field-session-category- {
+      margin-top: 28px;
+      background: #835bdb;
+      width: auto;
+      display: inline-block;
+      color: #fff;
+      border-radius: 45px;
+      padding: 10px 16px;
+      font-size: 16px;
+    }
+
+    .experienced_level {
+      margin-bottom: 28px;
+      display: flex;
+
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
+}
