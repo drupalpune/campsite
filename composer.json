@@ -24,7 +24,7 @@
         "drupal/core-recommended": "^10",
         "pantheon-systems/drupal-integrations": "^10",
         "cweagans/composer-patches": "^1.7",
-        "drush/drush": "^11.5",
+        "drush/drush": "^12",
         "drupal/paragraphs": "^1.15",
         "drupal/admin_toolbar": "^3.3",
         "drupal/backup_migrate": "^5.0",
@@ -46,15 +46,12 @@
         "drupal/persistent_login": "^2.0",
         "drupal/forgot_password_block": "^2.1",
         "drupal/views_accordion": "^2.0",
-        "acquia/blt": "^13.7",
         "drupal/conditional_fields": "^4.0",
         "drupal/select2": "^1.15",
         "oomphinc/composer-installers-extender": "^2.0",
         "npm-asset/select2": "^4.0",
-        "drupal/pathauto": "^1.11"
-    },
-    "require-dev": {
-        "drupal/core-dev": "^10.0"
+        "drupal/pathauto": "^1.11",
+        "acquia/blt": "^13.7"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -131,8 +128,8 @@
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
-            "acquia/blt": true,
-            "oomphinc/composer-installers-extender": true
+            "oomphinc/composer-installers-extender": true,
+            "acquia/blt": true
         }
     }
 

@@ -1,3 +1,4 @@
+langcode: en
 smtp_on: true
 smtp_host: smtpout.secureserver.net
 smtp_hostbackup: ''

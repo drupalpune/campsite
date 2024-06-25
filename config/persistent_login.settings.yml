@@ -1,5 +1,6 @@
 _core:
   default_config_hash: Kl0WJbkU9ixPFaFd6q0VmA49MNp4MwPY6fUSgk_swHI
+langcode: en
 lifetime: 30
 extend_lifetime: false
 max_tokens: 0

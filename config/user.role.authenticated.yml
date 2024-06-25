@@ -11,6 +11,7 @@ dependencies:
     - comment
     - contact
     - content_moderation
+    - file
     - filter
     - node
     - search
@@ -29,6 +30,7 @@ permissions:
   - 'access site-wide contact form'
   - 'access user profiles'
   - 'create session content'
+  - 'delete own files'
   - 'delete own session content'
   - 'edit own session content'
   - 'post comments'

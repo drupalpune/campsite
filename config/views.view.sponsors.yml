@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.sponsor_homepage
     - core.entity_view_mode.node.teaser
     - node.type.sponsor
   module:
@@ -139,8 +138,7 @@ display:
       row:
         type: 'entity:node'
         options:
-          relationship: none
-          view_mode: sponsor_homepage
+          view_mode: teaser
       query:
         type: views_query
         options:
@@ -161,64 +159,12 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  sponsors_homepage:
-    id: sponsors_homepage
-    display_title: Block
-    display_plugin: block
-    position: 1
-    display_options:
-      style:
-        type: default
-        options: {  }
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: sponsor_homepage
-      defaults:
-        style: false
-        row: false
-        header: false
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: 'Our Sponsors'
-            format: basic_html
-          tokenize: false
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  sponsors_page:
-    id: sponsors_page
+  page_1:
+    id: page_1
     display_title: Page
     display_plugin: page
     position: 1
     display_options:
-      style:
-        type: default
-        options: {  }
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: teaser
-      defaults:
-        style: false
-        row: false
       display_extenders: {  }
       path: sponsors
     cache_metadata:
