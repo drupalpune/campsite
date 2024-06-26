@@ -15,6 +15,7 @@ dependencies:
     - contextual
     - dcp_user
     - file
+    - help
     - node
     - path
     - system
@@ -32,6 +33,7 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access help pages'
   - 'access schedule detail page'
   - 'access sponsor detail page'
   - 'access toolbar'
@@ -45,6 +47,7 @@ permissions:
   - 'delete any sponsor content'
   - 'delete article revisions'
   - 'delete own article content'
+  - 'delete own files'
   - 'delete own page content'
   - 'delete own sponsor content'
   - 'delete page revisions'

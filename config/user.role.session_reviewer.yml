@@ -6,11 +6,13 @@ dependencies:
     - workflows.workflow.editorial
   module:
     - content_moderation
+    - file
 id: session_reviewer
 label: 'Session Reviewer'
 weight: 5
 is_admin: null
 permissions:
+  - 'delete own files'
   - 'use editorial transition archived_draft'
   - 'use editorial transition archived_published'
   - 'use editorial transition publish'

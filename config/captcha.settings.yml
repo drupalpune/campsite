@@ -1,5 +1,6 @@
 _core:
   default_config_hash: hSAUW7BoAd9YUpKcVKyZpW4wY67g4XZAYlt3Vnz6SVA
+langcode: en
 enabled_default: 0
 default_challenge: captcha/Math
 description: 'This question is for testing whether or not you are a human visitor and to prevent automated spam submissions.'
