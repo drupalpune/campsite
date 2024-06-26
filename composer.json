@@ -129,8 +129,11 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "phpstan/extension-installer": true,
             "oomphinc/composer-installers-extender": true,
-            "acquia/blt": true
+            "acquia/blt": true,
+            "php-http/discovery": true
         }
+    },
+    "require-dev": {
+        "drupal/core-dev": "^10.3"
     }
-
 }
