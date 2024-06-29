@@ -2,14 +2,14 @@
 ## Local development instructions.
 ### Requirements
 1. Docker and DDEV
+2. [Pantheon Integration](https://ddev.readthedocs.io/en/stable/users/providers/pantheon/)
 ### Set up instructions
 1. Clone repo to your local and navigate to cloned directory.
 2. Run `ddev composer install`
-3. Import DB usind `ddev sql-cli < /path/to/db.sql`
+3. Take a pull from pantheon: `ddev pull pantheon`
 ### Theme development
-1. Run `ddev theme:install` to install node packages. This is a one time step.
-2. To build theme run `ddev theme:build`
-3. To watch theme run `ddev theme:watch`
+1. Go to the theme folder and run `ddev npm i`.
+2. To compile the theme: `ddev npm run build`
 ### Code quality
 1. Run `ddev phpcs` to check and fix code standard errors in your code.
 
