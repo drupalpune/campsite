@@ -4,6 +4,5 @@ status: true
 dependencies: {  }
 name: 'Session location (Room)'
 vid: session_location
-description: null
+description: ''
 weight: 0
-new_revision: false

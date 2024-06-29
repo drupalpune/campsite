@@ -6,6 +6,5 @@ dependencies:
     - google_api_client
 id: google_api_client.token
 label: Token
-description: ''
 targetEntityType: google_api_client
 cache: true

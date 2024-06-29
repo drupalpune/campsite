@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: hero_banner
 label: 'Hero Banner'
-revision: false
+revision: 0
 description: ''
