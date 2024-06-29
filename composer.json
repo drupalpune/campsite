@@ -51,7 +51,8 @@
         "npm-asset/select2": "^4.0",
         "drupal/pathauto": "^1.11",
         "acquia/blt": "^13.7",
-        "drupal/gin": "^3.0@RC"
+        "drupal/gin": "^3.0@RC",
+        "pantheon-systems/upstream-management": "^1.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -62,9 +63,6 @@
         "patches": {
             "drupal/quicktabs": {
                 "View's Empty Behavior not displayed anymore": "https://www.drupal.org/files/issues/2022-03-08/issues-3197108-fix-views-empty-behavior-not-displayed-error_0.patch"
-            },
-            "drupal/conditional_fields": {
-                "something": "https://www.drupal.org/files/issues/2023-06-15/conditional-fields-controlled-fields-inside-paragraphs-2902164-134.patch"
             }
         },
         "drupal-scaffold": {
@@ -130,7 +128,8 @@
             "phpstan/extension-installer": true,
             "oomphinc/composer-installers-extender": true,
             "acquia/blt": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "pantheon-systems/upstream-management": true
         }
     },
     "require-dev": {
