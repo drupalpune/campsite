@@ -18,6 +18,8 @@
 }
 
 #block-tweet1 {
+  text-align: center;
+
   h2 {
     margin: 36px 60px;
     text-align: center;
@@ -28,11 +30,11 @@
     }
   }
   .twitter-block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: inline-block;
+    vertical-align: top;
     padding: 0 60px;
     @include mobile{
+      display: flex;
       padding: 0px 17px;
     }
     .twitter-tweet {
