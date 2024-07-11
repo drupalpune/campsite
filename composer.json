@@ -52,7 +52,8 @@
         "drupal/pathauto": "^1.11",
         "acquia/blt": "^13.7",
         "drupal/gin": "^3.0@RC",
-        "pantheon-systems/upstream-management": "^1.0"
+        "pantheon-systems/upstream-management": "^1.0",
+        "drupal/admin_toolbar": "^3.4"
     },
     "conflict": {
         "drupal/drupal": "*"
