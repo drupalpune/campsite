@@ -383,7 +383,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'administer site configuration'
       cache:
         type: tag
         options: {  }
