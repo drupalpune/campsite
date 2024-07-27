@@ -61,3 +61,8 @@ $settings['config_sync_directory'] = '../config';
  *
  * @link https://docs.acquia.com/blt/
  */
+
+
+if (file_exists(dirname(__FILE__) . '/../../config/settings.php')) {
+  include dirname(__FILE__) . '/../../config/settings.php';
+}
