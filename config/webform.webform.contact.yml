@@ -15,7 +15,7 @@ template: false
 archive: false
 id: contact
 title: Contact
-description: '<p>Basic email contact webform.</p>'
+description: 'Basic email contact webform.'
 categories: {  }
 elements: |-
   first_name:
@@ -54,7 +54,7 @@ settings:
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
-  page: false
+  page: true
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
@@ -133,8 +133,6 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
-  wizard_page_type: container
-  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

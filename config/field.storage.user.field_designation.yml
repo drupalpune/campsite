@@ -36,9 +36,6 @@ settings:
       value: c_x_o
       label: CxO
     -
-      value: ai_engineer
-      label: 'AI Engineer'
-    -
       value: other
       label: Other
   allowed_values_function: ''

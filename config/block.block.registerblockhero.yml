@@ -12,7 +12,7 @@ dependencies:
 id: registerblockhero
 theme: camp
 region: hero
-weight: -13
+weight: -15
 provider: null
 plugin: 'block_content:352ffa44-c77b-4603-b8f9-9f71b6e3fb57'
 settings:

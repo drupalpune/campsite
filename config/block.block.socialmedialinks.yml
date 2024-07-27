@@ -9,7 +9,7 @@ dependencies:
 id: socialmedialinks
 theme: camp
 region: footer2
-weight: -13
+weight: -15
 provider: null
 plugin: social_media_links_block
 settings:

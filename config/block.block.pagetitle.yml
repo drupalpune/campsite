@@ -9,7 +9,7 @@ dependencies:
 id: pagetitle
 theme: camp
 region: hero
-weight: -12
+weight: -14
 provider: null
 plugin: page_title_block
 settings:

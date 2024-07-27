@@ -9,7 +9,7 @@ _core:
 id: camp_primary_admin_actions
 theme: camp
 region: content
-weight: -15
+weight: -17
 provider: null
 plugin: local_actions_block
 settings:

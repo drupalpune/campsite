@@ -1,0 +1,25 @@
+uuid: 0fa4e2c6-b7de-49d0-ad18-0b7bf6d2b8ad
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:556591a8-d1a9-42c8-b3ab-b7210b96cdb0'
+  module:
+    - block_content
+  theme:
+    - camp
+id: camp_incollaborationwith
+theme: camp
+region: footer2
+weight: -17
+provider: null
+plugin: 'block_content:556591a8-d1a9-42c8-b3ab-b7210b96cdb0'
+settings:
+  id: 'block_content:556591a8-d1a9-42c8-b3ab-b7210b96cdb0'
+  label: 'In collaboration with'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

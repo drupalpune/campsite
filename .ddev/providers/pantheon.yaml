@@ -41,7 +41,7 @@
 # `ddev exec terminus site:list` will show available sites
 
 environment_variables:
-  project: campsite2024.dev
+  project: campsite2024.test
 
 auth_command:
   command: |

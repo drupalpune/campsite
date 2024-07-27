@@ -1,0 +1,30 @@
+uuid: 3bfa382b-4005-4d2f-b560-ed7171ba1ea7
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:039f1c2d-d0cf-4476-8ce4-48cc8879b4be'
+  module:
+    - block_content
+    - system
+  theme:
+    - camp
+id: camp_basicblock27
+theme: camp
+region: hero
+weight: -13
+provider: null
+plugin: 'block_content:039f1c2d-d0cf-4476-8ce4-48cc8879b4be'
+settings:
+  id: 'block_content:039f1c2d-d0cf-4476-8ce4-48cc8879b4be'
+  label: 'Basic block: 27'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/6
