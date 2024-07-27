@@ -6,7 +6,7 @@ name: 'Drupal Camp Pune 2023'
 mail: camp@drupalpune.in
 slogan: ''
 page:
-  403: ''
+  403: /user/login
   404: /node/4
   front: /node/1
 admin_compact_mode: false

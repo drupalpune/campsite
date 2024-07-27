@@ -11,3 +11,8 @@ regions:
   footer2: 'Footer 2'
 libraries:
   - camp/global-styling
+libraries-override:
+  olivero/global-styling:
+    css:
+      component:
+        css/components/table.css: false
