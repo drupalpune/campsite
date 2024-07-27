@@ -2,7 +2,7 @@ name: Deploy to live
 
 on:
   push:
-    tags: v*
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -26,25 +26,26 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: Host key verification for BLT
-      continue-on-error: true
-      run: ssh -o StrictHostKeyChecking=No drupalcamppune@svn-12800.prod.hosting.acquia.com
-
-    - name: Host key verification for drush remote
-      continue-on-error: true
-      run: ssh -o StrictHostKeyChecking=No drupalcamppune.prod@drupalcamppune.ssh.prod.acquia-sites.com
-
     - name: Install dependencies
       run: composer install
 
-    - name: deploy
-      run: vendor/bin/blt artifact:deploy -vvv --ignore-dirty --no-interaction --branch "main"
+    - name: Deploy to Live
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.LIVE_SERVER_SSH_KEY }}
+        ARGS: "-rltDzvO --delete"
+        SOURCE: "./"
+        REMOTE_HOST: ${{ secrets.LIVE_REMOTE_HOST }}
+        REMOTE_USER: ${{ secrets.LIVE_REMOTE_USER }}
+        TARGET: ${{ secrets.LIVE_REMOTE_TARGET }}
+        EXCLUDE: "/**/node_modules/"
 
-    - name: Post deploy
-      run: |
-        vendor/bin/drush @drupalcamppune.prod -- updb
-        vendor/bin/drush @drupalcamppune.prod -- cr
-        vendor/bin/drush @drupalcamppune.prod -- cim
+    # - name: Post deploy
+    #   run: |
+    #     vendor/bin/drush @drupalcamppune.prod -- updb
+    #     vendor/bin/drush @drupalcamppune.prod -- cr
+    #     vendor/bin/drush @drupalcamppune.prod -- cim
+
 
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
