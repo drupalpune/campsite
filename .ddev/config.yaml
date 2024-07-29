@@ -1,5 +1,5 @@
 name: campsite-2024
-type: drupal
+type: drupal10
 docroot: docroot
 php_version: "8.3"
 webserver_type: nginx-fpm
