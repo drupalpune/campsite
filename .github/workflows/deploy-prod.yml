@@ -49,9 +49,9 @@ jobs:
       with:
         host: ${{ secrets.LIVE_REMOTE_HOST }}
         username: ${{ secrets.LIVE_REMOTE_USER }}
-        key: ${{ secrets.LIVE_REMOTE_TARGET }}
+        key: ${{ secrets.LIVE_SERVER_SSH_KEY }}
         script: |
-          cd ${{ secrets.LIVE_SERVER_SSH_KEY }}
+          cd ${{ secrets.LIVE_REMOTE_TARGET }}
           vendor/bin/drush updb
           vendor/bin/drush cr
           vendor/bin/drush cim
