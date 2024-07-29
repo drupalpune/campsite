@@ -47,7 +47,7 @@ if (file_exists('/var/www/site-php')) {
 
 $secrets_file = $_ENV['HOME'] . '/secrets.settings.php';
 if (file_exists($secrets_file)) {
-   require $secrets_file;
+  require $secrets_file;
 }
 
 // Override default config directory to be ../config.
@@ -63,6 +63,6 @@ $settings['config_sync_directory'] = '../config';
  */
 
 
-if (file_exists(dirname(__FILE__) . '/../../config/settings.php')) {
-  include dirname(__FILE__) . '/../../config/settings.php';
+if (file_exists(dirname(__FILE__) . '/../../../../config/settings.php')) {
+  include dirname(__FILE__) . '/../../../../config/settings.php';
 }

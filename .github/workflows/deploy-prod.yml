@@ -29,6 +29,10 @@ jobs:
     - name: Install dependencies
       run: composer install
 
+    - name: Symlink files directory
+      run: ln -s /var/www/html/sites/drupalpune.in/public/files files
+      working-directory: web/sites/default
+
     - name: Deploy to Live
       uses: easingthemes/ssh-deploy@main
       env:
