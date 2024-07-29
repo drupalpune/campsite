@@ -44,11 +44,21 @@ jobs:
         TARGET: ${{ secrets.LIVE_REMOTE_TARGET }}
         EXCLUDE: "/**/node_modules/"
 
-    # - name: Post deploy
-    #   run: |
-    #     vendor/bin/drush @drupalcamppune.prod -- updb
-    #     vendor/bin/drush @drupalcamppune.prod -- cr
-    #     vendor/bin/drush @drupalcamppune.prod -- cim
+    - name: Post Deploy Scripts
+      runs-on: ubuntu-latest
+      steps:
+      - name: Execute post deploy commands using remote ssh
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.LIVE_REMOTE_HOST }}
+          username: ${{ secrets.LIVE_REMOTE_USER }}
+          key: ${{ secrets.LIVE_REMOTE_TARGET }}
+          script: |
+            cd ${{ secrets.LIVE_SERVER_SSH_KEY }}
+            vendor/bin/drush updb
+            vendor/bin/drush cr
+            vendor/bin/drush cim
+
 
 
 
