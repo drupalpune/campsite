@@ -8,6 +8,8 @@
 use Drupal\Core\Access\AccessResult;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\node\NodeInterface;
+use Drupal\user\Entity\Role;
+use Drupal\user\UserInterface;
 
 /**
  * Using hook_form_alter.
@@ -58,3 +60,21 @@ function _dcp_user_node_access(NodeInterface $node, string $op, AccountInterface
 
   return AccessResult::forbidden();
 }
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function  dcp_user_user_insert(UserInterface $user) {
+    // Check if the entity type is a user.
+    if ($user->getEntityTypeId() == 'user') {
+        // Load the role object based on the role name.
+        $role = Role::load('speaker');
+
+        // Assign the role to the user.
+        if ($role) {
+            $user->addRole($role->id());
+            $user->save();
+        }
+    }
+}
+
