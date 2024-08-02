@@ -1,7 +1,7 @@
 .user_profile {
   &__header {
-    
-    .field--name-user-picture { 
+
+    .field--name-user-picture {
       position: relative;
       height: 175px;
 
@@ -36,7 +36,7 @@
       &-full-name {
         margin-bottom: 0;
         padding-top: 1px;
-  
+
         .field__label,
         .field__item {
           font-family: $primaryFont;
@@ -123,7 +123,7 @@
 
     .field {
       flex-basis: 50%;
-    
+
       &__label {
         font-size: 20px;
         color: $label-text;
@@ -132,7 +132,7 @@
           font-size: 17px;
         }
       }
-  
+
       &__item {
         font-family: $secondaryFont;
         font-weight: bold;
@@ -146,32 +146,38 @@
 }
 
 //quicktabs implementation
-
-ul.quicktabs-tabs{
-  @include mobile{
-    margin: unset;
-  }
-  text-align: center;
-  li{
-    width: 170px;
-    border: 1px solid #e9ebed;
-    padding: 5px 10px;
+.quicktabs-wrapper {
+  ul.quicktabs-tabs{
+    @include mobile{
+      margin: unset;
+    }
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 16px;
-    a{
-      color: #68737d;
+    li{
+      width: 170px;
+      border: 1px solid #e9ebed;
+      padding: 5px 10px;
+      text-align: center;
       text-decoration: none;
-    }
-    &.active {
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 16px;
       a{
-      color: $purple;
+        color: #68737d;
+        text-decoration: none;
       }
-      background-color: $color--form-bg;
-      border: none;
+      &.active {
+        a{
+        color: $purple;
+        }
+        background-color: $color--form-bg;
+        border: none;
+      }
     }
+  }
+
+  .submit-session {
+    max-width: 210px;
+    margin: 30px auto 0;
   }
 }
