@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.session.field_keynote_session
     - field.field.node.session.field_selected
     - field.field.node.session.field_session_category_
+    - field.field.node.session.field_session_duration
     - field.field.node.session.field_session_synopsis
     - field.field.node.session.field_speaker_consent
     - node.type.session
@@ -57,5 +58,6 @@ hidden:
   field_attachment: true
   field_keynote_session: true
   field_selected: true
+  field_session_duration: true
   field_speaker_consent: true
   links: true

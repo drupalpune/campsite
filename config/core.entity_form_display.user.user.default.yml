@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_code_of_conduct
     - field.field.user.user.field_designation
     - field.field.user.user.field_drupal_profile_link
     - field.field.user.user.field_full_name
@@ -26,6 +27,13 @@ content:
     weight: 0
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_code_of_conduct:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: false
     third_party_settings: {  }
   field_designation:
     type: options_select

@@ -1,0 +1,21 @@
+uuid: cd7ca300-d99f-48a4-873a-6964baccf252
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_duration
+    - node.type.session
+  module:
+    - options
+id: node.session.field_session_duration
+field_name: field_session_duration
+entity_type: node
+bundle: session
+label: 'Session Duration'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

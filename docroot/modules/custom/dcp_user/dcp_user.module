@@ -24,6 +24,13 @@ function dcp_user_form_alter(&$form, &$form_state, $form_id) {
       '#weight' => '100',
     ];
   }
+
+  if ($form_id == 'node_session_form') {
+    $current_user = \Drupal::currentUser();
+    if ($current_user->hasRole('speaker')) {
+      $form["moderation_state"]["#access"] = false;
+    }
+  }
 }
 
 /**

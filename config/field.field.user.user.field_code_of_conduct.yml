@@ -1,0 +1,24 @@
+uuid: 4e189ae2-58db-4d32-ac7c-901b535902a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_code_of_conduct
+  module:
+    - user
+id: user.user.field_code_of_conduct
+field_name: field_code_of_conduct
+entity_type: user
+bundle: user
+label: 'Code of conduct'
+description: 'I have read and agree to the <a href="/code-of-conduct" target="_blank">code of conduct</a>.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'I have read and agree to the <a href="/code-of-conduct" target="_blank">code of conduct</a>.'
+  off_label: 'I have read and agree to the <a href="/code-of-conduct" target="_blank">code of conduct</a>.'
+field_type: boolean

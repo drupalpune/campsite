@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.session.field_keynote_session
     - field.field.node.session.field_selected
     - field.field.node.session.field_session_category_
+    - field.field.node.session.field_session_duration
     - field.field.node.session.field_session_synopsis
     - field.field.node.session.field_speaker_consent
     - node.type.session
@@ -25,7 +26,7 @@ content:
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: -20
+    weight: 0
     region: content
   field_attachment:
     type: file_default
@@ -33,7 +34,7 @@ content:
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_co_presenter:
     type: entity_reference_label
@@ -41,14 +42,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 5
+    weight: 7
     region: content
   field_experience_level:
     type: list_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_keynote_session:
     type: boolean
@@ -58,7 +59,7 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 7
+    weight: 9
     region: content
   field_session_category_:
     type: entity_reference_label
@@ -66,14 +67,21 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 4
+    region: content
+  field_session_duration:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_session_synopsis:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   field_speaker_consent:
     type: boolean
@@ -83,12 +91,12 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 6
+    weight: 8
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
 hidden:
   field_selected: true

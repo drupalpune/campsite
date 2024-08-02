@@ -110,7 +110,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'administer nodes'
       cache:
         type: tag
         options: {  }
@@ -200,6 +200,7 @@ display:
     display_plugin: block
     position: 2
     display_options:
+      title: 'Submitted Sessions'
       fields:
         status:
           id: status
@@ -631,11 +632,13 @@ display:
           hide_empty: false
       defaults:
         access: false
+        title: false
         style: false
         row: false
         relationships: false
         fields: false
         arguments: false
+        header: false
       relationships:
         uid:
           id: uid
@@ -648,6 +651,20 @@ display:
           entity_field: uid
           plugin_id: standard
           required: true
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text
+          empty: false
+          content:
+            value: '<h2>Submitted Sessions</h2>'
+            format: basic_html
+          tokenize: false
       display_extenders: {  }
       block_hide_empty: false
     cache_metadata:

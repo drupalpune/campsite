@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_code_of_conduct
     - field.field.user.user.field_designation
     - field.field.user.user.field_drupal_profile_link
     - field.field.user.user.field_full_name
@@ -22,6 +23,16 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_code_of_conduct:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
   field_designation:
     type: list_default
     label: above

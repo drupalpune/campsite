@@ -18,44 +18,44 @@ configuration_data:
     weight: 0
     type: view_content
     content:
-      block_content:
+      qtabs_content:
         options:
-          bid: google_oauth_login_block
-          block_title: ''
-          display_title: false
-      node_content:
-        options:
-          nid: ''
-          view_mode: full
-          hide_title: true
+          machine_name: schedule
       view_content:
         options:
           vid: my_profile
           display: block_1
           args: '%2'
-      qtabs_content:
-        options:
-          machine_name: ''
-  -
-    title: Session
-    weight: 0
-    type: view_content
-    content:
-      block_content:
-        options:
-          bid: google_oauth_login_block
-          block_title: ''
-          display_title: false
       node_content:
         options:
           nid: ''
           view_mode: full
           hide_title: true
+      block_content:
+        options:
+          bid: google_oauth_login_block
+          block_title: ''
+          display_title: false
+  -
+    title: 'Submitted Sessions'
+    weight: 0
+    type: view_content
+    content:
+      qtabs_content:
+        options:
+          machine_name: schedule
       view_content:
         options:
           vid: session
           display: block_1
           args: '%2'
-      qtabs_content:
+      node_content:
         options:
-          machine_name: ''
+          nid: ''
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: google_oauth_login_block
+          block_title: ''
+          display_title: false

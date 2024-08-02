@@ -1,4 +1,8 @@
 form {
+  a {
+    color: var(--color-text-primary-medium) !important;
+    text-decoration: underline !important;
+  }
   margin: 0px 260px;
   @include mobile{
     margin: 0px 20px;
