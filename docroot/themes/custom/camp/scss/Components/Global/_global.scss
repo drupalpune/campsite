@@ -118,7 +118,12 @@ footer.page-footer-section{
    text-decoration: none;
    box-shadow: none;
    text-transform: uppercase;
+
    &:hover {
+     color: white;
+   }
+
+   a:hover {
      color: white;
    }
 }
@@ -126,7 +131,7 @@ footer.page-footer-section{
 header.page-header {
 
   z-index: 1;
-  
+
   background: white;
   &.fixed {
     width: 100vw;
@@ -280,4 +285,8 @@ ul.cheeseburger-menu__mainmenu{
 
 .paragraph-font {
   font-family: 'Manrope', serif;
+}
+
+.js input.form-autocomplete {
+  background-repeat: no-repeat !important;
 }
