@@ -1,23 +1,23 @@
-uuid: d716c2ad-93f9-441b-8092-3efd664c6903
+uuid: 5a3faf7f-5d98-4878-a932-957438bae43e
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:hero_banner:fa0d006d-604e-4bdf-8201-0b3e93813fa8'
+    - 'block_content:basic:89df28bc-9ab3-42c0-8e47-548de047d687'
   module:
     - block_content
     - system
   theme:
     - camp
-id: contactus_hero
+id: camp_proposeasession
 theme: camp
 region: hero
-weight: -17
+weight: -16
 provider: null
-plugin: 'block_content:fa0d006d-604e-4bdf-8201-0b3e93813fa8'
+plugin: 'block_content:89df28bc-9ab3-42c0-8e47-548de047d687'
 settings:
-  id: 'block_content:fa0d006d-604e-4bdf-8201-0b3e93813fa8'
-  label: 'ContactUs Hero'
+  id: 'block_content:89df28bc-9ab3-42c0-8e47-548de047d687'
+  label: 'Propose a Session'
   label_display: '0'
   provider: block_content
   status: true
@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /contact
+    pages: /submit-session
