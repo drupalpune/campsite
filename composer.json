@@ -54,7 +54,8 @@
         "drupal/gin": "^3.0@RC",
         "pantheon-systems/upstream-management": "^1.0",
         "drupal/admin_toolbar": "^3.4",
-        "drupal/tome": "^1.12"
+        "drupal/tome": "^1.12",
+        "drupal/simple_sitemap": "^4.1"
     },
     "conflict": {
         "drupal/drupal": "*"
