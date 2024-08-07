@@ -56,6 +56,9 @@ function dcp_user_node_access(NodeInterface $node, $op, AccountInterface $accoun
  */
 function _dcp_user_node_access(NodeInterface $node, string $op, AccountInterface $account, string $permission) {
   $current_route_node = \Drupal::routeMatch()->getParameter('node');
+  if (empty($current_route_node)) {
+    return AccessResult::neutral();
+  }
 
   if ($current_route_node->id() !== $node->id()) {
     return AccessResult::neutral();
