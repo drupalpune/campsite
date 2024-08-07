@@ -1,6 +1,6 @@
 uuid: 52a79c26-9bbc-48cc-aa96-c0e439a769f3
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - simple_sitemap.type.index
