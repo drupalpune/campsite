@@ -7,8 +7,8 @@ label: 'Content: Session'
 tags:
   description: '[node:field_session_synopsis]'
   og_description: '[node:field_session_synopsis:summary]'
-  og_title: 'Session : [current-page:title] | [site:name]'
-  title: 'Session : [current-page:title] | [site:name]'
+  og_title: '[current-page:title] | Session | [site:name]'
+  title: '[current-page:title] | Session | [site:name]'
   twitter_cards_description: '[node:field_session_synopsis:summary]'
-  twitter_cards_title: 'Session : [current-page:title] | [site:name]'
+  twitter_cards_title: '[current-page:title] | Session | [site:name]'
   twitter_cards_type: summary
