@@ -55,6 +55,7 @@ jobs:
           vendor/bin/drush updb
           vendor/bin/drush cr
           vendor/bin/drush cim
+          vendor/bin/drush ssg
 
 
 
