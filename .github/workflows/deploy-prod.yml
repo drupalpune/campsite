@@ -52,10 +52,11 @@ jobs:
         key: ${{ secrets.LIVE_SERVER_SSH_KEY }}
         script: |
           cd ${{ secrets.LIVE_REMOTE_TARGET }}
-          vendor/bin/drush updb
-          vendor/bin/drush cr
-          vendor/bin/drush cim
-          vendor/bin/drush ssg
+          vendor/bin/drush --uri=https://www.drupalpune.in updb
+          vendor/bin/drush --uri=https://www.drupalpune.in cr
+          vendor/bin/drush --uri=https://www.drupalpune.in cim
+          vendor/bin/drush --uri=https://www.drupalpune.in ssg
+
 
 
 
