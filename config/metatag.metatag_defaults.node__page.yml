@@ -1,0 +1,14 @@
+uuid: 2177215e-0221-453f-aa66-e8d234c52e36
+langcode: en
+status: true
+dependencies: {  }
+id: node__page
+label: 'Content: Basic page'
+tags:
+  description: '[node:summary]'
+  og_description: '[node:summary]'
+  og_title: '[current-page:title] | [site:name]'
+  title: '[current-page:title] | [site:name]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_title: '[current-page:title] | [site:name]'
+  twitter_cards_type: summary

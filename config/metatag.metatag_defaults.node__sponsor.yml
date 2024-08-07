@@ -1,0 +1,17 @@
+uuid: af1e965a-8234-4e89-951f-b2503e656e36
+langcode: en
+status: true
+dependencies: {  }
+id: node__sponsor
+label: 'Content: Sponsor'
+tags:
+  description: '[node:summary]'
+  og_description: '[node:summary]'
+  og_image: '[node:field_logo:large:url]'
+  og_image_url: '[node:field_logo:large:url]'
+  og_title: '[current-page:title] | Sponsor | [site:name]'
+  title: '[current-page:title] | Sponsor | [site:name]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_image: '[node:field_logo:large:url]'
+  twitter_cards_title: '[current-page:title] | Sponsor | [site:name]'
+  twitter_cards_type: summary

@@ -10,7 +10,7 @@ dependencies:
 id: log_in_to_your_account
 theme: camp
 region: content
-weight: -16
+weight: -15
 provider: null
 plugin: 'block_content:afe99884-21c7-4aef-99d5-19b26586d38e'
 settings:

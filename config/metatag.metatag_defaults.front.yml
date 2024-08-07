@@ -1,0 +1,15 @@
+uuid: 7d9a784e-a62d-42fe-bf2b-6d92e5a5bced
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: 'Front page'
+tags:
+  canonical_url: '[site:url]'
+  og_title: 'DrupalCamp Pune 2024 | Brought to you by Drupalers Association Pune'
+  shortlink: '[site:url]'
+  title: 'DrupalCamp Pune 2024 | Brought to you by Drupalers Association Pune'
+  twitter_cards_title: 'DrupalCamp Pune 2024 | Brought to you by Drupalers Association Pune'
+  twitter_cards_type: summary

@@ -72,7 +72,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
-      show_summary: false
+      show_summary: true
     third_party_settings: {  }
   field_speaker_consent:
     type: boolean_checkbox
@@ -84,6 +84,11 @@ content:
   moderation_state:
     type: moderation_state_default
     weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

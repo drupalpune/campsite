@@ -1,0 +1,14 @@
+uuid: 3b3db624-5a70-4f5c-8397-615e54f52389
+langcode: en
+status: true
+dependencies: {  }
+id: node__session
+label: 'Content: Session'
+tags:
+  description: '[node:field_session_synopsis]'
+  og_description: '[node:field_session_synopsis:summary]'
+  og_title: 'Session : [current-page:title] | [site:name]'
+  title: 'Session : [current-page:title] | [site:name]'
+  twitter_cards_description: '[node:field_session_synopsis:summary]'
+  twitter_cards_title: 'Session : [current-page:title] | [site:name]'
+  twitter_cards_type: summary

@@ -1,0 +1,18 @@
+uuid: 00eadbd9-4641-4de5-813c-71890adad684
+langcode: en
+status: true
+dependencies: {  }
+id: node__landing_page
+label: 'Content: Landing page'
+tags:
+  description: '[node:summary]'
+  og_description: '[node:summary]'
+  og_image: 'https://www.drupalpune.in/themes/custom/camp/scss/Images/group.png'
+  og_image_secure_url: 'https://www.drupalpune.in/themes/custom/camp/scss/Images/group.png'
+  og_image_url: 'https://www.drupalpune.in/themes/custom/camp/scss/Images/group.png'
+  og_title: '[current-page:title] | [site:name]'
+  title: '[current-page:title] | [site:name]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_image: 'https://www.drupalpune.in/themes/custom/camp/scss/Images/group.png'
+  twitter_cards_title: '[current-page:title] | [site:name]'
+  twitter_cards_type: summary

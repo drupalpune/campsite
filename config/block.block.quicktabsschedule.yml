@@ -10,7 +10,7 @@ dependencies:
 id: quicktabsschedule
 theme: camp
 region: content
-weight: -9
+weight: -8
 provider: null
 plugin: 'quicktabs_block:schedule'
 settings:

@@ -1,0 +1,22 @@
+uuid: 6b3175df-a8a5-462b-92ae-d259e15db72b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  description: 'DrupalCamp Pune is a highly anticipated annual event that brings together Drupal enthusiasts, developers, designers, and professionals worldwide. The camp offers a platform for knowledge sharing, networking, and collaboration within the Drupal community.'
+  image_src: 'https://www.drupalpune.in/themes/custom/camp/scss/Images/group.png'
+  og_description: 'DrupalCamp Pune is a highly anticipated annual event that brings together Drupal enthusiasts, developers, designers, and professionals worldwide. The camp offers a platform for knowledge sharing, networking, and collaboration within the Drupal community.'
+  og_image: 'https://www.drupalpune.in/themes/custom/camp/scss/Images/group.png'
+  og_image_url: 'https://www.drupalpune.in/themes/custom/camp/scss/Images/group.png'
+  og_title: '[current-page:title] | [site:name]'
+  title: '[current-page:title] | [site:name]'
+  twitter_cards_description: 'DrupalCamp Pune is a highly anticipated annual event that brings together Drupal enthusiasts, developers, designers, and professionals worldwide. The camp offers a platform for knowledge sharing, networking, and collaboration within the Drupal community.'
+  twitter_cards_image: 'https://www.drupalpune.in/themes/custom/camp/scss/Images/group.png'
+  twitter_cards_site: '@drupalcamppune'
+  twitter_cards_title: '[current-page:title] | [site:name]'
+  twitter_cards_type: summary
