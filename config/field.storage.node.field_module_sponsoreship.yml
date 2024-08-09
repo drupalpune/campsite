@@ -1,0 +1,36 @@
+uuid: 2b4bb0f2-d5e0-4b07-bdc9-0d97455fad55
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_module_sponsoreship
+field_name: field_module_sponsoreship
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: coffee_tea_booth_sponsor
+      label: 'Coffee/Tea Booth Sponsor'
+    -
+      value: contribution_sprint_sponsor
+      label: 'Contribution Sprint Sponsor'
+    -
+      value: goodie_bag_sponsor
+      label: 'Goodie Bag Sponsor'
+    -
+      value: lanyard_sponsor
+      label: 'Lanyard Sponsor'
+    -
+      value: lunch_sponsor
+      label: 'Lunch Sponsor'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
