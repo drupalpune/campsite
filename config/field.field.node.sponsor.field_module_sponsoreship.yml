@@ -1,0 +1,21 @@
+uuid: aadae67f-23fe-4ac8-89ef-9b1058bd5360
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_module_sponsoreship
+    - node.type.sponsor
+  module:
+    - options
+id: node.sponsor.field_module_sponsoreship
+field_name: field_module_sponsoreship
+entity_type: node
+bundle: sponsor
+label: 'Module Sponsoreship'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
