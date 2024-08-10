@@ -11,7 +11,7 @@ id: node.sponsor.field_category
 field_name: field_category
 entity_type: node
 bundle: sponsor
-label: Category
+label: 'Sponsors Category'
 description: ''
 required: false
 translatable: false

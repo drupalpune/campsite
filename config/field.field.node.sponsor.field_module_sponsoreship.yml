@@ -11,7 +11,7 @@ id: node.sponsor.field_module_sponsoreship
 field_name: field_module_sponsoreship
 entity_type: node
 bundle: sponsor
-label: 'Module Sponsoreship'
+label: 'Module Sponsor Category'
 description: ''
 required: false
 translatable: false

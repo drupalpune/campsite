@@ -20,6 +20,9 @@ settings:
     -
       value: diamond
       label: Diamond
+    -
+      value: module
+      label: Module
   allowed_values_function: ''
 module: options
 locked: false
