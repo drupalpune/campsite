@@ -219,6 +219,7 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      title: 'Gold Sponsors'
       filters:
         status:
           id: status
@@ -286,6 +287,7 @@ display:
         groups:
           1: AND
       defaults:
+        title: false
         filters: false
         filter_groups: false
       display_description: ''
@@ -304,6 +306,7 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      title: 'Platinum Sponsors'
       filters:
         status:
           id: status
@@ -371,6 +374,7 @@ display:
         groups:
           1: AND
       defaults:
+        title: false
         filters: false
         filter_groups: false
       display_description: ''
@@ -389,6 +393,7 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      title: 'Diamond Sponsors'
       filters:
         status:
           id: status
@@ -456,6 +461,7 @@ display:
         groups:
           1: AND
       defaults:
+        title: false
         filters: false
         filter_groups: false
       display_description: ''
@@ -474,6 +480,7 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      title: 'Module Sponsors'
       filters:
         status:
           id: status
@@ -541,6 +548,7 @@ display:
         groups:
           1: AND
       defaults:
+        title: false
         filters: false
         filter_groups: false
       display_description: ''
