@@ -1,4 +1,4 @@
-uuid: 34067bb6-1d04-46a2-b55b-5a5140f42ff4
+uuid: 1df7b544-c938-4e05-b44d-9df6ea7b781f
 langcode: en
 status: true
 dependencies:
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - camp
-id: camp_views_block__sponsors_block_2
+id: camp_views_block__sponsors_view_block_platinum_sponsors
 theme: camp
 region: content
-weight: 0
+weight: -8
 provider: null
-plugin: 'views_block:sponsors-block_2'
+plugin: 'views_block:sponsors-view_block_platinum_sponsors'
 settings:
-  id: 'views_block:sponsors-block_2'
+  id: 'views_block:sponsors-view_block_platinum_sponsors'
   label: ''
   label_display: visible
   provider: views

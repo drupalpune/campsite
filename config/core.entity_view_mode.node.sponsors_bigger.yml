@@ -1,0 +1,11 @@
+uuid: 933f1dbf-897d-4fb8-8f22-a491f71a16d2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sponsors_bigger
+label: 'Sponsors Bigger'
+description: ''
+targetEntityType: node
+cache: true

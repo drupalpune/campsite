@@ -1,0 +1,11 @@
+uuid: b7954553-d353-479e-b8f5-489abb034a89
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sponsors_module
+label: 'Sponsors Module'
+description: ''
+targetEntityType: node
+cache: true

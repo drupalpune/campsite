@@ -57,7 +57,7 @@
         "drupal/tome": "^1.12",
         "drupal/simple_sitemap": "^4.1",
         "drupal/metatag": "^2.0",
-        "drupal/image_link_formatter": "^2.2"
+        "drupal/devel": "^5.3"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -66,6 +66,9 @@
     "prefer-stable": true,
     "extra": {
         "patches": {
+            "drupal/core":{
+                "3463875 - BigPipe error - An error occurred during the execution of the Ajax response: LoadJS": "https://www.drupal.org/files/issues/2024-07-25/3463875-2.ajaxjs-prevent-loadjs-errors.patch"
+            },
             "drupal/quicktabs": {
                 "View's Empty Behavior not displayed anymore": "https://www.drupal.org/files/issues/2022-03-08/issues-3197108-fix-views-empty-behavior-not-displayed-error_0.patch"
             }

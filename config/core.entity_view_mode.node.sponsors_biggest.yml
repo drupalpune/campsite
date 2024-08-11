@@ -1,0 +1,11 @@
+uuid: 14fcd745-4c9b-4e99-bf5e-972252f7fc7c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sponsors_biggest
+label: 'Sponsors Biggest'
+description: ''
+targetEntityType: node
+cache: true

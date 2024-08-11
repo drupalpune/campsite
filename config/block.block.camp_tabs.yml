@@ -7,7 +7,7 @@ dependencies:
 id: camp_tabs
 theme: camp
 region: content
-weight: -18
+weight: -20
 provider: null
 plugin: local_tasks_block
 settings:

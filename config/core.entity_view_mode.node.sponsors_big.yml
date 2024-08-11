@@ -1,0 +1,11 @@
+uuid: d9bf0bcd-c897-4d70-b729-e4b3e235e8ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.sponsors_big
+label: 'Sponsors Big'
+description: ''
+targetEntityType: node
+cache: true

@@ -1,0 +1,57 @@
+uuid: 3cd03d24-4ba1-4e39-9848-f912da41a61a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.sponsors_bigger
+    - field.field.node.sponsor.body
+    - field.field.node.sponsor.field_category
+    - field.field.node.sponsor.field_link
+    - field.field.node.sponsor.field_logo
+    - field.field.node.sponsor.field_metatag
+    - field.field.node.sponsor.field_module_sponsoreship
+    - image.style.medium
+    - node.type.sponsor
+  module:
+    - image
+    - layout_builder
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.sponsor.sponsors_bigger
+targetEntityType: node
+bundle: sponsor
+mode: sponsors_bigger
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_category: true
+  field_metatag: true
+  field_module_sponsoreship: true
+  links: true

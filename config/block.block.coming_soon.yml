@@ -12,7 +12,7 @@ dependencies:
 id: coming_soon
 theme: camp
 region: content
-weight: -9
+weight: -11
 provider: null
 plugin: 'block_content:fa01f96e-3bcd-4fe6-af64-f885291779a6'
 settings:
