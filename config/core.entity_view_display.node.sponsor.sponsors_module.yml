@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.sponsor.field_logo
     - field.field.node.sponsor.field_metatag
     - field.field.node.sponsor.field_module_sponsoreship
-    - image.style.thumbnail
     - node.type.sponsor
   module:
     - image
@@ -44,7 +43,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: thumbnail
+      image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }

@@ -90,19 +90,66 @@
   .view-content {
     display: flex;
     flex-flow: row wrap;
-    gap: 40px;
+    justify-content: center;
+    gap: 32px;
 
     @include tablet{
       gap: 30px;
     }
 
     @include mobile{
-      gap: 0;
+      gap: 20px;
+    }
+  }
+
+  &.view-display-id-view_block_diamond_sponsors {
+    .views-row {
+      width: calc((100% - 160px) / 3);
+
+      @include mobile{
+        width: 100%;
+      }
+    }
+
+    .view-content {
+      gap: 32px;
+    }
+  }
+
+  &.view-display-id-view_block_platinum_sponsors {
+    .views-row {
+      width: calc((100% - 160px) / 4);
+
+      @include mobile{
+        width: 100%;
+      }
+    }
+
+    .view-content {
+      gap: 32px;
+    }
+  }
+
+  &.view-display-id-view_block_gold_sponsors {
+    .views-row {
+      width: calc((100% - 160px) / 5);
+
+      @include mobile{
+        width: calc((100% - 20px) / 2);
+      }
+    }
+
+    .view-content {
+      gap: 32px;
+
+      @include mobile{
+        gap: 20px;
+      }
     }
   }
 
   .views-row {
-    width: calc((100% - 160px) / 5);
+    width: calc((100% - 160px) / 6);
     margin: 0 0 40px;
 
     @include tablet{
@@ -110,7 +157,7 @@
     }
 
     @include mobile{
-      width: 100%;
+      width: calc((100% - 20px) / 2);
     }
   }
 
