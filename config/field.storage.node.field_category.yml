@@ -23,6 +23,9 @@ settings:
     -
       value: module
       label: Module
+    -
+      value: media_partners
+      label: 'Media partners'
   allowed_values_function: ''
 module: options
 locked: false

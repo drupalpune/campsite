@@ -109,7 +109,8 @@ footer.page-footer-section{
     text-transform: uppercase;
   }
 }
- .register-now {
+ .register-now,
+ .become-sponsor {
    font-size: 16px;
    line-height: 24px;
    font-weight: 700;
@@ -119,9 +120,9 @@ footer.page-footer-section{
    border: 1px solid $purple;
    height: auto;
    text-align: center;
-   color: white;
+   color: white !important;
    text-decoration: none;
-   box-shadow: none;
+   box-shadow: none !important;
    text-transform: uppercase;
 
    &:hover {
@@ -131,6 +132,11 @@ footer.page-footer-section{
    a:hover {
      color: white;
    }
+}
+
+.become-sponsor-container {
+  text-align: center;
+
 }
 
 header.page-header {

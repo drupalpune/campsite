@@ -1,0 +1,29 @@
+uuid: 57297380-bbf2-4302-993a-1251c39f3295
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sponsors
+  module:
+    - system
+    - views
+  theme:
+    - camp
+id: camp_views_block__sponsors_media_partners
+theme: camp
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:sponsors-media_partners'
+settings:
+  id: 'views_block:sponsors-media_partners'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /sponsors
