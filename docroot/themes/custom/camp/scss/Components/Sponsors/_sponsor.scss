@@ -73,7 +73,8 @@
   .node--view-mode-teaser,
   .node--view-mode-sponsors-biggest,
   .node--view-mode-sponsors-bigger,
-  .node--view-mode-sponsors-big {
+  .node--view-mode-sponsors-big,
+  .node--view-mode-sponsors-module {
     padding: 0.5rem;
     box-shadow: 0px 0px 8px 0px #0000001A;
     height: 100%;
@@ -85,6 +86,10 @@
     &:hover {
       box-shadow: 0px 2px 50px 0px #00000033;
     }
+  }
+
+  .node--view-mode-sponsors-module {
+    text-align: center;
   }
 
   .view-content {
