@@ -6,8 +6,10 @@
  */
 
 use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\node\NodeInterface;
+use Drupal\user\Entity\Role;
 
 /**
  * Using hook_form_alter.
@@ -28,6 +30,14 @@ function dcp_user_form_alter(&$form, &$form_state, $form_id) {
     if ($current_user->hasRole('speaker')) {
       $form["moderation_state"]["#access"] = FALSE;
     }
+  }
+
+  // Show the field_volunteer just for users with role volunteers.
+  $current_user = \Drupal::currentUser();
+  if ($current_user->hasRole('volunteers')) {
+    $form["field_volunteer"]["#access"] = TRUE;
+  } else {
+    $form["field_volunteer"]["#access"] = FALSE;
   }
 }
 
