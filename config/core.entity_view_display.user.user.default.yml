@@ -9,6 +9,7 @@ dependencies:
     - field.field.user.user.field_full_name
     - field.field.user.user.field_organization
     - field.field.user.user.field_type_of_business
+    - field.field.user.user.field_volunteer
     - field.field.user.user.user_picture
     - image.style.medium
   module:
@@ -31,14 +32,14 @@ content:
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    weight: 11
+    weight: 7
     region: content
   field_designation:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 10
+    weight: 6
     region: content
   field_drupal_profile_link:
     type: link
@@ -50,7 +51,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 7
+    weight: 3
     region: content
   field_full_name:
     type: string
@@ -58,7 +59,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 6
+    weight: 2
     region: content
   field_organization:
     type: string
@@ -66,19 +67,19 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 9
+    weight: 5
     region: content
   field_type_of_business:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 4
     region: content
   member_for:
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 1
     region: content
   user_picture:
     type: image
@@ -92,6 +93,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_volunteer: true
   speaker_biography_profiles: true
   speaker_experience_profiles: true
   speaker_profiles: true

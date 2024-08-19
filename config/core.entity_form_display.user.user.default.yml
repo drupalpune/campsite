@@ -9,6 +9,7 @@ dependencies:
     - field.field.user.user.field_full_name
     - field.field.user.user.field_organization
     - field.field.user.user.field_type_of_business
+    - field.field.user.user.field_volunteer
     - field.field.user.user.user_picture
     - image.style.medium
   module:
@@ -30,7 +31,7 @@ content:
     third_party_settings: {  }
   field_code_of_conduct:
     type: boolean_checkbox
-    weight: 10
+    weight: 11
     region: content
     settings:
       display_label: false
@@ -71,6 +72,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_volunteer:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   language:
     weight: 2
     region: content
@@ -78,7 +87,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
