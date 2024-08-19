@@ -18,6 +18,12 @@
         margin: 10px 10px 0;
       }
     }
+
+    .cheeseburger-parent {
+      li {
+        margin: 0 !important;
+      }
+    }
   }
   .block-system-branding-block {
     background: transparent;
@@ -48,6 +54,40 @@
         a {
           color: $primary;
           text-decoration: none;
+        }
+
+        .menu__item--level-1 {
+          align-items: center;
+          display: flex;
+          height: 3rem !important;
+          margin: 0 .5em;
+          position: relative;
+
+          ul {
+            background-color: #fff;
+            border: 1px solid #f4f4f4;
+            box-shadow: 0 2px 4px rgba(38, 36, 36, .2);
+            display: none;
+            left: 50%;
+            min-width: 13em;
+            position: absolute;
+            text-align: center;
+            top: 4rem !important;
+            transform: translateX(-50%);
+            z-index: 5;
+
+            li a {
+              line-height: 1.3;
+              padding: .75em 1em;
+              display: inline-block;
+            }
+          }
+
+          &:hover {
+            ul {
+              display: block;
+            }
+          }
         }
       }
     }
