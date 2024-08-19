@@ -129,7 +129,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: "<p class=\"text-center\">\r\n    Still looking for Sponsors.\r\n</p>"
+            value: "<p class=\"text-center\">\r\nDCP Sponsor Spotlight – Your Logo Here\r\n</p>"
             format: full_html
           tokenize: false
       sorts:
