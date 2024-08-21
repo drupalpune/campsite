@@ -301,3 +301,11 @@ ul.cheeseburger-menu__mainmenu{
 .js input.form-autocomplete {
   background-repeat: no-repeat !important;
 }
+
+.text-content ul {
+  list-style: disc inside;
+}
+
+.text-content ol {
+  list-style: decimal inside;
+}
