@@ -12,13 +12,15 @@
   {{ title_prefix }}
   {{ title_suffix }}
   <div class="schedule__session--title">
-    <a href={{ url }}>{{ label }}</a>
+    <a href={{ url }} class ="text-7xl font-bold">{{ label }}</a>
   </div>
   <div class="schedule__session--author-detail">
-    {{ 'By '|t }}{{ node.Owner.field_full_name.value }}
-    {% if content.field_co_presenter.0 is not empty %}
-      {{ ', ' ~ content.field_co_presenter.0["#account"].field_full_name.value }}
-    {% endif %}
+    {{ 'By '|t }}{{ node.Owner.field_full_name.value|join }}
+    {% for item in content.field_co_presenter %}
+      {% if item is iterable and item["#account"].field_full_name.value is not empty %}
+        {{ ', ' ~ item["#account"].field_full_name.value|join }}
+      {% endif %}
+    {% endfor %}
   </div>
   <div class="schedule__session--category">
     {{ content.field_session_category_.0["#title"] }}
