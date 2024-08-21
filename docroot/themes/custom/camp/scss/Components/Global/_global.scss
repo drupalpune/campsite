@@ -2,6 +2,11 @@ body {
   background-image: none;
   background-color: transparent;
   font-family: $primaryFont;
+
+  td {
+    border: 1px solid;
+    padding: 10px;
+  }
 }
 
 .region--content {
@@ -37,6 +42,7 @@ footer.page-footer-section{
     position: relative;
     z-index: 1;
     max-height: 100%;
+    border-radius: 30%;
   }
 }
 .field--name-field-paragraph{
