@@ -164,7 +164,7 @@
 
   .views-row {
     width: calc((100% - 160px) / 6);
-    margin: 0 0 40px;
+    margin: 44px 0 8px;
 
     @include tablet{
       width: calc((100% - 60px) / 3);
