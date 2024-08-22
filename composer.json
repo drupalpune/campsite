@@ -57,7 +57,8 @@
         "drupal/tome": "^1.12",
         "drupal/simple_sitemap": "^4.1",
         "drupal/metatag": "^2.0",
-        "drupal/devel": "^5.3"
+        "drupal/devel": "^5.3",
+        "drupal/views_data_export": "^1.4"
     },
     "conflict": {
         "drupal/drupal": "*"
