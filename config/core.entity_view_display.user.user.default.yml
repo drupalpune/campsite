@@ -9,7 +9,6 @@ dependencies:
     - field.field.user.user.field_full_name
     - field.field.user.user.field_organization
     - field.field.user.user.field_type_of_business
-    - field.field.user.user.field_volunteer
     - field.field.user.user.user_picture
     - image.style.medium
   module:
@@ -93,7 +92,6 @@ content:
     weight: 0
     region: content
 hidden:
-  field_volunteer: true
   speaker_biography_profiles: true
   speaker_experience_profiles: true
   speaker_profiles: true

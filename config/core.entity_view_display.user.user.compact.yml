@@ -10,7 +10,6 @@ dependencies:
     - field.field.user.user.field_full_name
     - field.field.user.user.field_organization
     - field.field.user.user.field_type_of_business
-    - field.field.user.user.field_volunteer
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -41,7 +40,6 @@ hidden:
   field_full_name: true
   field_organization: true
   field_type_of_business: true
-  field_volunteer: true
   member_for: true
   speaker_biography_profiles: true
   speaker_experience_profiles: true

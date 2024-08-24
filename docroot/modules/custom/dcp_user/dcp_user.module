@@ -31,14 +31,6 @@ function dcp_user_form_alter(&$form, &$form_state, $form_id) {
       $form["moderation_state"]["#access"] = FALSE;
     }
   }
-
-  // Show the field_volunteer just for users with role volunteers.
-  $current_user = \Drupal::currentUser();
-  if ($current_user->hasRole('volunteers')) {
-    $form["field_volunteer"]["#access"] = TRUE;
-  } else {
-    $form["field_volunteer"]["#access"] = FALSE;
-  }
 }
 
 /**
