@@ -181,3 +181,59 @@
     margin: 30px auto 0;
   }
 }
+
+.view-meet-team {
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 24px;
+    margin-top: 48px;
+
+    @include mobile{
+      gap: 16px;
+    }
+
+    > .views-row {
+        flex-basis: calc((100% - 48px) / 3);
+        max-width: 100%;
+        margin: 0;
+        background: #f4f4f4;
+        position: relative;
+
+        @include mobile{
+          flex-basis: 100%;
+        }
+    }
+
+    .group-content {
+      padding: 32px;
+      text-align: center;
+      color: #fff;
+      background-image: url(../scss/Images/SponsorBanner.png);
+      width: 100%;
+    }
+  }
+
+  .user--designation {
+    color: #c2c8cc;
+  }
+
+  .user--profile-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+
+    &:hover {
+      + .user--content .group-content {
+        color: #c0c;
+      }
+    }
+  }
+
+  .user--name {
+    font-size: 24px;
+  }
+}

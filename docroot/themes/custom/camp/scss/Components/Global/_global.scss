@@ -12,8 +12,10 @@ body {
 .region--content {
   display: block;
 
-  .node__content {
-    .field--name-body {
+  .node__content,
+  .block__content {
+    .field--name-body,
+    .view-meet-team {
       max-width: 1280px;
       margin: 0 auto;
       padding: 0 32px;
