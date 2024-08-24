@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.full
+    - core.entity_view_mode.node.teaser
     - field.storage.node.body
     - field.storage.node.field_attachment
     - field.storage.node.field_co_presenter
@@ -15,7 +15,15 @@ dependencies:
     - field.storage.node.field_session_synopsis
     - field.storage.node.field_speaker_consent
     - node.type.session
+    - taxonomy.vocabulary.session_category
     - user.role.administrator
+  content:
+    - 'taxonomy_term:session_category:0a3d185d-019c-4d89-8170-2e44c48bc2e8'
+    - 'taxonomy_term:session_category:34418e71-0cf9-4ff9-a119-527f589fde5c'
+    - 'taxonomy_term:session_category:72c6af90-dc2d-4757-aa51-09fb8ca16875'
+    - 'taxonomy_term:session_category:74cc595b-3478-4256-a557-6fd874919951'
+    - 'taxonomy_term:session_category:b84b6963-280b-4fdc-a365-836a34577f58'
+    - 'taxonomy_term:session_category:e17a8219-3477-46b0-9b1b-42825183d59a'
   module:
     - csv_serialization
     - file
@@ -23,6 +31,7 @@ dependencies:
     - options
     - rest
     - serialization
+    - taxonomy
     - text
     - user
     - views_data_export
@@ -244,13 +253,70 @@ display:
           plugin_id: bundle
           value:
             session: session
+        field_session_category__target_id:
+          id: field_session_category__target_id
+          table: node__field_session_category_
+          field: field_session_category__target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            2: 2
+            27: 27
+            26: 26
+            4: 4
+            3: 3
+            28: 28
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_session_category__target_id_op
+            label: 'Session Category'
+            description: ''
+            use_operator: false
+            operator: field_session_category__target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_session_category__target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+              speaker: '0'
+              session_reviewer: '0'
+              volunteers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: session_category
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: default
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: full
+          view_mode: teaser
       query:
         type: views_query
         options:
@@ -268,6 +334,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.roles
@@ -288,72 +355,6 @@ display:
     position: 2
     display_options:
       fields:
-        nid:
-          id: nid
-          table: node_field_revision
-          field: nid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: nid
-          plugin_id: field
-          label: ID
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         title:
           id: title
           table: node_field_data
@@ -427,7 +428,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: Answer
+          label: Synopsis
           exclude: false
           alter:
             alter_text: false
@@ -668,126 +669,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_co_presenter:
-          id: field_co_presenter
-          table: node__field_co_presenter
-          field: field_co_presenter
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Co-Presenter
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        delta_1:
-          id: delta_1
-          table: node__field_co_presenter
-          field: delta
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: numeric
-          label: 'Co-Presenter (field_co_presenter:delta)'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ','
-          format_plural: false
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
         field_attachment:
           id: field_attachment
           table: node__field_attachment
@@ -799,8 +680,8 @@ display:
           label: Attachment
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: 'https://www.drupalpune.in{{ field_attachment }}'
             make_link: false
             path: ''
             absolute: false
@@ -838,339 +719,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
-          type: file_default
-          settings:
-            use_description_as_link_text: true
+          type: file_url_plain
+          settings: {  }
           group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        delta:
-          id: delta
-          table: node__field_attachment
-          field: delta
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: numeric
-          label: 'Attachment (field_attachment:delta)'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ','
-          format_plural: false
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
-        field_selected:
-          id: field_selected
-          table: node__field_selected
-          field: field_selected
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: Selected
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: default
-            format_custom_false: ''
-            format_custom_true: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_speaker_consent:
-          id: field_speaker_consent
-          table: node__field_speaker_consent
-          field: field_speaker_consent
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: 'Speaker consent'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: boolean
-          settings:
-            format: default
-            format_custom_false: ''
-            format_custom_true: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        uid:
-          id: uid
-          table: node_field_revision
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: uid
-          plugin_id: field
-          label: 'Authored by'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        created:
-          id: created
-          table: node_field_revision
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: field
-          label: 'Authored on'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: timestamp
-          settings:
-            date_format: medium
-            custom_date_format: ''
-            timezone: ''
-            tooltip:
-              date_format: long
-              custom_date_format: ''
-            time_diff:
-              enabled: false
-              future_format: '@interval hence'
-              past_format: '@interval ago'
-              granularity: 2
-              refresh: 60
-              description: ''
-          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -1208,7 +759,7 @@ display:
       displays:
         page_1: page_1
         default: '0'
-      filename: selected-sessions.csv
+      filename: submitted-sessions.csv
       automatic_download: false
       store_in_public_file_directory: false
       custom_redirect_path: false
@@ -1220,17 +771,15 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - url
         - 'user.node_grants:view'
         - user.roles
       tags:
         - 'config:field.storage.node.field_attachment'
-        - 'config:field.storage.node.field_co_presenter'
         - 'config:field.storage.node.field_experience_level'
-        - 'config:field.storage.node.field_selected'
         - 'config:field.storage.node.field_session_category_'
         - 'config:field.storage.node.field_session_duration'
         - 'config:field.storage.node.field_session_synopsis'
-        - 'config:field.storage.node.field_speaker_consent'
   page_1:
     id: page_1
     display_title: Page
@@ -1244,6 +793,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - 'user.node_grants:view'
         - user.roles
