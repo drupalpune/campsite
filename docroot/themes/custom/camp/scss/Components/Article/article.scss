@@ -1,0 +1,46 @@
+.node--type-article {
+
+  .layout--content-narrow {
+    grid-column: 1/11;
+    margin: 0 auto;
+    max-width: 1090px;
+
+    .field--name-field-image {
+      margin: 36px auto;
+      img {
+        margin: 0 auto;
+      }
+    }
+    .field--name-field-tags {
+      margin: 72px auto;
+    }
+
+    .field--name-body {
+      max-width: 1090px;
+      padding: 0;
+      @include laptop {
+        padding: 0 32px;
+      }
+    }
+    .node__meta {
+      margin: 32px auto 0;
+      color: $primary;
+
+      @include laptop {
+        padding: 0 32px;
+      }
+
+      .field--name-user-picture {
+        img {
+          width: 72px;
+          height: auto;
+        }
+      }
+      span {
+        display: block;
+      }
+    }
+
+  }
+
+}
