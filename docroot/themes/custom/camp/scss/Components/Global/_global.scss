@@ -32,7 +32,6 @@ body {
 }
 footer.page-footer-section{
   background-image: url('../scss/Images/Footer.png');
-  height: 454px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,6 +44,7 @@ footer.page-footer-section{
     border-radius: 30%;
   }
 }
+
 .field--name-field-paragraph{
   .full-width-banner{
     margin-top: -35px;
