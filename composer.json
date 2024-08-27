@@ -58,7 +58,8 @@
         "drupal/simple_sitemap": "^4.1",
         "drupal/metatag": "^2.0",
         "drupal/devel": "^5.3",
-        "drupal/views_data_export": "^1.4"
+        "drupal/views_data_export": "^1.4",
+        "drupal/konfhub": "^1.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -67,7 +68,7 @@
     "prefer-stable": true,
     "extra": {
         "patches": {
-            "drupal/core":{
+            "drupal/core": {
                 "3463875 - BigPipe error - An error occurred during the execution of the Ajax response: LoadJS": "https://www.drupal.org/files/issues/2024-07-25/3463875-2.ajaxjs-prevent-loadjs-errors.patch"
             },
             "drupal/quicktabs": {
@@ -78,9 +79,7 @@
             "locations": {
                 "web-root": "./docroot"
             },
-            "allowed-packages": [
-                "pantheon-systems/drupal-integrations"
-            ],
+            "allowed-packages": ["pantheon-systems/drupal-integrations"],
             "file-mapping": {
                 "[project-root]/.editorconfig": false,
                 "[project-root]/pantheon.upstream.yml": false,
@@ -103,7 +102,10 @@
             "docroot/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "docroot/private/scripts/quicksilver/{$name}/": ["type:quicksilver-script"]
         },
-        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
@@ -111,17 +113,11 @@
         "enable-patching": true
     },
     "autoload": {
-        "classmap": [
-            "upstream-configuration/scripts/ComposerScripts.php"
-        ]
+        "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]
     },
     "scripts": {
-        "pre-update-cmd": [
-            "DrupalComposerManaged\\ComposerScripts::preUpdate"
-        ],
-        "post-update-cmd": [
-            "DrupalComposerManaged\\ComposerScripts::postUpdate"
-        ]
+        "pre-update-cmd": ["DrupalComposerManaged\\ComposerScripts::preUpdate"],
+        "post-update-cmd": ["DrupalComposerManaged\\ComposerScripts::postUpdate"]
     },
     "config": {
         "preferred-install": "dist",
