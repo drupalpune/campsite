@@ -26,6 +26,9 @@ settings:
     -
       value: lunch_sponsor
       label: 'Lunch Sponsor'
+    -
+      value: drupal_certification_partner
+      label: 'Drupal Certification Partner'
   allowed_values_function: ''
 module: options
 locked: false
