@@ -162,6 +162,24 @@
     }
   }
 
+  &.view-display-id-view_block_module_sponsors {
+    .views-row {
+      width: calc((100% - 80px) / 5);
+
+      @include mobile{
+        width: calc((100% - 16px) / 2);
+      }
+    }
+
+    .view-content {
+      gap: 16px;
+    }
+
+    .module--sponsors-type {
+      margin-top: 12px;
+    }
+  }
+
   .views-row {
     width: calc((100% - 160px) / 6);
     margin: 44px 0 8px;
