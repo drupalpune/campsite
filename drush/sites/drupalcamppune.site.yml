@@ -1,4 +1,5 @@
 # Application 'drupalcamppune', environment 'dev'.
+# @todo update to Pantheon env.
 dev:
   root: /var/www/html/drupalcamppune.dev/docroot
   ac-site: drupalcamppune
@@ -13,24 +14,8 @@ dev:
   paths:
     drush-script: drush9
 
-
-# Application 'drupalcamppune', environment 'prod'.
-prod:
-  root: /var/www/html/drupalcamppune.prod/docroot
-  ac-site: drupalcamppune
-  ac-env: prod
-  ac-realm: prod
-  uri: camp2023.drupalpune.in
-  prod.livedev:
-    parent: '@drupalcamppune.prod'
-    root: /mnt/gfs/drupalcamppune.prod/livedev/docroot
-  host: drupalcamppune.ssh.prod.acquia-sites.com
-  user: drupalcamppune.prod
-  paths:
-    drush-script: drush9
-
-
 # Application 'drupalcamppune', environment 'test'.
+# @todo update to Pantheon env.
 stage:
   root: /var/www/html/drupalcamppune.test/docroot
   ac-site: drupalcamppune
@@ -46,3 +31,9 @@ stage:
     drush-script: drush9
 
 
+# Application 'drupalcamppune', environment 'prod'.
+prod:
+  root: /var/www/html/sites/drupalpune.in/site/web
+  uri: camp2024.drupalpune.in
+  host: ec2-13-233-167-240.ap-south-1.compute.amazonaws.com
+  user: ubuntu
