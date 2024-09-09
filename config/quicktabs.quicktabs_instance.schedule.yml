@@ -18,11 +18,6 @@ configuration_data:
     weight: 0
     type: node_content
     content:
-      node_content:
-        options:
-          nid: '301'
-          view_mode: full
-          hide_title: false
       qtabs_content:
         options:
           machine_name: profile_page
@@ -31,6 +26,11 @@ configuration_data:
           vid: block_content
           display: default
           args: ''
+      node_content:
+        options:
+          nid: '396'
+          view_mode: full
+          hide_title: false
       block_content:
         options:
           bid: google_oauth_login_block
@@ -41,11 +41,6 @@ configuration_data:
     weight: 0
     type: node_content
     content:
-      node_content:
-        options:
-          nid: '306'
-          view_mode: full
-          hide_title: false
       qtabs_content:
         options:
           machine_name: profile_page
@@ -54,6 +49,11 @@ configuration_data:
           vid: block_content
           display: default
           args: ''
+      node_content:
+        options:
+          nid: '398'
+          view_mode: full
+          hide_title: false
       block_content:
         options:
           bid: google_oauth_login_block

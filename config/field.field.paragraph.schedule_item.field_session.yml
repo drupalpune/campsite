@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_session
-    - node.type.session
     - paragraphs.paragraphs_type.schedule_item
 id: paragraph.schedule_item.field_session
 field_name: field_session
@@ -17,13 +16,10 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:node'
+  handler: views
   handler_settings:
-    target_bundles:
-      session: session
-    sort:
-      field: _none
-      direction: ASC
-    auto_create: false
-    auto_create_bundle: ''
+    view:
+      view_name: selected_sessions
+      display_name: entity_reference_1
+      arguments: {  }
 field_type: entity_reference
