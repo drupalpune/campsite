@@ -1,4 +1,16 @@
 .region--hero{
+
+    #block-pagetitle {
+        .page-title {
+            span {
+                font-size: 72px;
+                @include mobile {
+                    font-size: 32px;
+                    line-height: 46px;
+                }
+            }
+        }
+    }
     .field--name-field-main-heading{
         font-family: $primaryFont;
         font-size: 72px;
