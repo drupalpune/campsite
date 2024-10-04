@@ -1,9 +1,9 @@
-uuid: 28010ad2-f186-4252-b80f-f65a5901302e
+uuid: 875695eb-c680-4e47-8311-8ebcd9e4f566
 langcode: en
 status: true
 dependencies: {  }
-id: no_compression
-label: No-compression
+id: uncompressed
+label: Uncompressed
 config:
   namer:
     filename: backup

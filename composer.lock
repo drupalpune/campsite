@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6f9254de98cc8bb016f3a82dc9008ec",
+    "content-hash": "917b8939b9fe339d8c3ab6a0741853e2",
     "packages": [
         {
             "name": "acquia/blt",
@@ -16062,16 +16062,16 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "pantheon-upstreams/upstream-configuration": 20,
         "drupal/cheeseburger_menu": 5,
-        "drupal/webform": 10,
+        "drupal/gin": 5,
         "drupal/quicktabs": 15,
-        "drupal/gin": 5
+        "drupal/webform": 10,
+        "pantheon-upstreams/upstream-configuration": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.3"
     },

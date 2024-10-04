@@ -1,0 +1,445 @@
+From b25ba78f25938ac198276a2b62441210c61f2acb Mon Sep 17 00:00:00 2001
+From: Grevil <js@webks.de>
+Date: Wed, 19 Apr 2023 14:49:58 +0200
+Subject: [PATCH 01/10] Apply '3228379-download-errors-19.patch' by @jillh68
+
+---
+ src/Drupal/Destination/DrupalBrowserDownloadDestination.php | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/Drupal/Destination/DrupalBrowserDownloadDestination.php b/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
+index 9521ee5..af090bc 100644
+--- a/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
++++ b/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
+@@ -22,6 +22,7 @@ class DrupalBrowserDownloadDestination extends BrowserDownloadDestination {
+     // $headers); all the way out to the output of the caller.
+     // Probably need to provide the response as a service in the environment.
+     parent::saveFile($file);
++    exit();
+   }
+ 
+ }
+-- 
+GitLab
+
+
+From 795024afa07e8fbcb8e2364834a40a01570cf664 Mon Sep 17 00:00:00 2001
+From: Grevil <js@webks.de>
+Date: Thu, 20 Apr 2023 13:12:14 +0200
+Subject: [PATCH 02/10] Add maintenance tests
+
+---
+ .../src/Functional/AdminFunctionalityTest.php | 28 ++++++++++++++++++-
+ 1 file changed, 27 insertions(+), 1 deletion(-)
+
+diff --git a/tests/src/Functional/AdminFunctionalityTest.php b/tests/src/Functional/AdminFunctionalityTest.php
+index b8db5da..69a17d5 100644
+--- a/tests/src/Functional/AdminFunctionalityTest.php
++++ b/tests/src/Functional/AdminFunctionalityTest.php
+@@ -15,7 +15,7 @@ class AdminFunctionalityTest extends BrowserTestBase {
+   /**
+    * {@inheritdoc}
+    */
+-  protected static $modules = ['backup_migrate'];
++  protected static $modules = ['backup_migrate', 'test_page_test'];
+ 
+   /**
+    * {@inheritdoc}
+@@ -34,6 +34,9 @@ class AdminFunctionalityTest extends BrowserTestBase {
+     parent::setUp();
+     $this->container->get('router.builder')->rebuild();
+ 
++    // Set test-page as front page:
++    $this->config('system.site')->set('page.front', '/test-page')->save();
++
+     // Ensure backup_migrate folder exists, the
+     // `admin/config/development/backup_migrate/backups` path will fail without
+     // this.
+@@ -482,4 +485,27 @@ class AdminFunctionalityTest extends BrowserTestBase {
+     $session->pageTextNotContains('There are no backups in this destination.');
+   }
+ 
++  /**
++   * Tests the advanced backup using the "Take site offline" setting.
++   */
++  public function testAdvancedBackupWithMaintenanceModeEnabled() {
++    $session = $this->assertSession();
++    $page = $this->getSession()->getPage();
++    // Check if maintenance mode is currently disabled, note that as we have not
++    // changed it yet, it will be NULL as it is uninitialized:
++    $this->assertEmpty(\Drupal::state()->get('system.maintenance_mode'));
++    // Got to the advance backup site and create a backup with taking the site
++    // offline:
++    $this->drupalGet('/admin/config/development/backup_migrate/advanced');
++    $session->statusCodeEquals(200);
++    $page->checkField('edit-utils-site-offline');
++    $page->pressButton('edit-submit');
++    // Go to front page and Check if the maintenance mode is disabled after
++    // backup:
++    $this->drupalGet('<front>');
++    $session->statusCodeEquals(200);
++    // It should be FALSE now, as it was enabled and then disabled:
++    $this->assertFalse(\Drupal::state()->get('system.maintenance_mode'));
++  }
++
+ }
+-- 
+GitLab
+
+
+From 79ad9b6b94f933aeb2b65c6e982ee8af5b14d499 Mon Sep 17 00:00:00 2001
+From: Grevil <js@webks.de>
+Date: Thu, 20 Apr 2023 13:17:24 +0200
+Subject: [PATCH 03/10] Add maintenance test
+
+---
+ tests/src/Functional/AdminFunctionalityTest.php | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/tests/src/Functional/AdminFunctionalityTest.php b/tests/src/Functional/AdminFunctionalityTest.php
+index 69a17d5..3e9c372 100644
+--- a/tests/src/Functional/AdminFunctionalityTest.php
++++ b/tests/src/Functional/AdminFunctionalityTest.php
+@@ -500,6 +500,8 @@ class AdminFunctionalityTest extends BrowserTestBase {
+     $session->statusCodeEquals(200);
+     $page->checkField('edit-utils-site-offline');
+     $page->pressButton('edit-submit');
++    // Flush all caches, this is performance intensive, but might be needed:
++    drupal_flush_all_caches();
+     // Go to front page and Check if the maintenance mode is disabled after
+     // backup:
+     $this->drupalGet('<front>');
+-- 
+GitLab
+
+
+From 83b65da9188eed7173cd59386d09e91fa98df3c0 Mon Sep 17 00:00:00 2001
+From: Grevil <js@webks.de>
+Date: Thu, 20 Apr 2023 14:38:31 +0200
+Subject: [PATCH 04/10] Refactor tests
+
+---
+ .../src/Functional/AdminFunctionalityTest.php | 45 ++++++++++++++++---
+ 1 file changed, 39 insertions(+), 6 deletions(-)
+
+diff --git a/tests/src/Functional/AdminFunctionalityTest.php b/tests/src/Functional/AdminFunctionalityTest.php
+index 3e9c372..1775a8b 100644
+--- a/tests/src/Functional/AdminFunctionalityTest.php
++++ b/tests/src/Functional/AdminFunctionalityTest.php
+@@ -486,9 +486,12 @@ class AdminFunctionalityTest extends BrowserTestBase {
+   }
+ 
+   /**
+-   * Tests the advanced backup using the "Take site offline" setting.
++   * Tests the advanced backup.
++   *
++   * Tests the advanced backup using the "Take site offline" setting and
++   * setting the Backup Destination to "Download".
+    */
+-  public function testAdvancedBackupWithMaintenanceModeEnabled() {
++  public function testAdvancedBackupWithMaintenanceModeEnabledDestinationDownload() {
+     $session = $this->assertSession();
+     $page = $this->getSession()->getPage();
+     // Check if maintenance mode is currently disabled, note that as we have not
+@@ -499,11 +502,41 @@ class AdminFunctionalityTest extends BrowserTestBase {
+     $this->drupalGet('/admin/config/development/backup_migrate/advanced');
+     $session->statusCodeEquals(200);
+     $page->checkField('edit-utils-site-offline');
++    $page->selectFieldOption('edit-destination-id', 'download');
+     $page->pressButton('edit-submit');
+-    // Flush all caches, this is performance intensive, but might be needed:
+-    drupal_flush_all_caches();
+-    // Go to front page and Check if the maintenance mode is disabled after
+-    // backup:
++    // Check if the backup was completed:
++    $session->statusCodeEquals(200);
++    $session->pageTextContains('Backup Complete.');
++    // Maintenance mode should be disabled now, check the front page:
++    $this->drupalGet('<front>');
++    $session->statusCodeEquals(200);
++    // It should be FALSE now, as it was enabled and then disabled:
++    $this->assertFalse(\Drupal::state()->get('system.maintenance_mode'));
++  }
++
++  /**
++   * Tests the advanced backup.
++   *
++   * Tests the advanced backup using the "Take site offline" setting and
++   * setting the Backup Destination to "Private Files Directory".
++   */
++  public function testAdvancedBackupWithMaintenanceModeEnabledDestinationPrivate() {
++    $session = $this->assertSession();
++    $page = $this->getSession()->getPage();
++    // Check if maintenance mode is currently disabled, note that as we have not
++    // changed it yet, it will be NULL as it is uninitialized:
++    $this->assertEmpty(\Drupal::state()->get('system.maintenance_mode'));
++    // Got to the advance backup site and create a backup with taking the site
++    // offline:
++    $this->drupalGet('/admin/config/development/backup_migrate/advanced');
++    $session->statusCodeEquals(200);
++    $page->checkField('edit-utils-site-offline');
++    $page->selectFieldOption('edit-destination-id', 'private_files');
++    $page->pressButton('edit-submit');
++    // Check if the backup was completed:
++    $session->statusCodeEquals(200);
++    $session->pageTextContains('Backup Complete.');
++    // Maintenance mode should be disabled now, check the front page:
+     $this->drupalGet('<front>');
+     $session->statusCodeEquals(200);
+     // It should be FALSE now, as it was enabled and then disabled:
+-- 
+GitLab
+
+
+From fe2c45d4bba90792ef1f462d3a2b5ac71194721d Mon Sep 17 00:00:00 2001
+From: Grevil <js@webks.de>
+Date: Mon, 8 Jan 2024 16:17:40 +0100
+Subject: [PATCH 05/10] Fix
+ testAdvancedBackupWithMaintenanceModeEnabledDestinationDownload
+
+---
+ tests/src/Functional/AdminFunctionalityTest.php | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/tests/src/Functional/AdminFunctionalityTest.php b/tests/src/Functional/AdminFunctionalityTest.php
+index 1775a8b..af71f0f 100644
+--- a/tests/src/Functional/AdminFunctionalityTest.php
++++ b/tests/src/Functional/AdminFunctionalityTest.php
+@@ -504,9 +504,9 @@ class AdminFunctionalityTest extends BrowserTestBase {
+     $page->checkField('edit-utils-site-offline');
+     $page->selectFieldOption('edit-destination-id', 'download');
+     $page->pressButton('edit-submit');
+-    // Check if the backup was completed:
++    // Check if the backup is downloaded:
+     $session->statusCodeEquals(200);
+-    $session->pageTextContains('Backup Complete.');
++    $session->responseHeaderContains('Content-Disposition', 'attachment');
+     // Maintenance mode should be disabled now, check the front page:
+     $this->drupalGet('<front>');
+     $session->statusCodeEquals(200);
+-- 
+GitLab
+
+
+From d0bcae70d82284258d436d73a700c5c942b45b7c Mon Sep 17 00:00:00 2001
+From: Grevil <js@webks.de>
+Date: Wed, 18 Sep 2024 12:16:26 +0200
+Subject: [PATCH 06/10] Add validation and adjust tests
+
+---
+ src/Form/BackupMigrateAdvancedBackupForm.php    |  8 ++++++++
+ tests/src/Functional/AdminFunctionalityTest.php | 16 +++++++++-------
+ 2 files changed, 17 insertions(+), 7 deletions(-)
+
+diff --git a/src/Form/BackupMigrateAdvancedBackupForm.php b/src/Form/BackupMigrateAdvancedBackupForm.php
+index a6a0776..9b0e59f 100644
+--- a/src/Form/BackupMigrateAdvancedBackupForm.php
++++ b/src/Form/BackupMigrateAdvancedBackupForm.php
+@@ -89,6 +89,14 @@ class BackupMigrateAdvancedBackupForm extends FormBase {
+   public function validateForm(array &$form, FormStateInterface $form_state) {
+     parent::validateForm($form, $form_state);
+ 
++    $destinationId = $form_state->getValue('destination_id');
++    $siteOffline = !empty($form_state->getValue('utils')['site_offline']) ? $form_state->getValue('utils')['site_offline'] : FALSE;
++
++    if ($destinationId === 'download' && $siteOffline) {
++      $form_state->setErrorByName('destination_id', $this->t('The Backup Destination "Download" does not support taking the site offline during backup.'));
++      $form_state->setErrorByName('utils][site_offline');
++    }
++
+     $bam = backup_migrate_get_service_object($form_state->getValues());
+ 
+     // Let the plugins validate their own config data.
+diff --git a/tests/src/Functional/AdminFunctionalityTest.php b/tests/src/Functional/AdminFunctionalityTest.php
+index af71f0f..a70c98f 100644
+--- a/tests/src/Functional/AdminFunctionalityTest.php
++++ b/tests/src/Functional/AdminFunctionalityTest.php
+@@ -494,9 +494,6 @@ class AdminFunctionalityTest extends BrowserTestBase {
+   public function testAdvancedBackupWithMaintenanceModeEnabledDestinationDownload() {
+     $session = $this->assertSession();
+     $page = $this->getSession()->getPage();
+-    // Check if maintenance mode is currently disabled, note that as we have not
+-    // changed it yet, it will be NULL as it is uninitialized:
+-    $this->assertEmpty(\Drupal::state()->get('system.maintenance_mode'));
+     // Got to the advance backup site and create a backup with taking the site
+     // offline:
+     $this->drupalGet('/admin/config/development/backup_migrate/advanced');
+@@ -504,14 +501,19 @@ class AdminFunctionalityTest extends BrowserTestBase {
+     $page->checkField('edit-utils-site-offline');
+     $page->selectFieldOption('edit-destination-id', 'download');
+     $page->pressButton('edit-submit');
+-    // Check if the backup is downloaded:
++    // Setting both the site offline and the destination to download should
++    // not be allowed:
++    $session->statusCodeEquals(200);
++    $session->pageTextContains('The Backup Destination "Download" does not support taking the site offline during backup.');
++    // Uncheck taking the site offline:
++    $page->uncheckField('edit-utils-site-offline');
++    $page->pressButton('edit-submit');
++    // Check if the backup is downloaded now:
+     $session->statusCodeEquals(200);
+     $session->responseHeaderContains('Content-Disposition', 'attachment');
+-    // Maintenance mode should be disabled now, check the front page:
++    // Check if the front page is still reachable after the backup:
+     $this->drupalGet('<front>');
+     $session->statusCodeEquals(200);
+-    // It should be FALSE now, as it was enabled and then disabled:
+-    $this->assertFalse(\Drupal::state()->get('system.maintenance_mode'));
+   }
+ 
+   /**
+-- 
+GitLab
+
+
+From e77b9071800317e1bb187ac359dcfedabb7b7c13 Mon Sep 17 00:00:00 2001
+From: Grevil <js@webks.de>
+Date: Wed, 18 Sep 2024 12:16:51 +0200
+Subject: [PATCH 07/10] Add comment
+
+---
+ src/Form/BackupMigrateAdvancedBackupForm.php | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/src/Form/BackupMigrateAdvancedBackupForm.php b/src/Form/BackupMigrateAdvancedBackupForm.php
+index 9b0e59f..d22126e 100644
+--- a/src/Form/BackupMigrateAdvancedBackupForm.php
++++ b/src/Form/BackupMigrateAdvancedBackupForm.php
+@@ -89,9 +89,11 @@ class BackupMigrateAdvancedBackupForm extends FormBase {
+   public function validateForm(array &$form, FormStateInterface $form_state) {
+     parent::validateForm($form, $form_state);
+ 
++    // Currently there is a problem, where the download destination does not
++    // support taking the site offline.
++    // See https://www.drupal.org/project/backup_migrate/issues/3475192.
+     $destinationId = $form_state->getValue('destination_id');
+     $siteOffline = !empty($form_state->getValue('utils')['site_offline']) ? $form_state->getValue('utils')['site_offline'] : FALSE;
+-
+     if ($destinationId === 'download' && $siteOffline) {
+       $form_state->setErrorByName('destination_id', $this->t('The Backup Destination "Download" does not support taking the site offline during backup.'));
+       $form_state->setErrorByName('utils][site_offline');
+-- 
+GitLab
+
+
+From e114bb8774480a14ac6004e7f491fe01093fb4cd Mon Sep 17 00:00:00 2001
+From: Grevil <js@webks.de>
+Date: Thu, 19 Sep 2024 12:42:35 +0200
+Subject: [PATCH 08/10] Add final comments
+
+---
+ src/Drupal/Destination/DrupalBrowserDownloadDestination.php | 5 +++++
+ src/Form/BackupMigrateAdvancedBackupForm.php                | 2 +-
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/src/Drupal/Destination/DrupalBrowserDownloadDestination.php b/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
+index af090bc..30a31e8 100644
+--- a/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
++++ b/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
+@@ -22,6 +22,11 @@ class DrupalBrowserDownloadDestination extends BrowserDownloadDestination {
+     // $headers); all the way out to the output of the caller.
+     // Probably need to provide the response as a service in the environment.
+     parent::saveFile($file);
++    // Exit here to prevent any further output:
++    // @todo Firing "exit()" here, will prevent the site coming out of
++    // maintenance mode. As a current workaround we are simply not allowing
++    // the "download" destination in combination with "Take site offline".
++    // See https://www.drupal.org/project/backup_migrate/issues/3475192
+     exit();
+   }
+ 
+diff --git a/src/Form/BackupMigrateAdvancedBackupForm.php b/src/Form/BackupMigrateAdvancedBackupForm.php
+index d22126e..a46333a 100644
+--- a/src/Form/BackupMigrateAdvancedBackupForm.php
++++ b/src/Form/BackupMigrateAdvancedBackupForm.php
+@@ -89,7 +89,7 @@ class BackupMigrateAdvancedBackupForm extends FormBase {
+   public function validateForm(array &$form, FormStateInterface $form_state) {
+     parent::validateForm($form, $form_state);
+ 
+-    // Currently there is a problem, where the download destination does not
++    // @todo Currently there is a problem, where the download destination does not
+     // support taking the site offline.
+     // See https://www.drupal.org/project/backup_migrate/issues/3475192.
+     $destinationId = $form_state->getValue('destination_id');
+-- 
+GitLab
+
+
+From 09423eff7ac77270cace1f4913ac170b5ff30a02 Mon Sep 17 00:00:00 2001
+From: Grevil <js@webks.de>
+Date: Thu, 19 Sep 2024 12:46:10 +0200
+Subject: [PATCH 09/10] Adjust comment
+
+---
+ src/Drupal/Destination/DrupalBrowserDownloadDestination.php | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/src/Drupal/Destination/DrupalBrowserDownloadDestination.php b/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
+index 30a31e8..2e5faa6 100644
+--- a/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
++++ b/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
+@@ -22,11 +22,12 @@ class DrupalBrowserDownloadDestination extends BrowserDownloadDestination {
+     // $headers); all the way out to the output of the caller.
+     // Probably need to provide the response as a service in the environment.
+     parent::saveFile($file);
+-    // Exit here to prevent any further output:
++    // Exit here to prevent any further output and the module from breaking, see
++    // https://www.drupal.org/project/backup_migrate/issues/3228379.
+     // @todo Firing "exit()" here, will prevent the site coming out of
+     // maintenance mode. As a current workaround we are simply not allowing
+     // the "download" destination in combination with "Take site offline".
+-    // See https://www.drupal.org/project/backup_migrate/issues/3475192
++    // See https://www.drupal.org/project/backup_migrate/issues/3475192.
+     exit();
+   }
+ 
+-- 
+GitLab
+
+
+From b170fa5ef360b52bbd99f1dc65abdfe03dae5032 Mon Sep 17 00:00:00 2001
+From: Grevil <js@webks.de>
+Date: Thu, 19 Sep 2024 15:04:51 +0200
+Subject: [PATCH 10/10] Added "@see" before every url
+
+---
+ src/Drupal/Destination/DrupalBrowserDownloadDestination.php | 6 +++---
+ src/Form/BackupMigrateAdvancedBackupForm.php                | 2 +-
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/src/Drupal/Destination/DrupalBrowserDownloadDestination.php b/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
+index 2e5faa6..e8905e4 100644
+--- a/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
++++ b/src/Drupal/Destination/DrupalBrowserDownloadDestination.php
+@@ -22,12 +22,12 @@ class DrupalBrowserDownloadDestination extends BrowserDownloadDestination {
+     // $headers); all the way out to the output of the caller.
+     // Probably need to provide the response as a service in the environment.
+     parent::saveFile($file);
+-    // Exit here to prevent any further output and the module from breaking, see
+-    // https://www.drupal.org/project/backup_migrate/issues/3228379.
++    // Exit here to prevent any further output and the module from breaking.
++    // @see https://www.drupal.org/project/backup_migrate/issues/3228379
+     // @todo Firing "exit()" here, will prevent the site coming out of
+     // maintenance mode. As a current workaround we are simply not allowing
+     // the "download" destination in combination with "Take site offline".
+-    // See https://www.drupal.org/project/backup_migrate/issues/3475192.
++    // @see https://www.drupal.org/project/backup_migrate/issues/3475192
+     exit();
+   }
+ 
+diff --git a/src/Form/BackupMigrateAdvancedBackupForm.php b/src/Form/BackupMigrateAdvancedBackupForm.php
+index a46333a..0c78d79 100644
+--- a/src/Form/BackupMigrateAdvancedBackupForm.php
++++ b/src/Form/BackupMigrateAdvancedBackupForm.php
+@@ -91,7 +91,7 @@ class BackupMigrateAdvancedBackupForm extends FormBase {
+ 
+     // @todo Currently there is a problem, where the download destination does not
+     // support taking the site offline.
+-    // See https://www.drupal.org/project/backup_migrate/issues/3475192.
++    // @see https://www.drupal.org/project/backup_migrate/issues/3475192
+     $destinationId = $form_state->getValue('destination_id');
+     $siteOffline = !empty($form_state->getValue('utils')['site_offline']) ? $form_state->getValue('utils')['site_offline'] : FALSE;
+     if ($destinationId === 'download' && $siteOffline) {
+-- 
+GitLab
+
