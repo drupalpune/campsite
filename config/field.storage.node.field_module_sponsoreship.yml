@@ -29,6 +29,9 @@ settings:
     -
       value: drupal_certification_partner
       label: 'Drupal Certification Partner'
+    -
+      value: training_partner
+      label: 'Training Partner'
   allowed_values_function: ''
 module: options
 locked: false

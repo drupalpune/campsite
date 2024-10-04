@@ -1,0 +1,39 @@
+uuid: 29ce80dc-abf1-4be8-915a-b578d2b80b07
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.workshop.body
+    - field.field.node.workshop.field_co_presenter
+    - node.type.workshop
+  module:
+    - text
+    - user
+id: node.workshop.teaser
+targetEntityType: node
+bundle: workshop
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_co_presenter:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

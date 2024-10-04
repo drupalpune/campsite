@@ -1,0 +1,39 @@
+uuid: 481fdcd0-f837-4038-8784-99ef3bced4f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.email
+    - field.field.user.user.field_code_of_conduct
+    - field.field.user.user.field_designation
+    - field.field.user.user.field_drupal_profile_link
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_type_of_business
+    - field.field.user.user.user_picture
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
+id: user.user.email
+targetEntityType: user
+bundle: user
+mode: email
+content: {  }
+hidden:
+  field_code_of_conduct: true
+  field_designation: true
+  field_drupal_profile_link: true
+  field_full_name: true
+  field_organization: true
+  field_type_of_business: true
+  member_for: true
+  speaker_biography_profiles: true
+  speaker_experience_profiles: true
+  speaker_profiles: true
+  user_picture: true

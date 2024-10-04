@@ -1,0 +1,35 @@
+uuid: cbc5a2f3-50f3-4b2f-a3e4-efa490395ddf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.schedule
+    - field.field.node.workshop.body
+    - field.field.node.workshop.field_co_presenter
+    - node.type.workshop
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.workshop.schedule
+targetEntityType: node
+bundle: workshop
+mode: schedule
+content:
+  field_co_presenter:
+    type: author
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true

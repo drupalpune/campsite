@@ -14,8 +14,8 @@ options:
     style: ''
 configuration_data:
   -
-    title: 'Day 1'
-    weight: 0
+    title: 'Day 1 (Sessions)'
+    weight: -10
     type: node_content
     content:
       qtabs_content:
@@ -38,7 +38,7 @@ configuration_data:
           display_title: false
   -
     title: 'Day 2'
-    weight: 0
+    weight: -8
     type: node_content
     content:
       qtabs_content:
