@@ -10,7 +10,7 @@ dependencies:
 id: twitterblock
 theme: camp
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: twitter_block
 settings:

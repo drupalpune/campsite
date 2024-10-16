@@ -24,6 +24,9 @@ settings:
       value: module
       label: Module
     -
+      value: sprint_venue_partner
+      label: 'Sprint Venue Partner'
+    -
       value: media_partners
       label: 'Media partners'
   allowed_values_function: ''

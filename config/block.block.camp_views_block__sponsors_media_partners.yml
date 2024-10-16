@@ -12,7 +12,7 @@ dependencies:
 id: camp_views_block__sponsors_media_partners
 theme: camp
 region: content
-weight: 0
+weight: -5
 provider: null
 plugin: 'views_block:sponsors-media_partners'
 settings:

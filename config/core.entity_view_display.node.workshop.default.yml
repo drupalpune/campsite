@@ -19,12 +19,8 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 1
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   field_co_presenter: true
+  links: true

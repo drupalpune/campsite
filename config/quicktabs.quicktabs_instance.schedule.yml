@@ -37,6 +37,29 @@ configuration_data:
           block_title: ''
           display_title: false
   -
+    title: 'Day 1 (Workshop)'
+    weight: -9
+    type: node_content
+    content:
+      qtabs_content:
+        options:
+          machine_name: profile_page
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      node_content:
+        options:
+          nid: '401'
+          view_mode: full
+          hide_title: false
+      block_content:
+        options:
+          bid: google_oauth_login_block
+          block_title: ''
+          display_title: false
+  -
     title: 'Day 2'
     weight: -8
     type: node_content
